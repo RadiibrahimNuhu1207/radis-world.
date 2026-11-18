@@ -19,6 +19,20 @@ def publish(modeladmin, request, qs):
     qs.update(status=Status.PUBLISHED)
 
 
+@admin.action(description="Generate cover with AI (up to 3 at a time)")
+def ai_cover(modeladmin, request, qs):
+    from .ai_cover import AICoverError, make_cover
+    done = 0
+    for obj in qs[:3]:
+        try:
+            make_cover(obj); done += 1
+        except AICoverError as e:
+            modeladmin.message_user(request, f"{obj}: {e}", messages.ERROR)
+            break
+    if done:
+        modeladmin.message_user(request, f"Created {done} new cover(s). Open the item to see it.", messages.SUCCESS)
+
+
 @admin.action(description="Move selected back to draft")
 def unpublish(modeladmin, request, qs):
     qs.update(status=Status.DRAFT)
@@ -46,7 +60,7 @@ class HistoryEntryAdmin(admin.ModelAdmin):
     list_filter = ("status", "topic", "region", "featured")
     search_fields = ("title", "text", "place", "slug")
     prepopulated_fields = {"slug": ("title",)}
-    actions = [publish, unpublish]
+    actions = [publish, unpublish, ai_cover]
     fieldsets = (
         ("When", {"fields": (("year", "circa", "undated"), ("month", "day"))}),
         ("Story (English)", {"fields": ("title", "slug", "place", "text", "topic", "region", "sources")}),
@@ -131,7 +145,7 @@ class AudiobookAdmin(admin.ModelAdmin):
     list_display = ("title", "author", "language", "status", "featured", "chapter_count")
     list_editable = ("status", "featured")
     prepopulated_fields = {"slug": ("title",)}
-    actions = [publish, unpublish]
+    actions = [publish, unpublish, ai_cover]
 
     @admin.display(description="Chapters")
     def chapter_count(self, o):
@@ -149,7 +163,7 @@ class ComicAdmin(admin.ModelAdmin):
     list_display = ("title", "language", "status", "featured", "page_count")
     list_editable = ("status", "featured")
     prepopulated_fields = {"slug": ("title",)}
-    actions = [publish, unpublish]
+    actions = [publish, unpublish, ai_cover]
 
     @admin.display(description="Pages")
     def page_count(self, o):
@@ -174,7 +188,7 @@ class EbookAdmin(admin.ModelAdmin):
     list_display = ("title", "author", "language", "has_pdf", "status", "featured")
     list_editable = ("status", "featured")
     prepopulated_fields = {"slug": ("title",)}
-    actions = [publish, unpublish]
+    actions = [publish, unpublish, ai_cover]
 
     @admin.display(boolean=True, description="PDF")
     def has_pdf(self, o):

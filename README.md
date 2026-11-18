@@ -117,6 +117,18 @@ To also import each video as its own card (and send notifications for new ones),
 
 The daily task then keeps your videos up to date automatically.
 
+## AI covers (optional)
+
+Admin can create cover artwork with AI, using OpenAI's image engine (the one behind ChatGPT images). It needs a paid
+OpenAI account: platform.openai.com → API keys → Create key, and add credit under Billing.
+
+On PythonAnywhere: `cd ~/radis-world && nano .env`, add `OPENAI_API_KEY=your-key`, save, then press **Reload** on the Web tab.
+
+Then in Admin open **Ebooks**, **Audiobooks**, **Comics** or **History entries**, tick up to 3 items, choose
+**"Generate cover with AI"** in the Action menu, and press **Go**. Each picture takes about a minute.
+
+You can also make artwork in **Canva**, download it, and upload it in the item's Cover / Artwork box.
+
 ## 3. Adding content (Admin)
 
 Admin is at **https://radisworld.pythonanywhere.com/admin/** (also linked at the bottom of every page and in Settings).

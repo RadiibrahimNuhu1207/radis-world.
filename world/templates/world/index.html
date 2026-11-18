@@ -357,6 +357,12 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .sheet-body .yr{font-family:var(--display);font-style:italic;color:var(--gold);font-size:40px;line-height:1}
 .eyebrow{color:var(--blue-hi);font-size:13px;font-weight:700}
 .meta{color:var(--mist);font-size:14px}
+.txt.rich{white-space:normal}
+.txt.rich p{margin:0 0 1.05em}
+.txt.rich h3.sec{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.2vw,27px);line-height:1.2;color:var(--ink);margin:1.7em 0 .55em}
+.txt.rich h3.sec:first-child{margin-top:.4em}
+.txt.rich ul.lines{list-style:none;padding:0;margin:0 0 1.2em;font-family:var(--sans);font-size:15px;line-height:1.55}
+.txt.rich ul.lines li{padding:9px 0;border-top:1px solid var(--line)}
 .sheet-body .txt{font-family:var(--serif);font-size:19px;line-height:1.7;max-width:62ch;margin-top:20px;white-space:pre-line;color:var(--soft)}
 .side h3{font-size:13.5px;margin-bottom:6px;color:var(--mist);font-weight:600}
 .mini{display:flex;gap:12px;align-items:center;width:100%;background:none;border:0;border-top:1px solid var(--line);padding:11px 0;text-align:start;cursor:pointer;color:var(--ink)}
@@ -449,6 +455,8 @@ footer a{color:var(--mist)} footer a:hover{color:var(--ink)}
 .pg h3{font-family:var(--display);font-size:clamp(20px,3vh,30px);margin-bottom:10px;color:var(--p-red)}
 .pg p{margin:0 0 .7em;font-size:clamp(15px,2.3vh,21px);line-height:1.55;text-align:justify;hyphens:auto}
 .pg p.first::first-letter{float:inline-start;font-family:var(--display);font-weight:900;font-size:3.4em;line-height:.82;margin-top:4px;margin-inline-end:8px;color:var(--p-red)}
+.pg h4{font-family:var(--display);font-weight:600;font-size:clamp(17px,2.5vh,23px);color:var(--p-red);margin:.3em 0 .45em;line-height:1.2}
+.pg .li{font-size:clamp(12.5px,1.85vh,16px);line-height:1.4;padding:5px 0;border-bottom:1px solid var(--p-line)}
 .pg .facts{border-top:1px solid var(--p-line);border-bottom:1px solid var(--p-line);padding:8px 0;margin:6px 0 14px;font-size:clamp(14px,2vh,18px)}
 .pg .facts b{color:var(--p-red)}
 .pg .also{border-top:1px solid var(--p-line);padding:8px 0}
@@ -596,6 +604,13 @@ const fmt = (o, d) => new Intl.DateTimeFormat(LANG_LOCALE[LANG], Object.assign({
 const dayLabel = (day, m) => fmt({ day: "numeric", month: "long" }, new Date(Date.UTC(2000, m - 1, day)));
 const monthName = m => fmt({ month: "long" }, new Date(Date.UTC(2000, m - 1, 1)));
 const fullDate = iso => iso ? fmt({ day: "numeric", month: "short", year: "numeric" }, new Date(iso + "T00:00:00Z")) : "";
+function fmtText(s){
+  return String(s || "").split(/\n\s*\n/).map(p => { p = p.trim(); if(!p) return "";
+    if(p.startsWith("## ")) return `<h3 class="sec">${esc(p.slice(3))}</h3>`;
+    if(p.includes("\n")) return `<ul class="lines">${p.split("\n").map(l => `<li>${esc(l)}</li>`).join("")}</ul>`;
+    return `<p>${esc(p)}</p>`; }).join("");
+}
+const plainText = s => String(s || "").split(/\n\s*\n/).map(p => p.trim()).filter(p => p && !p.startsWith("## ")).join("\n\n");
 function yearLabel(e){ if(e.und) return t("old_trad"); let y = e.y < 0 ? t("bce", { y: -e.y }) : String(e.y); return e.circa ? t("circa", { y }) : y; }
 function build(){
   H = DATA.history.map(e => {
@@ -603,7 +618,7 @@ function build(){
     const [dd, mm] = e.d ? e.d.split("-").map(Number) : [null, null];
     return Object.assign({}, e, { key: "h:" + e.id, type: "h", title: L.title, place: L.place, text: L.text, translated: !!e.tr[LANG],
       day: dd, date: e.d ? dayLabel(dd, mm) : "", ylab: yearLabel(e), era: eraOf(e.y),
-      img: e.h169 || e.h916, art: e.art || "", video: !!(e.v169 || e.v916) });
+      img: e.h169 || e.h916, art: e.art || "", plain: plainText(L.text), video: !!(e.v169 || e.v916) });
   }).sort((a, b) => a.y - b.y);
   V = DATA.videos.map(v => Object.assign({}, v, { key: "v:" + v.id, type: "v" })).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   A = DATA.audiobooks.map(a => Object.assign({}, a, { key: "a:" + a.id, type: "a" }));
@@ -701,7 +716,7 @@ function slideHTML(x, i){
   const [ic, lab] = KIND[x.type]; let bg = "", extra = "", meta = "", desc = x.desc || "";
   if(x.type === "v") bg = `<div class="sl-bg" style="background-image:url('https://i.ytimg.com/vi/${x.id}/maxresdefault.jpg'),url('${x.thumb}')"></div>`;
   else if(x.type === "h"){ bg = x.art ? `<div class="sl-bg art" style="background-image:url('${x.art}')"></div>` : `<div class="sl-storm"></div>`;
-    if(!x.art) extra = `<div class="sl-yr" aria-hidden="true">${esc(Math.abs(x.y))}</div>`; desc = x.text;
+    if(!x.art) extra = `<div class="sl-yr" aria-hidden="true">${esc(Math.abs(x.y))}</div>`; desc = x.plain;
     meta = `<span class="y">${esc(x.ylab)}</span><span>${esc(x.place)}</span>`; }
   else { const img = x.cover || x.image || "";
     bg = img ? `<div class="sl-bg blur" style="background-image:url('${img}')"></div>` : `<div class="sl-storm"></div>`;
@@ -731,7 +746,7 @@ function otdHTML(){
   const [lead, ...rest] = L.items, where = e => [e.place, e.date].filter(Boolean).join(", ");
   return `<section class="row"><a class="row-h" href="#list/today"><h2>${esc(L.title)}</h2><span class="more">${t("see_all")}</span></a>
     <div class="otd"><button class="otd-lead ${lead.art ? "has-art" : ""}" data-open="${lead.key}" ${lead.art ? `style="--art:url('${lead.art}')"` : ""}><span class="y">${esc(lead.ylab)}</span><h3>${esc(lead.title)}</h3>
-      <p>${esc(lead.text)}</p><span class="pl">${esc(where(lead))}</span></button>
+      <p>${esc(lead.plain)}</p><span class="pl">${esc(where(lead))}</span></button>
     <ul class="otd-list">${rest.slice(0, 4).map(e => `<li><button data-open="${e.key}"><span class="y">${esc(e.ylab)}</span>
       <span><b>${esc(e.title)}</b><small>${esc(where(e))}</small></span></button></li>`).join("")}</ul></div></section>`;
 }
@@ -913,7 +928,7 @@ function openHistory(x, play){
         <span id="sh-dl"></span>
         <button class="btn ghost sm" id="sh-copy">${t("copy")}</button><button class="btn ghost sm" id="sh-link">${t("share")}</button></div>
       ${narrPanel(x)}
-      <div class="txt">${esc(x.text)}</div>
+      <div class="txt rich">${fmtText(x.text)}</div>
     </div><aside class="side"><h3>${esc(rh)}</h3>${rel.map(e => `<button class="mini" data-open="${e.key}"><b>${esc(e.ylab)}</b><span>${esc(e.title)}</span></button>`).join("")}</aside></div>`);
   setFrame(state.ratio === "auto" ? autoRatio() : state.ratio, play);
   $("#sh-ratio").onclick = ev => { const b = ev.target.closest("button"); if(b) setFrame(b.dataset.r); };
@@ -1063,9 +1078,24 @@ function buildPages(x, single){
     if(!single) P.push({ cls: "end", html: `<div style="letter-spacing:.2em;font-weight:700;color:var(--p-ink-2)">EX LIBRIS</div>
       <h3 style="color:var(--p-ink);margin-top:8px">${t("exlibris_h")}</h3><p style="text-align:center">${t("exlibris_p")}</p>` });
     const wide = ["ja", "zh", "ko"].includes(LANG);
-    chunkText(x.text, (single ? 300 : 380) / (wide ? 2.2 : 1)).forEach((c, k) => P.push({ n: ++n, html:
-      (k === 0 ? `<h3>${t("story")}</h3><div class="facts"><b>${t("f_date")}:</b> ${esc([x.date, x.ylab].filter(Boolean).join(" "))}<br><b>${t("f_place")}:</b> ${esc(x.place)}<br><b>${t("f_topic")}:</b> ${esc(catName(x.cat))}</div>` : "")
-      + `<p class="${k === 0 ? "first" : ""}">${esc(c)}</p>` }));
+    const max = (single ? 600 : 880) / (wide ? 2.2 : 1), blocks = [];
+    String(x.text).split(/\n\s*\n/).forEach((p, pi) => { p = p.trim(); if(!p) return;
+      if(p.startsWith("## ")) blocks.push({ h: p.slice(3) });
+      else if(p.includes("\n")) p.split("\n").forEach(l => blocks.push({ li: l }));
+      else chunkText(p, max * .3).forEach(c => blocks.push({ p: c, pi })); });
+    let items = [{ raw: `<h3>${t("story")}</h3><div class="facts"><b>${t("f_date")}:</b> ${esc([x.date, x.ylab].filter(Boolean).join(" "))}<br><b>${t("f_place")}:</b> ${esc(x.place)}<br><b>${t("f_topic")}:</b> ${esc(catName(x.cat))}</div>` }],
+      len = max * .3, firstP = true;
+    const html = it => it.raw || (it.h ? `<h4>${esc(it.h)}</h4>` : it.li ? `<div class="li">${esc(it.li)}</div>` : `<p class="${it.first ? "first" : ""}">${esc(it.text)}</p>`);
+    const flush = () => { if(items.length){ P.push({ n: ++n, html: items.map(html).join("") }); items = []; len = 0; } };
+    blocks.forEach(b => {
+      const L = b.h ? max * .14 : (b.p || b.li).length * (b.li ? 1.3 : 1);
+      if(len > 0 && (len + L > max || (b.h && len > max * .72))) flush();
+      if(b.p){ const last = items[items.length - 1];
+        if(last && last.pi === b.pi) last.text += " " + b.p; else { items.push({ text: b.p, pi: b.pi, first: firstP }); firstP = false; } }
+      else items.push(b);
+      len += L;
+    });
+    flush();
     const [rh, rel] = related(x);
     if(rel.length) P.push({ n: ++n, html: `<h3>${esc(rh)}</h3>` + rel.slice(0, 3).map(e => `<div class="also"><b>${esc(e.ylab)}</b> · ${esc(e.title)}<br><small>${esc(e.place)}</small></div>`).join("") });
   }

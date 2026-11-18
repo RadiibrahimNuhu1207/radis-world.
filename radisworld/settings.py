@@ -112,3 +112,6 @@ YOUTUBE_API_KEY = env("YOUTUBE_API_KEY", "")
 # Large uploads (audiobook chapters, comic pages)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 50 * 1024 * 1024
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
+
+OPENAI_API_KEY = env("OPENAI_API_KEY", "")
+OPENAI_IMAGE_MODEL = env("OPENAI_IMAGE_MODEL", "gpt-image-1")
