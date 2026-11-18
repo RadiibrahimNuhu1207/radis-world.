@@ -1,0 +1,23 @@
+# secrets — never commit
+.env
+vapid_private.pem
+
+# local data
+db.sqlite3
+media/
+staticfiles/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# video tool outputs
+tools/video/out/
+tools/video/*.wav
+tools/video/countries.geojson
+tools/video/lkh.xml
+tools/sfx_out/
+
+.DS_Store

@@ -1,0 +1,6 @@
+# Only for making videos on your own computer (not needed on PythonAnywhere)
+numpy>=1.26
+scipy>=1.11
+Pillow>=10
+shapely>=2.0
+# also install ffmpeg:  brew install ffmpeg

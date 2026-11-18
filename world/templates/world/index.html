@@ -1,0 +1,899 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Radi's World</title>
+<meta name="description" content="Stories, history, audiobooks and comics by Radi the Storyteller.">
+<meta name="theme-color" content="#0B0F1A">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="{% static 'world/icons/icon-192.png' %}">
+<link rel="apple-touch-icon" href="{% static 'world/icons/icon-192.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0F1A; --s1:#121827; --s2:#1A2234; --s3:#243049; --line:rgba(167,179,201,.15);
+  --ink:#F4F8FF; --mist:#A7B3C9; --dim:#6F7C95; --blue:#4DA3FF; --blue-2:#2F7FD9; --gold:#F2B84B;
+  --sans:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Playfair Display",Georgia,serif; --serif:"EB Garamond",Georgia,serif;
+  --paper:#F1E5C8; --p-ink:#2E2116; --p-ink-2:#6B5640; --p-red:#8B3A1F; --p-line:rgba(46,33,22,.2);
+  --r:12px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+body.ar{--sans:"Noto Kufi Arabic",system-ui,sans-serif;--display:"Amiri",serif;--serif:"Amiri",serif}
+body.ko{--sans:"Noto Sans KR",system-ui,sans-serif;--display:"Noto Serif KR",serif;--serif:"Noto Serif KR",serif}
+body.ja{--sans:"Noto Sans JP",system-ui,sans-serif;--display:"Noto Serif JP",serif;--serif:"Noto Serif JP",serif}
+body.zh{--sans:"Noto Sans SC",system-ui,sans-serif;--display:"Noto Serif SC",serif;--serif:"Noto Serif SC",serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{padding:0 clamp(16px,4vw,48px)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:14px;padding:10px clamp(16px,4vw,48px);
+  background:linear-gradient(var(--bg) 55%, rgba(11,15,26,.0));backdrop-filter:blur(6px)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px;letter-spacing:-.01em;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{color:var(--gold);font-weight:800}
+.nav{display:flex;gap:4px;margin-inline-start:12px}
+.nav a{padding:7px 12px;border-radius:999px;color:var(--mist);font-weight:600;font-size:15px}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);background:var(--s2)}
+.tools{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
+.search{background:var(--s1);border:1px solid var(--line);border-radius:999px;padding:8px 14px;width:220px;color:var(--ink);font:inherit;font-size:15px}
+.search::placeholder{color:var(--dim)}
+.icon-btn{width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--s1);cursor:pointer;display:grid;place-items:center;font-size:17px}
+.lang-sel{background:var(--s1);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+@media (max-width:980px){ .nav{display:none} }
+@media (max-width:640px){
+  .brand{font-size:18px} .brand svg{width:26px;height:26px}
+  .search{width:110px;padding:7px 11px}
+  .lang-sel{max-width:92px}
+  .top .opt{display:none}
+}
+@media (max-width:430px){ .top{gap:8px} .brand span{font-size:16px} .search{width:84px} .lang-sel{max-width:66px;padding:7px 6px} .icon-btn{width:34px;height:34px} }
+
+/* bottom tabs (phone + tablet) */
+.tabs{position:fixed;inset:auto 0 0 0;z-index:45;display:none;justify-content:space-around;
+  background:rgba(18,24,39,.96);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));backdrop-filter:blur(10px)}
+.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;font-weight:600;color:var(--dim);padding:4px 6px;min-width:58px}
+.tabs a i{font-style:normal;font-size:20px;line-height:1.1;filter:grayscale(1) brightness(1.4);opacity:.75}
+.tabs a.on{color:var(--ink)} .tabs a.on i{filter:none;opacity:1}
+@media (max-width:980px){ .tabs{display:flex} }
+@media (min-width:981px){ body{padding-bottom:40px} }
+
+/* hero */
+.hero{position:relative;min-height:min(74vh,640px);display:flex;align-items:flex-end;margin-top:-58px;overflow:hidden}
+.hero-yr{position:absolute;inset-inline-end:clamp(10px,5vw,70px);top:90px;font-family:var(--display);font-weight:900;font-size:clamp(90px,17vw,260px);line-height:1;color:var(--gold);opacity:.22;z-index:1;pointer-events:none}
+.hero-in{z-index:2}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 30%}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg, rgba(11,15,26,.95) 0%, rgba(11,15,26,.6) 45%, rgba(11,15,26,.1) 100%),
+             linear-gradient(0deg, var(--bg) 0%, rgba(11,15,26,0) 45%)}
+[dir=rtl] .hero-bg::after{background:linear-gradient(270deg, rgba(11,15,26,.95) 0%, rgba(11,15,26,.6) 45%, rgba(11,15,26,.1) 100%),
+             linear-gradient(0deg, var(--bg) 0%, rgba(11,15,26,0) 45%)}
+.hero-in{position:relative;padding:120px clamp(16px,4vw,48px) 36px;max-width:760px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(34px,5.4vw,64px);line-height:1.05;margin:10px 0 12px;letter-spacing:-.01em}
+.hero p{color:var(--mist);font-size:clamp(16px,1.6vw,19px);max-width:56ch;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:15.5px;
+  background:var(--blue);color:#06101F;transition:transform .15s, background .15s}
+.btn:hover{background:#6DB5FF}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:rgba(244,248,255,.08);color:var(--ink);border:1px solid rgba(244,248,255,.22)}
+.btn.ghost:hover{background:rgba(244,248,255,.16)}
+.btn.gold{background:var(--gold);color:#1B1305}
+.btn.sm{padding:8px 14px;font-size:14px}
+
+/* rows */
+.row{margin:30px 0 6px}
+.row-h{display:flex;align-items:baseline;gap:12px;padding:0 clamp(16px,4vw,48px);margin-bottom:12px;cursor:pointer;width:max-content;max-width:100%}
+.row-h h2{font-size:clamp(19px,2vw,24px);font-weight:800;letter-spacing:-.01em}
+.row-h span{color:var(--blue);font-weight:700;font-size:14px;white-space:nowrap;opacity:.85;transition:opacity .15s, transform .15s}
+.row-h:hover span{opacity:1;transform:translateX(3px)}
+.row-sub{color:var(--mist);font-size:14.5px;padding:0 clamp(16px,4vw,48px);margin:-6px 0 12px}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px clamp(16px,4vw,48px) 14px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track > *{scroll-snap-align:start;flex:none}
+.empty{color:var(--mist);background:var(--s1);border:1px dashed var(--line);border-radius:var(--r);padding:18px 20px;max-width:520px}
+
+/* cards */
+.card{display:block;background:none;border:0;padding:0;cursor:pointer;text-align:start;width:min(64vw,280px)}
+.card .art{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:var(--s2);
+  box-shadow:0 0 0 1px var(--line);transition:transform .2s, box-shadow .2s}
+.card:hover .art{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(77,163,255,.5), 0 14px 30px rgba(0,0,0,.45)}
+.card .art img{width:100%;height:100%;object-fit:cover}
+.card .cap{padding:9px 2px 0}
+.card .cap b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:700;font-size:15.5px;line-height:1.3}
+.card .cap small{display:block;color:var(--mist);font-size:13.5px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.tall{width:min(42vw,190px)} .card.tall .art{aspect-ratio:2/3}
+.card.sq .play,.card.tall .play{inset:8px 8px auto auto}
+.soon.top{inset:0 0 auto 0;background:linear-gradient(rgba(0,0,0,.8),transparent)}
+.card.sq{width:min(44vw,200px)} .card.sq .art{aspect-ratio:1/1}
+.tag{position:absolute;top:8px;inset-inline-start:8px;background:rgba(11,15,26,.78);color:var(--ink);font-size:11.5px;font-weight:700;
+  border-radius:999px;padding:3px 9px;letter-spacing:.03em}
+.tag.gold{background:var(--gold);color:#1B1305}
+.play{position:absolute;inset:auto 8px 8px auto;width:34px;height:34px;border-radius:50%;background:rgba(11,15,26,.75);display:grid;place-items:center;font-size:13px}
+[dir=rtl] .play{inset:auto auto 8px 8px}
+/* history "plate" art (no image needed, works in every language) */
+.plate{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;overflow:hidden}
+.plate::before{content:"";position:absolute;inset:0;background:var(--pg, linear-gradient(135deg,#1D2638,#0B0F1A))}
+.plate::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 9px);mix-blend-mode:screen}
+.plate .yr{position:relative;font-family:var(--display);font-weight:900;font-size:clamp(30px,4vw,42px);line-height:1;color:var(--gold);
+  text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.plate .rg{position:relative;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,248,255,.75);margin-top:4px}
+.plate .glyph{position:absolute;top:10px;inset-inline-end:12px;font-size:30px;opacity:.55}
+.card .art img + .yrb{position:absolute;inset:auto auto 8px 10px;font-family:var(--display);font-weight:900;font-size:24px;color:var(--gold);text-shadow:0 2px 10px #000}
+
+/* era tiles */
+.era{width:min(60vw,240px);aspect-ratio:16/10;border-radius:var(--r);border:0;cursor:pointer;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:14px;text-align:start;color:var(--ink);background:var(--eg)}
+.era b{font-size:19px;font-weight:800;position:relative}
+.era small{color:rgba(244,248,255,.75);position:relative}
+.era i{position:absolute;top:8px;inset-inline-end:12px;font-style:normal;font-size:44px;opacity:.5}
+
+/* pages */
+.view{display:none}
+.view.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.page-h{padding:26px clamp(16px,4vw,48px) 6px}
+.page-h h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.02em}
+.page-h p{color:var(--mist);max-width:62ch;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(44vw,230px),1fr));gap:22px 16px;padding:14px clamp(16px,4vw,48px) 20px}
+.grid .card{width:auto}
+.grid.tall{grid-template-columns:repeat(auto-fill,minmax(min(40vw,170px),1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--s1);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:14.5px;color:var(--mist)}
+.chip:hover{color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;padding:12px clamp(16px,4vw,48px)}
+.filters label{color:var(--dim);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-inline-end:6px}
+.sel{background:var(--s1);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:15px}
+.datebar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 clamp(16px,4vw,48px);padding:14px 16px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r)}
+.datebar .lbl{font-weight:700;margin-inline-end:6px}
+.era-h{display:flex;align-items:center;gap:12px;padding:18px clamp(16px,4vw,48px) 0;color:var(--gold);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.era-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg, rgba(242,184,75,.5), transparent)}
+[dir=rtl] .era-h::after{background:linear-gradient(270deg, rgba(242,184,75,.5), transparent)}
+.yt-band{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin:14px clamp(16px,4vw,48px) 0;padding:16px 20px;border-radius:var(--r);
+  background:linear-gradient(110deg, rgba(77,163,255,.18), rgba(242,184,75,.10));border:1px solid var(--line)}
+
+/* settings */
+.panel{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin:16px clamp(16px,4vw,48px) 0;max-width:780px}
+.panel h2{font-size:20px;margin-bottom:4px}
+.panel p{color:var(--mist);margin-bottom:12px;font-size:15px}
+.note{font-size:14px;color:var(--mist);border-inline-start:3px solid var(--gold);padding-inline-start:10px;margin-top:12px}
+
+/* sheet */
+.sheet{position:fixed;inset:0;z-index:50;display:none;background:rgba(5,8,14,.72);overflow-y:auto;padding:28px 12px;backdrop-filter:blur(4px)}
+.sheet.on{display:block}
+.sheet-in{max-width:1080px;margin:0 auto;background:var(--s1);border-radius:16px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
+.sheet-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.close{border:1px solid var(--line);background:var(--s2);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:18px;flex:none;margin-inline-start:auto}
+.ratio{display:flex;gap:4px;background:var(--s2);border-radius:999px;padding:3px}
+.ratio button{border:0;background:transparent;border-radius:999px;padding:5px 12px;cursor:pointer;font-weight:600;font-size:14px;color:var(--mist)}
+.ratio button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.stage{background:#000;display:flex;justify-content:center}
+.frame{position:relative;width:100%;max-height:72vh;background:#000}
+.frame video,.frame img,.frame iframe{width:100%;height:100%;display:block;object-fit:contain;border:0;background:#000}
+.frame[data-r="9x16"]{aspect-ratio:9/16;width:auto;height:72vh;max-width:100%}
+.frame[data-r="16x9"]{aspect-ratio:16/9}
+.frame .plate .yr{font-size:clamp(60px,12vw,140px)}
+.soon{position:absolute;inset:auto 0 0 0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:var(--ink);text-align:center;font-size:15px}
+.sheet-body{padding:22px clamp(16px,4vw,40px) 32px;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:34px}
+.sheet-body h2{font-family:var(--display);font-size:clamp(28px,3.4vw,42px);line-height:1.1;margin:6px 0}
+.sheet-body .yr{font-family:var(--display);font-weight:900;color:var(--gold);font-size:46px;line-height:1}
+.sheet-body .meta{color:var(--mist)}
+.sheet-body .txt{font-family:var(--serif);font-size:20px;line-height:1.6;max-width:62ch;margin-top:16px;white-space:pre-line;color:#E3E9F5}
+.side h3{font-size:16px;margin-bottom:8px;color:var(--mist)}
+.mini{display:flex;gap:10px;align-items:center;width:100%;background:none;border:0;border-top:1px solid var(--line);padding:9px 0;text-align:start;cursor:pointer;color:var(--ink)}
+.mini b{color:var(--gold);font-family:var(--display);flex:none}
+.mini img{width:86px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;flex:none}
+.mini span{font-size:14.5px;line-height:1.3}
+@media (max-width:760px){
+  .sheet{padding:0}
+  .sheet-in{border-radius:0;min-height:100%}
+  .sheet-body{grid-template-columns:1fr}
+  .frame[data-r="9x16"]{height:70vh}
+}
+/* narration */
+.narr{margin-top:18px;background:var(--s2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;max-width:620px}
+.narr h4{font-size:15px;margin-bottom:10px;display:flex;gap:8px;align-items:center}
+.narr .row2{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.narr .chip.rec::after{content:"●";color:var(--gold);margin-inline-start:6px;font-size:10px;vertical-align:middle}
+.narr .src{font-size:13.5px;color:var(--mist);margin-top:8px}
+.narr .other{margin-top:8px;font-size:13.5px;color:var(--mist)}
+.narr .other button{background:none;border:0;color:var(--blue);cursor:pointer;font-weight:700;padding:0 4px}
+.bar{height:4px;background:var(--s3);border-radius:4px;margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--gold))}
+/* audiobook */
+.ab{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;padding:6px clamp(16px,4vw,40px) 32px}
+.ab .cover{border-radius:var(--r);overflow:hidden;aspect-ratio:1;background:var(--s2);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.ab .cover img{width:100%;height:100%;object-fit:cover}
+.ab h2{font-family:var(--display);font-size:clamp(26px,3vw,38px);line-height:1.1}
+.ab audio{width:100%;margin-top:16px}
+.ch{display:flex;justify-content:space-between;gap:12px;width:100%;background:none;border:0;border-top:1px solid var(--line);padding:11px 4px;cursor:pointer;text-align:start;color:var(--ink)}
+.ch.on{color:var(--blue);font-weight:700}
+.ch small{color:var(--mist)}
+@media (max-width:760px){ .ab{grid-template-columns:1fr} .ab .cover{max-width:240px} }
+.gen-cover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:16px;
+  background:radial-gradient(circle at 80% 15%, rgba(77,163,255,.35), transparent 50%), linear-gradient(160deg,#1D2638,#0B0F1A)}
+.gen-cover b{font-family:var(--display);font-size:22px;line-height:1.1}
+.gen-cover small{color:var(--gold);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+
+/* onboarding + toast */
+.onb{position:fixed;inset:0;z-index:90;background:rgba(5,8,14,.85);display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(6px)}
+.onb.on{display:flex}
+.onb-in{background:var(--s1);border-radius:18px;border:1px solid var(--line);max-width:540px;width:100%;padding:30px;text-align:center}
+.onb-in svg{width:64px;height:64px;margin:0 auto 10px}
+.onb-in h2{font-size:30px;font-weight:800}
+.onb-in h2 b{color:var(--gold)}
+.onb-in p{color:var(--mist);margin:8px 0 18px}
+.onb-in .chips{justify-content:center}
+.toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;font-weight:600;
+  border-radius:999px;z-index:95;opacity:0;pointer-events:none;transition:opacity .25s;max-width:90vw;text-align:center}
+.toast.on{opacity:1}
+footer{color:var(--dim);font-size:13.5px;padding:40px clamp(16px,4vw,48px) 20px}
+
+/* ---------- book reader (vintage paper kept on purpose) ---------- */
+.book-ov{position:fixed;inset:0;z-index:80;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  padding:16px;background:radial-gradient(ellipse at 50% 40%, #1D2638 0%, #05070C 78%)}
+.book-ov.on{display:flex}
+.book-bar{display:flex;gap:10px;align-items:center;color:var(--mist);font-size:15px}
+.book-bar button{background:rgba(244,248,255,.08);color:var(--ink);border:1px solid rgba(244,248,255,.22);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600}
+.book-bar button:disabled{opacity:.35;cursor:default}
+.book{position:relative;perspective:2200px;width:min(92vw, calc((100vh - 140px) * 1.36));aspect-ratio:1.36/1}
+.book.single{width:min(92vw, calc((100vh - 140px) * 0.68));aspect-ratio:.68/1}
+.book .half{position:absolute;top:0;bottom:0;width:50%}
+.book.single .half{width:100%}
+.book .h-left{left:0}.book .h-right{right:0}
+.book.single .h-left{display:none}
+.pg{position:absolute;inset:0;overflow:hidden;padding:clamp(18px,4%,40px) clamp(18px,7%,52px);display:flex;flex-direction:column;
+  background:var(--paper);color:var(--p-ink);font-family:var(--serif);
+  background-image:radial-gradient(ellipse at 50% 50%, rgba(255,250,235,.55) 0%, rgba(0,0,0,0) 65%);
+  box-shadow:inset 0 0 50px rgba(110,80,45,.25)}
+.h-left .pg{border-radius:6px 0 0 6px;background-image:radial-gradient(ellipse at 50% 50%, rgba(255,250,235,.55) 0%, rgba(0,0,0,0) 65%), linear-gradient(to left, rgba(80,55,30,.28), rgba(0,0,0,0) 9%)}
+.h-right .pg{border-radius:0 6px 6px 0;background-image:radial-gradient(ellipse at 50% 50%, rgba(255,250,235,.55) 0%, rgba(0,0,0,0) 65%), linear-gradient(to right, rgba(80,55,30,.28), rgba(0,0,0,0) 9%)}
+.book.single .h-right .pg{border-radius:4px 6px 6px 4px}
+.book::after{content:"";position:absolute;inset:-10px;z-index:-1;border-radius:10px;background:#141B2B;box-shadow:0 0 0 1px rgba(242,184,75,.35), 0 30px 60px rgba(0,0,0,.65)}
+.pg .pn{margin-top:auto;text-align:center;font-size:14px;color:var(--p-ink-2);padding-top:8px}
+.pg.cover{justify-content:center;align-items:center;text-align:center;background:#0B0F1A;color:var(--ink);font-family:var(--sans);
+  background-image:radial-gradient(ellipse at 50% 35%, rgba(77,163,255,.22), rgba(0,0,0,0) 65%);
+  box-shadow:inset 0 0 0 12px #0B0F1A, inset 0 0 0 13px var(--gold), inset 0 0 0 19px #0B0F1A, inset 0 0 0 20px rgba(242,184,75,.5)}
+.pg.cover svg{width:clamp(30px,5vh,46px);height:auto;margin-bottom:8px}
+.pg.cover .c-eb{letter-spacing:.2em;font-weight:700;font-size:clamp(11px,1.5vh,15px);color:var(--mist);text-transform:uppercase}
+.pg.cover .c-yr{font-family:var(--display);font-weight:900;font-size:clamp(50px,10vh,112px);color:var(--gold);line-height:1;margin:14px 0}
+.pg.cover h2{font-family:var(--display);font-size:clamp(22px,3.5vh,38px);max-width:16ch;line-height:1.15}
+.pg.cover .c-by{margin-top:22px;font-style:italic;color:var(--mist)}
+.pg h3{font-family:var(--display);font-size:clamp(20px,3vh,30px);margin-bottom:10px;color:var(--p-red)}
+.pg p{margin:0 0 .7em;font-size:clamp(15px,2.3vh,21px);line-height:1.55;text-align:justify;hyphens:auto}
+.pg p.first::first-letter{float:inline-start;font-family:var(--display);font-weight:900;font-size:3.4em;line-height:.82;margin-top:4px;margin-inline-end:8px;color:var(--p-red)}
+.pg .facts{border-top:1px solid var(--p-line);border-bottom:1px solid var(--p-line);padding:8px 0;margin:6px 0 14px;font-size:clamp(14px,2vh,18px)}
+.pg .facts b{color:var(--p-red)}
+.pg .also{border-top:1px solid var(--p-line);padding:8px 0}
+.pg .also b{font-family:var(--display);color:var(--p-red)}
+.pg.end{justify-content:center;text-align:center;align-items:center}
+.pg.blank{background-color:#EDE0C2}
+.pg.img{padding:0;background:#0B0F1A}
+.pg.img img{width:100%;height:100%;object-fit:contain}
+.book.single .pg p{text-align:start;hyphens:none}
+.pg[lang="ja"] p,.pg[lang="zh"] p,.pg[lang="ko"] p{text-align:start}
+.leaf{position:absolute;top:0;bottom:0;width:50%;transform-style:preserve-3d;z-index:5}
+.book.single .leaf{width:100%}
+.leaf .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.leaf .face.back{transform:rotateY(180deg)}
+.leaf .shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right, rgba(0,0,0,.25), rgba(0,0,0,0) 60%);opacity:0}
+.book-hint{color:var(--dim);font-size:13.5px}
+@media (max-width:760px){ .book-bar{font-size:13.5px;flex-wrap:wrap;justify-content:center} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="bolt-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F8FF"/><stop offset=".45" stop-color="#4DA3FF"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#141B2B" stroke="#F2B84B" stroke-opacity=".55" stroke-width="2"/>
+      <path d="M36 8 L17 36 H30 L25 56 L47 25 H33 Z" fill="url(#bolt-g)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <a class="brand" href="#home" aria-label="Radi's World"><svg><use href="#logo"/></svg><span>Radi's <b>World</b></span></a>
+  <nav class="nav" id="nav">
+    <a href="#home" data-i="home"></a><a href="#stories" data-i="stories"></a><a href="#history" data-i="history"></a>
+    <a href="#audiobooks" data-i="audiobooks"></a><a href="#comics" data-i="comics"></a>
+  </nav>
+  <div class="tools">
+    <input class="search" id="q" type="search" data-ph="search" aria-label="Search">
+    <a class="icon-btn opt" href="#mylist" data-title="mylist">♡</a>
+    <a class="icon-btn" href="#settings" data-title="settings">⚙</a>
+    <select class="lang-sel" id="lang-sel" aria-label="Language"></select>
+  </div>
+</header>
+
+<main>
+  <section class="view" id="v-home"></section>
+  <section class="view" id="v-stories"></section>
+  <section class="view" id="v-history"></section>
+  <section class="view" id="v-audiobooks"></section>
+  <section class="view" id="v-comics"></section>
+  <section class="view" id="v-list"></section>
+  <section class="view" id="v-mylist"></section>
+  <section class="view" id="v-settings"></section>
+</main>
+<footer>© Radi the Storyteller · Radi's World</footer>
+
+<nav class="tabs" id="tabs">
+  <a href="#home"><i>⌂</i><span data-i="home"></span></a>
+  <a href="#stories"><i>▶</i><span data-i="stories_short"></span></a>
+  <a href="#history"><i>⏳</i><span data-i="history"></span></a>
+  <a href="#audiobooks"><i>🎧</i><span data-i="audio_short"></span></a>
+  <a href="#comics"><i>💥</i><span data-i="comics"></span></a>
+  <a href="#mylist"><i>♡</i><span data-i="mylist"></span></a>
+</nav>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="sheet-in" id="sheet-in"></div></div>
+
+<div class="book-ov" id="book-ov" role="dialog" aria-modal="true">
+  <div class="book-bar">
+    <button id="bk-close"></button><button id="bk-sound" aria-pressed="true"></button>
+  </div>
+  <div class="book" id="book"><div class="half h-left" id="bk-left"></div><div class="half h-right" id="bk-right"></div></div>
+  <div class="book-bar"><button id="bk-prev"></button><span id="bk-pos"></span><button id="bk-next"></button></div>
+  <div class="book-hint" data-i="book_hint"></div>
+</div>
+
+<div class="onb" id="onb"><div class="onb-in">
+  <svg><use href="#logo"/></svg>
+  <h2><span data-i="welcome"></span> Radi's <b>World</b></h2>
+  <p data-i="onb_p"></p>
+  <div class="chips" id="onb-langs"></div>
+  <div class="btns" style="justify-content:center"><button class="btn" id="onb-go" data-i="start"></button></div>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+
+{{ data|json_script:"app-data" }}
+<script src="{% static 'world/i18n.js' %}"></script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("app-data").textContent);
+const VAPID = "{{ vapid_public_key }}";
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem("rw:" + k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem("rw:" + k, JSON.stringify(v)); }catch(e){} }
+};
+let LANG = store.get("lang", null) || "en";
+const state = {
+  topics: store.get("topics", DATA.topics.slice()),
+  voice: store.get("voice", "female"),
+  ratio: store.get("ratio", "auto"),
+  list: store.get("list", []),
+  hFilter: { era: "all", region: "all", topic: "all" },
+  kind: "all",
+  current: null
+};
+function t(k, v){ let s = (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+  if(v) for(const [a, b] of Object.entries(v)) s = s.split("{" + a + "}").join(b); return s; }
+function esc(s){ return String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function toast(m){ const el = $("#toast"); el.textContent = m; el.classList.add("on"); clearTimeout(el._h); el._h = setTimeout(() => el.classList.remove("on"), 2600); }
+function csrf(){ const m = document.cookie.match(/csrftoken=([^;]+)/); return m ? m[1] : ""; }
+
+/* ---------- content model ---------- */
+const REGION_STYLE = {
+  tanzania:["🌄","linear-gradient(140deg,#123B2E 0%,#0B0F1A 75%)"], east_africa:["⛵","linear-gradient(140deg,#0E3346 0%,#0B0F1A 75%)"],
+  africa:["🌍","linear-gradient(140deg,#4A2C12 0%,#0B0F1A 75%)"], europe:["🏛","linear-gradient(140deg,#262E4A 0%,#0B0F1A 75%)"],
+  asia:["⛩","linear-gradient(140deg,#4A1B22 0%,#0B0F1A 75%)"], middle_east:["🕌","linear-gradient(140deg,#4A3A12 0%,#0B0F1A 75%)"],
+  americas:["🗽","linear-gradient(140deg,#1B3A4A 0%,#0B0F1A 75%)"], oceania:["🌊","linear-gradient(140deg,#0D3C44 0%,#0B0F1A 75%)"],
+  world:["🌐","linear-gradient(140deg,#1D2638 0%,#0B0F1A 75%)"], space:["🚀","linear-gradient(140deg,#24154A 0%,#05070C 75%)"]
+};
+const ERAS = [["ancient",-1e6,500,"🏺","linear-gradient(140deg,#5A3A15,#0B0F1A)"],["medieval",500,1500,"🏰","linear-gradient(140deg,#3B2A4A,#0B0F1A)"],
+  ["early",1500,1800,"⚓","linear-gradient(140deg,#123A4A,#0B0F1A)"],["c19",1800,1900,"🚂","linear-gradient(140deg,#4A2414,#0B0F1A)"],
+  ["c20",1900,2000,"✈","linear-gradient(140deg,#14324A,#0B0F1A)"],["c21",2000,1e6,"🛰","linear-gradient(140deg,#24154A,#0B0F1A)"]];
+const eraOf = y => ERAS.find(e => y >= e[1] && y < e[2])[0];
+let H = [], V = [], A = [], C = [], byKey = {};
+const fmt = (o, d) => new Intl.DateTimeFormat(LANG_LOCALE[LANG], Object.assign({ timeZone: "UTC" }, o)).format(d);
+const dayLabel = (day, m) => fmt({ day: "numeric", month: "long" }, new Date(Date.UTC(2000, m - 1, day)));
+const monthName = m => fmt({ month: "long" }, new Date(Date.UTC(2000, m - 1, 1)));
+const fullDate = iso => iso ? fmt({ day: "numeric", month: "short", year: "numeric" }, new Date(iso + "T00:00:00Z")) : "";
+function yearLabel(e){ let y = e.y < 0 ? t("bce", { y: -e.y }) : String(e.y); return e.circa ? t("circa", { y }) : y; }
+function build(){
+  H = DATA.history.map(e => {
+    const L = e.tr[LANG] || e.tr.en || Object.values(e.tr)[0];
+    const [dd, mm] = e.d ? e.d.split("-").map(Number) : [null, null];
+    return Object.assign({}, e, { key: "h:" + e.id, type: "h", title: L.title, place: L.place, text: L.text, translated: !!e.tr[LANG],
+      day: dd, date: e.d ? dayLabel(dd, mm) : "", ylab: yearLabel(e), era: eraOf(e.y),
+      img: e.h169 || e.h916, video: !!(e.v169 || e.v916) });
+  }).sort((a, b) => a.y - b.y);
+  V = DATA.videos.map(v => Object.assign({}, v, { key: "v:" + v.id, type: "v" })).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  A = DATA.audiobooks.map(a => Object.assign({}, a, { key: "a:" + a.id, type: "a" }));
+  C = DATA.comics.map(c => Object.assign({}, c, { key: "c:" + c.id, type: "c" }));
+  byKey = {}; [...H, ...V, ...A, ...C].forEach(x => byKey[x.key] = x);
+}
+const regName = r => t("reg_" + r), catName = c => t("cat_" + c);
+const ytChannel = () => { const c = (DATA.channel || "").trim(); if(!c) return "";
+  if(/^https?:/.test(c)) return c; if(c.startsWith("@")) return "https://www.youtube.com/" + c;
+  if(/^UC[\w-]{20,}$/.test(c)) return "https://www.youtube.com/channel/" + c; return "https://www.youtube.com/@" + c; };
+
+/* ---------- cards ---------- */
+function plate(e){ const [g, bg] = REGION_STYLE[e.region] || REGION_STYLE.world;
+  return `<div class="plate" style="--pg:${bg}"><span class="glyph">${g}</span><span class="yr">${esc(e.ylab)}</span><span class="rg">${esc(regName(e.region))}</span></div>`; }
+function genCover(x, label){ return `<div class="gen-cover"><small>${esc(label)}</small><b>${esc(x.title)}</b></div>`; }
+function card(x){
+  if(!x) return "";
+  if(x.type === "h") return `<button class="card" data-open="${x.key}"><div class="art">${plate(x)}
+    ${x.video ? `<span class="play">▶</span>` : ""}</div><div class="cap"><b>${esc(x.title)}</b><small>${esc([x.date, x.place].filter(Boolean).join(" · "))}</small></div></button>`;
+  if(x.type === "v") return `<button class="card" data-open="${x.key}"><div class="art"><img loading="lazy" src="${x.thumb}" alt="">
+    <span class="tag">${esc(t("k_" + x.kind))}</span><span class="play">▶</span></div><div class="cap"><b>${esc(x.title)}</b><small>${esc(fullDate(x.date))}</small></div></button>`;
+  if(x.type === "a") return `<button class="card sq" data-open="${x.key}"><div class="art">${x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x, t("tag_audio"))}
+    <span class="play">🎧</span></div><div class="cap"><b>${esc(x.title)}</b><small>${esc(x.author)} · ${esc(LANG_NAMES[x.lang] || "")}</small></div></button>`;
+  if(x.type === "c") return `<button class="card tall" data-open="${x.key}"><div class="art">${x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x, t("tag_comic"))}</div>
+    <div class="cap"><b>${esc(x.title)}</b><small>${esc(t("pages", { n: x.pages.length }))}</small></div></button>`;
+  return "";
+}
+
+/* ---------- lists: every row title opens its own "See all" page ---------- */
+const now = new Date(), TODAY = { d: now.getDate(), m: now.getMonth() + 1 };
+function onThisDay(day, m){
+  const exact = H.filter(e => e.day === day && e.m === m);
+  if(exact.length) return { title: t("on_this_day") + " · " + dayLabel(day, m), items: exact };
+  const month = H.filter(e => e.m === m).sort((a, b) => Math.abs(a.day - day) - Math.abs(b.day - day));
+  if(month.length) return { title: t("this_month") + " · " + monthName(m), sub: t("no_date", { d: dayLabel(day, m), m: monthName(m) }), items: month };
+  const ahead = e => ((e.m - m) * 31 + (e.day - day) + 372) % 372;
+  return { title: t("nearest"), items: H.filter(e => e.d).sort((a, b) => ahead(a) - ahead(b)).slice(0, 12) };
+}
+const LISTS = {
+  today: () => onThisDay(TODAY.d, TODAY.m),
+  stories: () => ({ title: t("latest_stories"), items: V, empty: t("empty_stories") }),
+  audiobooks: () => ({ title: t("audiobooks"), items: A, empty: t("empty_audio") }),
+  comics: () => ({ title: t("comics"), items: C, empty: t("empty_comics") }),
+  foryou: () => ({ title: t("for_you"), items: H.filter(e => state.topics.includes(e.cat)).slice().reverse() }),
+  featured: () => ({ title: t("featured"), items: [...V, ...H, ...A, ...C].filter(x => x.featured) }),
+  continue: () => ({ title: t("continue"), items: A.filter(a => store.get("ab:" + a.id, null)) }),
+  history: () => ({ title: t("history"), items: H })
+};
+ERAS.forEach(([k]) => LISTS["era-" + k] = () => ({ title: t("era_" + k), items: H.filter(e => e.era === k) }));
+function rowHTML(id, opts = {}){
+  const L = LISTS[id](); if(!L.items.length && !L.empty && !opts.always) return "";
+  const items = L.items.slice(0, opts.max || 14);
+  return `<section class="row"><a class="row-h" href="#list/${id}"><h2>${esc(L.title)}</h2><span>${t("see_all")}</span></a>
+    ${L.sub ? `<div class="row-sub">${esc(L.sub)}</div>` : ""}
+    <div class="track">${items.length ? items.map(card).join("") : `<div class="empty">${esc(L.empty || t("no_match"))}</div>`}</div></section>`;
+}
+
+/* ---------- views ---------- */
+function heroItem(){
+  return V.find(v => v.featured) || onThisDay(TODAY.d, TODAY.m).items.find(e => e.video) || H.find(e => e.featured) || V[0] || H[H.length - 1];
+}
+function renderHome(){
+  const x = heroItem(); let hero = "";
+  if(x){
+    const bg = x.type === "v" ? `https://i.ytimg.com/vi/${x.id}/maxresdefault.jpg` : "";
+    const eb = x.type === "v" ? t("stories") : t("history") + " · " + x.ylab;
+    const desc = x.type === "v" ? x.desc : x.text;
+    hero = `<div class="hero">${x.type === "h" ? `<div class="hero-yr">${esc(x.ylab)}</div>` : ""}<div class="hero-bg" style="${bg ? `background-image:url('${bg}')` : `background:${(REGION_STYLE[x.region] || REGION_STYLE.world)[1]}`}"></div>
+      <div class="hero-in"><div class="eyebrow">⚡ ${esc(eb)}</div><h1>${esc(x.title)}</h1><p>${esc(desc)}</p>
+      <div class="btns"><button class="btn" data-open="${x.key}" data-play="1">${x.type === "v" || x.video ? t("watch") : t("read")}</button>
+      ${x.type === "h" ? `<button class="btn ghost" data-book="${x.key}">${t("read_book")}</button>` : ""}
+      <button class="btn ghost" data-toggle="${x.key}">${inList(x.key) ? t("in_list") : t("add_list")}</button></div></div></div>`;
+  }
+  const eraTiles = `<section class="row"><a class="row-h" href="#history"><h2>${t("by_era")}</h2><span>${t("see_all")}</span></a>
+    <div class="track">${ERAS.map(([k, , , g, bg]) => `<button class="era" style="--eg:${bg}" data-go="#list/era-${k}"><i>${g}</i><b>${esc(t("era_" + k))}</b>
+    <small>${H.filter(e => e.era === k).length} · ${esc(t("history"))}</small></button>`).join("")}</div></section>`;
+  $("#v-home").innerHTML = hero + rowHTML("continue") + rowHTML("today") + rowHTML("stories") + eraTiles
+    + rowHTML("foryou") + rowHTML("audiobooks") + rowHTML("comics");
+}
+function renderStories(){
+  const ch = ytChannel(), kinds = ["all", ...new Set(V.map(v => v.kind))];
+  const items = V.filter(v => state.kind === "all" || v.kind === state.kind);
+  $("#v-stories").innerHTML = `<div class="page-h"><h1>${t("stories")}</h1><p>${t("stories_p")}</p></div>
+    ${ch ? `<div class="yt-band"><b>▶ YouTube · Radi the Storyteller</b><a class="btn gold sm" href="${ch}" target="_blank" rel="noopener">${t("subscribe_yt")}</a></div>` : ""}
+    ${V.length ? `<div class="filters"><div class="chips">${kinds.map(k => `<button class="chip" data-kind="${k}" aria-pressed="${state.kind === k}">${t(k === "all" ? "all" : "k_" + k)}</button>`).join("")}</div></div>` : ""}
+    ${items.length ? `<div class="grid">${items.map(card).join("")}</div>` : `<div class="wrap" style="margin-top:14px"><div class="empty">${t("empty_stories")}</div></div>`}`;
+}
+function renderSimple(id, items, head, p, empty, tall){
+  $("#v-" + id).innerHTML = `<div class="page-h"><h1>${head}</h1><p>${p}</p></div>` +
+    (items.length ? `<div class="grid ${tall ? "tall" : ""}">${items.map(card).join("")}</div>` : `<div class="wrap" style="margin-top:14px"><div class="empty">${empty}</div></div>`);
+}
+let hDate = { d: TODAY.d, m: TODAY.m };
+function renderHistory(){
+  const f = state.hFilter;
+  const opt = (v, l, s) => `<option value="${v}" ${s ? "selected" : ""}>${esc(l)}</option>`;
+  const days = Array.from({ length: 31 }, (_, i) => opt(i + 1, i + 1, i + 1 === hDate.d)).join("");
+  const months = Array.from({ length: 12 }, (_, i) => opt(i + 1, monthName(i + 1), i + 1 === hDate.m)).join("");
+  const od = onThisDay(hDate.d, hDate.m);
+  const list = H.filter(e => (f.era === "all" || e.era === f.era) && (f.region === "all" || e.region === f.region) && (f.topic === "all" || e.cat === f.topic));
+  const groups = ERAS.map(([k]) => [k, list.filter(e => e.era === k)]).filter(g => g[1].length);
+  $("#v-history").innerHTML = `<div class="page-h"><h1>${t("history")}</h1><p>${t("history_p")}</p></div>
+    <div class="datebar"><span class="lbl">📅 ${t("pick_date")}</span>
+      <select class="sel" id="hd-d" aria-label="day">${days}</select><select class="sel" id="hd-m" aria-label="month">${months}</select>
+      <button class="btn ghost sm" id="hd-today">${t("go_today")}</button></div>
+    <section class="row"><a class="row-h" href="#list/date-${hDate.d}-${hDate.m}"><h2>${esc(od.title)}</h2><span>${t("see_all")}</span></a>
+      ${od.sub ? `<div class="row-sub">${esc(od.sub)}</div>` : ""}<div class="track">${od.items.slice(0, 14).map(card).join("")}</div></section>
+    <div class="filters">
+      <div><label>${t("era")}</label><span class="chips" style="display:inline-flex">${["all", ...ERAS.map(e => e[0])].map(k =>
+        `<button class="chip" data-era="${k}" aria-pressed="${f.era === k}">${esc(k === "all" ? t("all") : t("era_" + k))}</button>`).join("")}</span></div>
+      <div><label>${t("region")}</label><select class="sel" id="hf-region">${opt("all", t("all"), f.region === "all")}${DATA.regions.map(r => opt(r, regName(r), f.region === r)).join("")}</select></div>
+      <div><label>${t("topic")}</label><select class="sel" id="hf-topic">${opt("all", t("all"), f.topic === "all")}${DATA.topics.map(c => opt(c, catName(c), f.topic === c)).join("")}</select></div>
+    </div>
+    ${groups.length ? groups.map(([k, es]) => `<div class="era-h">${esc(t("era_" + k))}</div><div class="grid">${es.map(card).join("")}</div>`).join("")
+      : `<div class="wrap"><div class="empty">${t("no_match")}</div></div>`}`;
+  const upd = () => { hDate = { d: +$("#hd-d").value, m: +$("#hd-m").value }; renderHistory(); };
+  $("#hd-d").onchange = upd; $("#hd-m").onchange = upd;
+  $("#hd-today").onclick = () => { hDate = { d: TODAY.d, m: TODAY.m }; renderHistory(); };
+  $("#hf-region").onchange = ev => { f.region = ev.target.value; renderHistory(); };
+  $("#hf-topic").onchange = ev => { f.topic = ev.target.value; renderHistory(); };
+}
+function renderList(id){
+  let L;
+  if(id.startsWith("search:")){
+    const q = decodeURIComponent(id.slice(7)).toLowerCase().trim();
+    const hit = x => [x.title, x.place, x.text, x.desc, x.author, x.ylab, x.type === "h" ? regName(x.region) + " " + catName(x.cat) : ""].join(" ").toLowerCase().includes(q);
+    const items = [...V, ...H, ...A, ...C].filter(hit);
+    L = { title: t("results", { q }), items, empty: t("no_results", { q }) };
+  } else if(id.startsWith("date-")){
+    const [, d, m] = id.split("-").map(Number); L = onThisDay(d, m);
+  } else L = (LISTS[id] || LISTS.history)();
+  const tall = L.items.length && L.items.every(x => x.type === "c");
+  $("#v-list").innerHTML = `<div class="page-h"><a href="javascript:history.back()" style="color:var(--blue);font-weight:700">‹</a>
+    <h1>${esc(L.title)}</h1>${L.sub ? `<p>${esc(L.sub)}</p>` : ""}</div>` +
+    (L.items.length ? `<div class="grid ${tall ? "tall" : ""}">${L.items.map(card).join("")}</div>` : `<div class="wrap"><div class="empty">${esc(L.empty || t("no_match"))}</div></div>`);
+}
+function inList(k){ return state.list.includes(k); }
+function toggleList(k){
+  const on = inList(k); state.list = on ? state.list.filter(x => x !== k) : [k, ...state.list]; store.set("list", state.list);
+  toast(on ? t("removed") : t("added"));
+  $$(`[data-toggle="${k}"]`).forEach(b => b.textContent = inList(k) ? t("in_list") : t("add_list"));
+  if(current === "mylist") renderMyList();
+}
+function renderMyList(){ renderSimple("mylist", state.list.map(k => byKey[k]).filter(Boolean), t("mylist"), "", t("empty_list")); }
+
+/* ---------- settings ---------- */
+function renderSettings(){
+  const ch = (k, v, on, label) => `<button class="chip" data-${k}="${v}" aria-pressed="${on}">${esc(label)}</button>`;
+  $("#v-settings").innerHTML = `<div class="page-h"><h1>${t("settings")}</h1></div>
+    <div class="panel"><h2>${t("lang_h")}</h2><p>${t("lang_p")}</p><div class="chips">${LANGS.map(l => ch("lang", l, l === LANG, LANG_NAMES[l])).join("")}</div></div>
+    <div class="panel"><h2>${t("interests_h")}</h2><div class="chips">${DATA.topics.map(c => ch("topic", c, state.topics.includes(c), catName(c))).join("")}</div></div>
+    <div class="panel"><h2>${t("voice_pref_h")}</h2><div class="chips">${["female", "male", "child"].map(v => ch("voice", v, state.voice === v, t("voice_" + v))).join("")}</div></div>
+    <div class="panel"><h2>${t("ratio_h")}</h2><div class="chips">${[["auto", "r_auto"], ["9x16", "r_v"], ["16x9", "r_h"]].map(([v, k]) => ch("ratio", v, state.ratio === v, t(k))).join("")}</div></div>
+    <div class="panel"><h2>${t("notify_h")}</h2><p>${t("notify_p")}</p>
+      <button class="btn" id="push-btn">${store.get("push", false) ? t("notify_on") : t("notify_btn")}</button>
+      <div class="note">${t("notify_note")}</div></div>`;
+  $("#push-btn").onclick = enablePush;
+}
+async function enablePush(){
+  try{
+    if(!("serviceWorker" in navigator) || !("PushManager" in window) || !VAPID) return toast(t("err_unsupported"));
+    const perm = await Notification.requestPermission(); if(perm !== "granted") return toast(t("err_denied"));
+    const reg = await navigator.serviceWorker.ready;
+    const sub = (await reg.pushManager.getSubscription()) || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToU8(VAPID) });
+    await sendSub(sub); store.set("push", true); $("#push-btn").textContent = t("notify_on");
+  }catch(e){ toast(t("err_generic")); }
+}
+async function sendSub(sub){
+  const r = await fetch("/api/subscribe/", { method: "POST", headers: { "Content-Type": "application/json", "X-CSRFToken": csrf() },
+    body: JSON.stringify({ subscription: sub.toJSON(), topics: state.topics, lang: LANG }) });
+  if(!r.ok) throw new Error("subscribe failed");
+}
+async function resyncPush(){ try{ if(!store.get("push", false)) return; const reg = await navigator.serviceWorker.ready;
+  const sub = await reg.pushManager.getSubscription(); if(sub) await sendSub(sub); }catch(e){} }
+function b64ToU8(s){ const p = "=".repeat((4 - s.length % 4) % 4); const b = atob((s + p).replace(/-/g, "+").replace(/_/g, "/")); return Uint8Array.from(b, c => c.charCodeAt(0)); }
+
+/* ---------- language ---------- */
+const loadedFonts = {};
+function loadFont(l){ const f = LANG_FONT[l]; if(!f || loadedFonts[l]) return; loadedFonts[l] = 1;
+  const k = document.createElement("link"); k.rel = "stylesheet"; k.href = `https://fonts.googleapis.com/css2?family=${f[1]}&family=${f[3]}&display=swap`; document.head.appendChild(k); }
+function applyStatic(){
+  document.documentElement.lang = LANG; document.documentElement.dir = LANG === "ar" ? "rtl" : "ltr";
+  document.body.className = LANG; loadFont(LANG);
+  $$("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  $$("[data-ph]").forEach(el => el.placeholder = t(el.dataset.ph));
+  $$("[data-title]").forEach(el => { el.title = t(el.dataset.title); el.setAttribute("aria-label", t(el.dataset.title)); });
+  $("#lang-sel").innerHTML = LANGS.map(l => `<option value="${l}" ${l === LANG ? "selected" : ""}>${LANG_NAMES[l]}</option>`).join("");
+  $("#bk-close").textContent = t("book_close"); $("#bk-prev").textContent = t("prev"); $("#bk-next").textContent = t("next"); paintSound();
+}
+function setLang(l){
+  if(!LANGS.includes(l)) return; LANG = l; store.set("lang", l); stopNarration();
+  build(); applyStatic(); rendered = {}; route(); resyncPush();
+  if(state.current && $("#sheet").classList.contains("on")) openItem(state.current);
+}
+
+/* ---------- sheets ---------- */
+const autoRatio = () => (innerWidth >= innerHeight ? "16x9" : "9x16");
+function showSheet(html){ $("#sheet-in").innerHTML = html; $("#sheet").classList.add("on"); document.body.style.overflow = "hidden"; $("#sheet").scrollTop = 0;
+  const c = $("#sheet .close"); c && c.focus({ preventScroll: true }); }
+function closeSheet(){ $$("#sheet video, #sheet audio").forEach(m => m.pause()); stopNarration(); $("#sheet").classList.remove("on");
+  $("#sheet-in").innerHTML = ""; document.body.style.overflow = ""; state.current = null;
+  if(/^#[hvac]-/.test(location.hash)) history.replaceState(null, "", "#" + (current || "home")); }
+const listBtn = k => `<button class="btn ghost" data-toggle="${k}">${inList(k) ? t("in_list") : t("add_list")}</button>`;
+function openItem(k, play){
+  const x = byKey[k]; if(!x) return; state.current = k;
+  if(x.type === "h") openHistory(x, play); else if(x.type === "v") openVideo(x); else if(x.type === "a") openAudio(x); else if(x.type === "c") openBook(k);
+}
+function related(x){
+  const same = H.filter(e => e.d && e.d === x.d && e.id !== x.id);
+  if(same.length) return [t("also_day"), same];
+  return [t("more_of", { c: regName(x.region) }), H.filter(e => e.region === x.region && e.id !== x.id).slice(0, 5)];
+}
+function openHistory(x, play){
+  const [rh, rel] = related(x);
+  showSheet(`<div class="sheet-bar"><div class="ratio" id="sh-ratio">${[["9x16", "r_v"], ["16x9", "r_h"]].map(([r, k]) => `<button data-r="${r}">${t(k)}</button>`).join("")}</div>
+    <button class="close" data-close aria-label="${t("close")}">✕</button></div>
+    <div class="stage"><div class="frame" id="sh-frame"></div></div>
+    <div class="sheet-body"><div>
+      <div class="eyebrow">${[...new Set([catName(x.cat), regName(x.region)])].map(esc).join(" · ")}${x.date ? " · " + esc(x.date) : ""}</div>
+      <div class="yr" style="margin-top:10px">${esc(x.ylab)}</div><h2>${esc(x.title)}</h2><div class="meta">📍 ${esc(x.place)}</div>
+      <div class="btns"><button class="btn gold" data-book="${x.key}">${t("read_book")}</button>${listBtn(x.key)}
+        <span id="sh-dl"></span>
+        <button class="btn ghost sm" id="sh-copy">${t("copy")}</button><button class="btn ghost sm" id="sh-link">${t("share")}</button></div>
+      ${narrPanel(x)}
+      <div class="txt">${esc(x.text)}</div>
+    </div><aside class="side"><h3>${esc(rh)}</h3>${rel.map(e => `<button class="mini" data-open="${e.key}"><b>${esc(e.ylab)}</b><span>${esc(e.title)}</span></button>`).join("")}</aside></div>`);
+  setFrame(state.ratio === "auto" ? autoRatio() : state.ratio, play);
+  $("#sh-ratio").onclick = ev => { const b = ev.target.closest("button"); if(b) setFrame(b.dataset.r); };
+  $("#sh-copy").onclick = () => copy(`${x.title} (${x.ylab})\n${x.place}\n\n${x.text}\n\n— Radi's World\n${location.origin}/history/${x.id}/`);
+  $("#sh-link").onclick = () => copy(`${location.origin}/history/${x.id}/`);
+  wireNarration(x);
+}
+function setFrame(r, play){
+  const x = byKey[state.current]; if(!x) return;
+  $$("#sh-ratio button").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === r));
+  const f = $("#sh-frame"); f.dataset.r = r; const old = f.querySelector("video"), tm = old ? old.currentTime : 0;
+  if(x.video){
+    const src = r === "9x16" ? (x.v916 || x.v169) : (x.v169 || x.v916), pst = r === "9x16" ? (x.h916 || x.h169) : (x.h169 || x.h916);
+    f.innerHTML = `<video controls playsinline preload="metadata" poster="${pst || ""}" src="${src}"></video>`;
+    const v = f.querySelector("video"); if(tm) v.currentTime = tm; if(tm || play) v.play().catch(() => {});
+    $("#sh-dl").innerHTML = `<a class="btn ghost sm" href="${src}" download="${x.id}-${r}.mp4">${t("download")}</a>`;
+  } else {
+    const im = r === "9x16" ? (x.h916 || x.h169) : (x.h169 || x.h916);
+    f.innerHTML = (im ? `<img src="${im}" alt="">` : plate(x)) + `<div class="soon top">${esc(t("video_soon"))}</div>`;
+    $("#sh-dl").innerHTML = "";
+  }
+}
+function openVideo(v){
+  const more = V.filter(o => o.id !== v.id).slice(0, 6), short = v.kind === "short";
+  showSheet(`<div class="sheet-bar"><div class="eyebrow">▶ ${t("stories")} · ${esc(t("k_" + v.kind))}</div><button class="close" data-close aria-label="${t("close")}">✕</button></div>
+    <div class="stage"><div class="frame" data-r="${short ? "9x16" : "16x9"}"><iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1"
+      title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div></div>
+    <div class="sheet-body"><div><h2>${esc(v.title)}</h2><div class="meta">${esc(fullDate(v.date))} · ${esc(LANG_NAMES[v.lang] || "")}</div>
+      <div class="btns"><a class="btn gold" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${t("watch_yt")}</a>${listBtn(v.key)}
+      <button class="btn ghost sm" id="sh-link">${t("share")}</button></div>
+      ${v.desc ? `<div class="txt" style="font-family:var(--sans);font-size:16px;color:var(--mist)">${esc(v.desc)}</div>` : ""}</div>
+    <aside class="side">${more.length ? `<h3>${t("latest_stories")}</h3>` : ""}${more.map(o => `<button class="mini" data-open="${o.key}"><img src="${o.thumb}" alt=""><span>${esc(o.title)}</span></button>`).join("")}</aside></div>`);
+  $("#sh-link").onclick = () => copy(`${location.origin}/watch/${v.id}/`);
+}
+function openAudio(a){
+  const saved = store.get("ab:" + a.id, null);
+  showSheet(`<div class="sheet-bar"><div class="eyebrow">🎧 ${t("tag_audio")}</div><button class="close" data-close aria-label="${t("close")}">✕</button></div>
+    <div class="ab"><div class="cover" style="position:relative">${a.cover ? `<img src="${a.cover}" alt="">` : genCover(a, t("tag_audio"))}</div>
+    <div><h2>${esc(a.title)}</h2><div class="meta" style="color:var(--mist)">${esc(t("by", { a: a.author }))}${a.narrator ? " · " + esc(t("narrated_by", { n: a.narrator })) : ""} · ${esc(LANG_NAMES[a.lang] || "")}</div>
+      ${a.desc ? `<p style="margin-top:12px;color:#D5DDEB">${esc(a.desc)}</p>` : ""}
+      <audio id="ab-audio" controls preload="metadata"></audio>
+      <div class="btns" style="margin-top:10px;align-items:center">${listBtn(a.key)}
+        <label style="color:var(--mist);font-size:14px">${t("speed")} <select class="sel" id="ab-speed">${[0.75, 1, 1.25, 1.5, 2].map(s => `<option ${s === store.get("abSpeed", 1) ? "selected" : ""}>${s}</option>`).join("")}</select></label>
+        ${saved ? `<button class="btn ghost sm" id="ab-resume">${t("resume_at", { t: mmss(saved.t) })}</button>` : ""}</div>
+      <h3 style="margin:20px 0 4px;font-size:16px;color:var(--mist)">${t("chapters")}</h3>
+      ${a.chapters.map((c, i) => `<button class="ch" data-ch="${i}"><span>${i + 1}. ${esc(c.title)}</span><small>${c.min ? t("minutes", { n: c.min }) : ""}</small></button>`).join("") || `<div class="empty">${t("empty_audio")}</div>`}
+    </div></div>`);
+  const au = $("#ab-audio"); let ch = saved ? saved.ch : 0, lastSave = 0;
+  const load = (i, at, go) => { const c = a.chapters[i]; if(!c) return; ch = i; au.src = c.url; au.playbackRate = +$("#ab-speed").value;
+    $$(".ch").forEach(b => b.classList.toggle("on", +b.dataset.ch === i));
+    if(at) au.addEventListener("loadedmetadata", () => { au.currentTime = at; }, { once: true }); if(go) au.play().catch(() => {}); };
+  load(ch, 0, false);
+  $$(".ch").forEach(b => b.onclick = () => load(+b.dataset.ch, 0, true));
+  $("#ab-speed").onchange = ev => { au.playbackRate = +ev.target.value; store.set("abSpeed", +ev.target.value); };
+  au.onratechange = () => {}; au.onplay = () => { au.playbackRate = +$("#ab-speed").value; };
+  au.ontimeupdate = () => { if(Date.now() - lastSave > 4000){ lastSave = Date.now(); store.set("ab:" + a.id, { ch, t: au.currentTime }); } };
+  au.onended = () => { if(ch + 1 < a.chapters.length) load(ch + 1, 0, true); else store.set("ab:" + a.id, null); };
+  const r = $("#ab-resume"); if(r) r.onclick = () => load(saved.ch, saved.t, true);
+}
+const mmss = s => { s = Math.floor(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+async function copy(txt){ try{ await navigator.clipboard.writeText(txt); toast(t("copied")); }catch(e){ toast(t("copy_fail")); } }
+
+/* ---------- narration: Radi's recordings first, device AI voice as fallback ---------- */
+function narrPanel(x){
+  const rec = v => x.narr.some(n => n.lang === LANG && n.voice === v);
+  const others = [...new Set(x.narr.filter(n => n.lang !== LANG).map(n => n.lang))];
+  return `<div class="narr"><h4>🎧 ${t("listen_h")}</h4><div class="row2">
+    ${["female", "male", "child"].map(v => `<button class="chip ${rec(v) ? "rec" : ""}" data-nvoice="${v}" aria-pressed="${state.voice === v}">${t("voice_" + v)}</button>`).join("")}
+    <button class="btn sm" id="narr-play">${t("listen")}</button></div>
+    <div class="bar"><i id="narr-bar"></i></div><div class="src" id="narr-src"></div>
+    ${others.length ? `<div class="other">${t("other_langs")} ${others.map(l => `<button data-nlang="${l}">${LANG_NAMES[l]}</button>`).join(" · ")}</div>` : ""}
+    <audio id="narr-audio" preload="none"></audio></div>`;
+}
+let narrating = false;
+function stopNarration(){ narrating = false; try{ speechSynthesis.cancel(); }catch(e){} const a = $("#narr-audio"); if(a){ a.pause(); }
+  const b = $("#narr-play"); if(b) b.textContent = t("listen"); const bar = $("#narr-bar"); if(bar) bar.style.width = "0"; }
+function srcLabel(x){
+  const n = x.narr.find(n => n.lang === LANG && n.voice === state.voice);
+  return n ? "🎙 " + t("recorded") + (n.by ? " · " + n.by : "") : "🤖 " + t("device_voice") + " · " + t("voice_" + state.voice);
+}
+function wireNarration(x){
+  $("#narr-src").textContent = srcLabel(x);
+  $$("[data-nvoice]").forEach(b => b.onclick = () => { state.voice = b.dataset.nvoice; store.set("voice", state.voice); stopNarration();
+    $$("[data-nvoice]").forEach(o => o.setAttribute("aria-pressed", o === b)); $("#narr-src").textContent = srcLabel(x); });
+  $("#narr-play").onclick = () => { if(narrating) return stopNarration(); playNarration(x, LANG); };
+  $$("[data-nlang]").forEach(b => b.onclick = () => { stopNarration(); playNarration(x, b.dataset.nlang); });
+}
+function playNarration(x, lang){
+  const rec = x.narr.find(n => n.lang === lang && n.voice === state.voice) || (lang !== LANG && x.narr.find(n => n.lang === lang));
+  const btn = $("#narr-play"), bar = $("#narr-bar");
+  if(rec){
+    const a = $("#narr-audio"); a.src = rec.url; a.play().then(() => { narrating = true; btn.textContent = t("stop"); }).catch(() => toast(t("err_generic")));
+    a.ontimeupdate = () => { bar.style.width = (a.currentTime / (a.duration || 1) * 100) + "%"; }; a.onended = stopNarration; return;
+  }
+  if(!("speechSynthesis" in window)) return toast(t("no_device_voice"));
+  const voices = speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().replace("_", "-").startsWith(lang));
+  if(!voices.length){ toast(t("no_device_voice")); return; }
+  const fem = /female|woman|zira|samantha|victoria|karen|susan|serena|tessa|moira|fiona|amélie|amelie|paulina|monica|mónica|kyoko|yuna|ting|mei|hoda|zuri|google uk english female/i;
+  const mal = /(^|[^e])male|\bman\b|david|daniel|alex|fred|thomas|jorge|diego|otoya|hattori|lee|maged|rafiki|google uk english male/i;
+  const pick = state.voice === "male" ? (voices.find(v => mal.test(v.name)) || voices[0]) : (voices.find(v => fem.test(v.name)) || voices[0]);
+  const parts = (x.title + ". " + x.text).match(/[^.!?。!?؟]+[.!?。!?؟]*\s*/g) || [x.text];
+  narrating = true; btn.textContent = t("stop");
+  parts.forEach((p, i) => { const u = new SpeechSynthesisUtterance(p); u.voice = pick; u.lang = pick.lang;
+    u.pitch = state.voice === "child" ? 1.75 : state.voice === "male" ? 0.8 : 1.1; u.rate = state.voice === "child" ? 1.02 : 0.93;
+    u.onstart = () => { bar.style.width = (i / parts.length * 100) + "%"; };
+    if(i === parts.length - 1) u.onend = () => { bar.style.width = "100%"; setTimeout(stopNarration, 400); };
+    speechSynthesis.speak(u); });
+}
+try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => {}; }catch(e){}
+
+/* ---------- book reader: history stories (text) + comics (pictures) ---------- */
+const SFX = { flip: ["{% static 'world/sfx/flip1.mp3' %}", "{% static 'world/sfx/flip2.mp3' %}", "{% static 'world/sfx/flip3.mp3' %}"],
+  open: "{% static 'world/sfx/open.mp3' %}", close: "{% static 'world/sfx/close.mp3' %}" };
+const sfxCache = {}; let bookSound = store.get("bookSound", true);
+function sfx(src){ if(!bookSound) return; try{ if(!sfxCache[src]){ sfxCache[src] = new Audio(src); sfxCache[src].preload = "auto"; }
+  const a = sfxCache[src].cloneNode(); a.volume = .75; a.play().catch(() => {}); }catch(e){} }
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let bk = { x: null, pages: [], i: 0, single: false, busy: false };
+const LOGO = `<svg viewBox="0 0 64 64"><use href="#logo"/></svg>`;
+function chunkText(text, max){ const s = text.match(/[^.!?。!?؟]+[.!?。!?؟]+\s*/g) || [text]; const out = []; let cur = "";
+  s.forEach(p => { if((cur + p).length > max && cur){ out.push(cur.trim()); cur = p; } else cur += p; }); if(cur.trim()) out.push(cur.trim()); return out; }
+function buildPages(x, single){
+  const P = []; let n = 0;
+  if(x.type === "c"){
+    P.push(x.cover ? { cls: "img", html: `<img src="${x.cover}" alt="">` } : { cls: "cover", html: `${LOGO}<div class="c-eb">${t("tag_comic")}</div><h2 style="margin-top:14px">${esc(x.title)}</h2><div class="c-by">Radi the Storyteller</div>` });
+    x.pages.forEach((src, i) => { if(i === 0 && src === x.cover) return; P.push({ cls: "img", html: `<img src="${src}" alt="">` }); });
+  } else {
+    P.push({ cls: "cover", html: `${LOGO}<div class="c-eb">Radi's World · ${t("history")}</div><div class="c-yr">${esc(x.ylab)}</div>
+      <h2>${esc(x.title)}</h2><div class="c-by">${esc(x.date || regName(x.region))} · Radi the Storyteller</div>` });
+    if(!single) P.push({ cls: "end", html: `<div style="letter-spacing:.2em;font-weight:700;color:var(--p-ink-2)">EX LIBRIS</div>
+      <h3 style="color:var(--p-ink);margin-top:8px">${t("exlibris_h")}</h3><p style="text-align:center">${t("exlibris_p")}</p>` });
+    const wide = ["ja", "zh", "ko"].includes(LANG);
+    chunkText(x.text, (single ? 300 : 380) / (wide ? 2.2 : 1)).forEach((c, k) => P.push({ n: ++n, html:
+      (k === 0 ? `<h3>${t("story")}</h3><div class="facts"><b>${t("f_date")}:</b> ${esc([x.date, x.ylab].filter(Boolean).join(" "))}<br><b>${t("f_place")}:</b> ${esc(x.place)}<br><b>${t("f_topic")}:</b> ${esc(catName(x.cat))}</div>` : "")
+      + `<p class="${k === 0 ? "first" : ""}">${esc(c)}</p>` }));
+    const [rh, rel] = related(x);
+    if(rel.length) P.push({ n: ++n, html: `<h3>${esc(rh)}</h3>` + rel.slice(0, 3).map(e => `<div class="also"><b>${esc(e.ylab)}</b> · ${esc(e.title)}<br><small>${esc(e.place)}</small></div>`).join("") });
+  }
+  P.push({ cls: "end", html: `<h3 style="color:var(--p-ink)">${t("the_end")}</h3><p style="text-align:center">${t("end_p")}</p>
+    <div style="font-family:var(--display);font-weight:900;font-size:clamp(22px,3.4vh,32px);color:var(--p-red);margin-top:10px">Radi's World</div>` });
+  if(!single){ P.unshift(null); if(P.length % 2) P.push({ cls: "blank", html: "" }); }
+  return P;
+}
+const pageHTML = p => p ? `<div class="pg ${p.cls || ""}" dir="${LANG === "ar" ? "rtl" : "ltr"}" lang="${LANG}">${p.html}${p.n ? `<div class="pn">${p.n}</div>` : ""}</div>` : "";
+const setHalf = (side, p) => { $("#bk-" + side).innerHTML = pageHTML(p); };
+const bookSteps = () => bk.single ? bk.pages.length : bk.pages.length / 2;
+function renderBook(){
+  if(bk.single){ setHalf("left", null); setHalf("right", bk.pages[bk.i]); } else { setHalf("left", bk.pages[2 * bk.i]); setHalf("right", bk.pages[2 * bk.i + 1]); }
+  const s = bookSteps(); $("#bk-prev").disabled = bk.i === 0; $("#bk-next").disabled = bk.i >= s - 1;
+  $("#bk-pos").textContent = bk.i === 0 ? t("cover") : bk.i === s - 1 ? t("the_end") : t("page_of", { a: bk.i, b: s - 2 });
+}
+function layoutBook(){
+  const single = innerWidth < 760 || innerWidth / innerHeight < 1.15;
+  $("#book").classList.toggle("single", single);
+  if(single !== bk.single || !bk.pages.length){ bk.single = single; bk.pages = buildPages(bk.x, single); bk.i = 0; }
+  renderBook();
+}
+function openBook(k){
+  const x = byKey[k]; if(!x) return; $$("#sheet video").forEach(v => v.pause()); stopNarration();
+  bk = { x, pages: [], i: 0, single: null, busy: false };
+  $("#book-ov").classList.add("on"); document.body.style.overflow = "hidden"; layoutBook(); sfx(SFX.open); $("#bk-next").focus();
+}
+function closeBook(){ $("#book-ov").classList.remove("on"); sfx(SFX.close); if(!$("#sheet").classList.contains("on")) document.body.style.overflow = "";
+  if(/^#c-/.test(location.hash)) history.replaceState(null, "", "#" + (current || "home")); }
+async function flip(dir){
+  const ni = bk.i + dir; if(bk.busy || ni < 0 || ni >= bookSteps()) return;
+  bk.busy = true; sfx(SFX.flip[Math.floor(Math.random() * 3)]);
+  const P = bk.pages, leaf = document.createElement("div"); leaf.className = "leaf";
+  let front, back, fSide, bSide, origin, from, to;
+  if(bk.single){
+    leaf.style.left = "0"; origin = "left center"; fSide = "h-right"; bSide = "h-left"; back = { cls: "blank", html: "" };
+    if(dir > 0){ front = P[bk.i]; setHalf("right", P[ni]); from = 0; to = -180; } else { front = P[ni]; from = -180; to = 0; }
+  } else {
+    const L = 2 * bk.i, R = L + 1;
+    if(dir > 0){ leaf.style.left = "50%"; origin = "left center"; front = P[R]; back = P[R + 1]; fSide = "h-right"; bSide = "h-left"; setHalf("right", P[R + 2]); from = 0; to = -180; }
+    else { leaf.style.left = "0"; origin = "right center"; front = P[L]; back = P[L - 1]; fSide = "h-left"; bSide = "h-right"; setHalf("left", P[L - 2]); from = 0; to = 180; }
+  }
+  leaf.style.transformOrigin = origin; leaf.style.transform = `rotateY(${from}deg)`;
+  leaf.innerHTML = `<div class="face front ${fSide}">${pageHTML(front)}</div><div class="face back ${bSide}">${pageHTML(back)}</div><div class="shade"></div>`;
+  $("#book").appendChild(leaf);
+  const dur = reduceMotion ? 1 : 780;
+  const an = leaf.animate([{ transform: `rotateY(${from}deg)` }, { transform: `rotateY(${to}deg)` }], { duration: dur, easing: "cubic-bezier(.45,.05,.3,1)", fill: "forwards" });
+  leaf.querySelector(".shade").animate([{ opacity: 0 }, { opacity: .55, offset: .5 }, { opacity: 0 }], { duration: dur });
+  try{ await an.finished; }catch(e){}
+  bk.i = ni; renderBook(); leaf.remove(); bk.busy = false;
+}
+$("#bk-next").onclick = () => flip(1); $("#bk-prev").onclick = () => flip(-1); $("#bk-close").onclick = closeBook;
+function paintSound(){ $("#bk-sound").textContent = bookSound ? t("sound_on") : t("sound_off"); $("#bk-sound").setAttribute("aria-pressed", bookSound); }
+$("#bk-sound").onclick = () => { bookSound = !bookSound; store.set("bookSound", bookSound); paintSound(); };
+$("#book").addEventListener("click", ev => { const r = $("#book").getBoundingClientRect(); let x = (ev.clientX - r.left) / r.width;
+  flip(x < (bk.single ? .3 : .5) ? -1 : 1); });
+let swipeX = null;
+$("#book").addEventListener("pointerdown", ev => { swipeX = ev.clientX; });
+$("#book").addEventListener("pointerup", ev => { if(swipeX === null) return; const dx = ev.clientX - swipeX; swipeX = null;
+  if(Math.abs(dx) > 45){ flip(dx < 0 ? 1 : -1); $("#book")._swiped = true; } }, true);
+$("#book").addEventListener("click", ev => { if($("#book")._swiped){ ev.stopImmediatePropagation(); $("#book")._swiped = false; } }, true);
+addEventListener("resize", () => { if($("#book-ov").classList.contains("on") && !bk.busy) layoutBook(); });
+
+/* ---------- global events + routing ---------- */
+document.addEventListener("click", ev => {
+  const el = s => ev.target.closest(s); let b;
+  if((b = el("[data-close]"))) return closeSheet();
+  if((b = el("[data-book]"))) return openBook(b.dataset.book);
+  if((b = el("[data-toggle]"))) return toggleList(b.dataset.toggle);
+  if((b = el("[data-open]"))) return openItem(b.dataset.open, !!b.dataset.play);
+  if((b = el("[data-go]"))) { location.hash = b.dataset.go; return; }
+  if((b = el("[data-kind]"))) { state.kind = b.dataset.kind; renderStories(); return; }
+  if((b = el("[data-era]"))) { state.hFilter.era = b.dataset.era; renderHistory(); return; }
+  if((b = el("[data-lang]"))) { setLang(b.dataset.lang); toast(t("lang_toast")); return; }
+  if((b = el("[data-topic]"))) { const c = b.dataset.topic; state.topics = state.topics.includes(c) ? state.topics.filter(x => x !== c) : [...state.topics, c];
+    store.set("topics", state.topics); b.setAttribute("aria-pressed", state.topics.includes(c)); rendered.home = 0; resyncPush(); return; }
+  if((b = el("[data-voice]"))) { state.voice = b.dataset.voice; store.set("voice", state.voice); renderSettings(); return; }
+  if((b = el("[data-ratio]"))) { state.ratio = b.dataset.ratio; store.set("ratio", state.ratio); renderSettings(); return; }
+});
+$("#sheet").addEventListener("click", ev => { if(ev.target.id === "sheet") closeSheet(); });
+document.addEventListener("keydown", ev => {
+  if($("#book-ov").classList.contains("on")){
+    if(ev.key === "ArrowRight"){ ev.preventDefault(); flip(LANG === "ar" ? -1 : 1); } else if(ev.key === "ArrowLeft"){ ev.preventDefault(); flip(LANG === "ar" ? 1 : -1); }
+    else if(ev.key === "Escape") closeBook(); return;
+  }
+  if(ev.key === "Escape" && $("#sheet").classList.contains("on")) closeSheet();
+});
+$("#lang-sel").onchange = ev => { setLang(ev.target.value); toast(t("lang_toast")); };
+let qTimer; $("#q").addEventListener("input", ev => { clearTimeout(qTimer); const q = ev.target.value.trim();
+  qTimer = setTimeout(() => { if(q.length >= 2) location.hash = "#list/search:" + encodeURIComponent(q); else if(!q && current === "list") location.hash = "#home"; }, 300); });
+
+let current = null, rendered = {};
+const RENDER = { home: renderHome, stories: renderStories, history: renderHistory, mylist: renderMyList, settings: renderSettings,
+  audiobooks: () => renderSimple("audiobooks", A, t("audiobooks"), t("audio_p"), t("empty_audio")),
+  comics: () => renderSimple("comics", C, t("comics"), t("comics_p"), t("empty_comics"), true) };
+function route(){
+  let h = decodeURIComponent((location.hash || "#home").slice(1));
+  const deep = h.match(/^([hvac])-(.+)$/);
+  if(deep){ if(!current){ RENDER.home(); rendered.home = 1; show("home"); } const k = deep[1] + ":" + deep[2]; if(byKey[k]) openItem(k); return; }
+  if($("#sheet").classList.contains("on")) closeSheet();
+  if(h.startsWith("list/")){ renderList(h.slice(5)); show("list"); return; }
+  if(!RENDER[h]) h = "home";
+  if(!rendered[h] || ["mylist", "settings"].includes(h)){ RENDER[h](); rendered[h] = 1; }
+  show(h);
+}
+function show(v){
+  if(current !== v) scrollTo(0, 0); current = v;
+  $$(".view").forEach(s => s.classList.toggle("on", s.id === "v-" + v));
+  const tab = v === "list" ? null : v; $$("#nav a, #tabs a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + tab));
+}
+addEventListener("hashchange", route);
+
+/* ---------- start ---------- */
+build(); applyStatic(); route();
+if(!store.get("lang", null)){
+  $("#onb-langs").innerHTML = LANGS.map(l => `<button class="chip" data-onb="${l}" aria-pressed="${l === LANG}">${LANG_NAMES[l]}</button>`).join("");
+  $("#onb-langs").onclick = ev => { const b = ev.target.closest("[data-onb]"); if(!b) return; setLang(b.dataset.onb);
+    $$("[data-onb]").forEach(o => o.setAttribute("aria-pressed", o === b)); };
+  $("#onb-go").onclick = () => { store.set("lang", LANG); $("#onb").classList.remove("on"); };
+  $("#onb").classList.add("on");
+}
+if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} — Radi's World</title>
+<meta name="description" content="{{ desc|truncatechars:160 }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ desc|truncatechars:160 }}">
+{% if image %}<meta property="og:image" content="{% if image|slice:':4' == 'http' %}{{ image }}{% else %}{{ request.scheme }}://{{ request.get_host }}{{ image }}{% endif %}">{% endif %}
+<meta property="og:site_name" content="Radi's World">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="refresh" content="0; url={{ target }}">
+<style>body{background:#0B0F1A;color:#F4F8FF;font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#4DA3FF}</style>
+</head>
+<body><p>{{ title }}<br><a href="{{ target }}">Open in Radi's World</a></p></body>
+</html>

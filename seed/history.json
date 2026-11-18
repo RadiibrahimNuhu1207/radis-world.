@@ -1,0 +1,1113 @@
+[
+ {
+  "slug": "suez-1869",
+  "year": 1869,
+  "month": 11,
+  "day": 17,
+  "topic": "Bahari",
+  "region": "africa",
+  "featured": true,
+  "en": {
+   "title": "The Suez Canal officially opens",
+   "place": "Egypt",
+   "text": "The Suez Canal officially opened in Egypt, linking the Mediterranean Sea and the Red Sea. Ships travelling from Europe to Asia and East Africa no longer had to sail around the Cape of Good Hope. Its construction took about ten years (1859–1869), and it remains one of the world's most important shipping routes today."
+  },
+  "translations": {
+   "fr": {
+    "title": "Ouverture officielle du canal de Suez",
+    "place": "Égypte",
+    "text": "Le canal de Suez est officiellement inauguré en Égypte, reliant la mer Méditerranée à la mer Rouge. Les navires allant d'Europe vers l'Asie et l'Afrique de l'Est n'ont plus besoin de contourner le cap de Bonne-Espérance. Sa construction a duré environ dix ans (1859–1869) et il reste aujourd'hui l'une des routes maritimes les plus importantes du monde."
+   },
+   "ar": {
+    "title": "الافتتاح الرسمي لقناة السويس",
+    "place": "مصر",
+    "text": "افتُتحت قناة السويس رسميًا في مصر، لتربط البحر الأبيض المتوسط بالبحر الأحمر. ولم تعد السفن المتجهة من أوروبا إلى آسيا وشرق أفريقيا بحاجة إلى الدوران حول رأس الرجاء الصالح. استغرق بناؤها نحو عشر سنوات (1859–1869)، ولا تزال حتى اليوم من أهم طرق الملاحة في العالم."
+   },
+   "ko": {
+    "title": "수에즈 운하 공식 개통",
+    "place": "이집트",
+    "text": "이집트에서 수에즈 운하가 공식 개통되어 지중해와 홍해가 연결되었습니다. 유럽에서 아시아와 동아프리카로 가는 배들은 더 이상 희망봉을 돌아갈 필요가 없게 되었습니다. 건설에는 약 10년(1859–1869)이 걸렸으며, 오늘날에도 세계에서 가장 중요한 해상 항로 중 하나입니다."
+   },
+   "ja": {
+    "title": "スエズ運河が正式に開通",
+    "place": "エジプト",
+    "text": "エジプトでスエズ運河が正式に開通し、地中海と紅海が結ばれました。ヨーロッパからアジアや東アフリカへ向かう船は、もう喜望峰を回る必要がなくなりました。建設には約10年(1859〜1869年)かかり、今も世界で最も重要な航路の一つです。"
+   },
+   "zh": {
+    "title": "苏伊士运河正式通航",
+    "place": "埃及",
+    "text": "苏伊士运河在埃及正式通航,连接了地中海和红海。从欧洲前往亚洲和东非的船只不再需要绕行好望角。运河修建历时约十年(1859–1869年),至今仍是世界上最重要的航运通道之一。"
+   },
+   "es": {
+    "title": "Se inaugura oficialmente el canal de Suez",
+    "place": "Egipto",
+    "text": "El canal de Suez se inauguró oficialmente en Egipto, uniendo el mar Mediterráneo con el mar Rojo. Los barcos que viajaban de Europa a Asia y África Oriental ya no tenían que rodear el cabo de Buena Esperanza. Su construcción duró unos diez años (1859–1869) y hoy sigue siendo una de las rutas marítimas más importantes del mundo."
+   },
+   "sw": {
+    "title": "Mfereji wa Suez wafunguliwa rasmi",
+    "place": "Misri",
+    "text": "Mfereji wa Suez ulifunguliwa rasmi nchini Misri, ukiunganisha Bahari ya Mediterania na Bahari ya Shamu. Meli kutoka Ulaya kwenda Asia na Afrika Mashariki hazikuhitaji tena kuzunguka Rasi ya Tumaini Jema. Ujenzi wake ulichukua takriban miaka kumi (1859–1869), na hadi leo ni moja ya njia muhimu zaidi za meli duniani."
+   }
+  },
+  "video_vertical": "media/suez-1869-9x16.mp4",
+  "video_horizontal": "media/suez-1869-16x9.mp4",
+  "image_vertical": "media/suez-1869-9x16.jpg",
+  "image_horizontal": "media/suez-1869-16x9.jpg"
+ },
+ {
+  "slug": "lunokhod-1970",
+  "year": 1970,
+  "month": 11,
+  "day": 17,
+  "topic": "Sayansi",
+  "region": "space",
+  "featured": false,
+  "en": {
+   "title": "Lunokhod 1: the first robot to roam the Moon",
+   "place": "The Moon",
+   "text": "The Soviet Union's Lunokhod 1 landed on the Moon aboard Luna 17 and became the first robot to travel across the surface of another world, driven by operators on Earth."
+  },
+  "translations": {
+   "fr": {
+    "title": "Lunokhod 1 : le premier robot à rouler sur la Lune",
+    "place": "Lune",
+    "text": "Le Lunokhod 1 de l'Union soviétique se pose sur la Lune à bord de Luna 17 et devient le premier robot à se déplacer à la surface d'un autre monde, piloté depuis la Terre."
+   },
+   "ar": {
+    "title": "لونوخود 1: أول روبوت يتجول على سطح القمر",
+    "place": "القمر",
+    "text": "هبطت المركبة السوفيتية لونوخود 1 على القمر على متن لونا 17، وأصبحت أول روبوت يتنقل على سطح عالم آخر، يقوده مشغلون من الأرض."
+   },
+   "ko": {
+    "title": "루노호트 1호: 달 표면을 달린 최초의 로봇",
+    "place": "달",
+    "text": "소련의 루노호트 1호가 루나 17호에 실려 달에 착륙했고, 지구의 조종사들이 원격으로 움직이며 다른 천체의 표면을 이동한 최초의 로봇이 되었습니다."
+   },
+   "ja": {
+    "title": "ルノホート1号:月面を走った初のロボット",
+    "place": "月",
+    "text": "ソ連のルノホート1号はルナ17号で月に着陸し、地球から操縦されて、地球以外の天体の表面を走行した初のロボットとなりました。"
+   },
+   "zh": {
+    "title": "月球车1号:第一个在月球上行驶的机器人",
+    "place": "月球",
+    "text": "苏联的月球车1号搭乘月球17号登陆月球,在地球上的操作人员遥控下,成为第一个在另一个天体表面行驶的机器人。"
+   },
+   "es": {
+    "title": "Lunokhod 1: el primer robot que recorrió la Luna",
+    "place": "La Luna",
+    "text": "El Lunokhod 1 de la Unión Soviética llegó a la Luna a bordo de la Luna 17 y se convirtió en el primer robot en recorrer la superficie de otro mundo, guiado por operadores desde la Tierra."
+   },
+   "sw": {
+    "title": "Lunokhod 1: roboti ya kwanza kutembea Mwezini",
+    "place": "Mwezi",
+    "text": "Chombo cha Umoja wa Kisovieti, Lunokhod 1, kilitua Mwezini kikiwa ndani ya Luna 17 na kuwa roboti ya kwanza kutembea kwenye uso wa dunia nyingine, kikiongozwa na wataalamu kutoka duniani."
+   }
+  }
+ },
+ {
+  "slug": "wanafunzi-1939",
+  "year": 1939,
+  "month": 11,
+  "day": 17,
+  "topic": "Dunia",
+  "region": "europe",
+  "featured": false,
+  "en": {
+   "title": "The origin of International Students' Day",
+   "place": "Prague, Czechoslovakia",
+   "text": "Nine Czech students were executed by the Nazi regime after protests. This event later became the origin of International Students' Day, observed every 17 November."
+  },
+  "translations": {
+   "fr": {
+    "title": "Origine de la Journée internationale des étudiants",
+    "place": "Prague, Tchécoslovaquie",
+    "text": "Neuf étudiants tchèques sont exécutés par le régime nazi après des manifestations. Cet événement est devenu l'origine de la Journée internationale des étudiants, célébrée chaque 17 novembre."
+   },
+   "ar": {
+    "title": "أصل اليوم العالمي للطلاب",
+    "place": "براغ، تشيكوسلوفاكيا",
+    "text": "أعدم النظام النازي تسعة طلاب تشيكيين بعد احتجاجات. وأصبح هذا الحدث لاحقًا أصل اليوم العالمي للطلاب الذي يُحتفل به في 17 نوفمبر من كل عام."
+   },
+   "ko": {
+    "title": "국제 학생의 날의 기원",
+    "place": "체코슬로바키아 프라하",
+    "text": "시위 이후 체코 학생 9명이 나치 정권에 의해 처형되었습니다. 이 사건은 훗날 매년 11월 17일에 기념하는 국제 학생의 날의 기원이 되었습니다."
+   },
+   "ja": {
+    "title": "国際学生の日の始まり",
+    "place": "チェコスロバキア・プラハ",
+    "text": "抗議活動の後、チェコの学生9人がナチス政権によって処刑されました。この出来事が、毎年11月17日に記念される国際学生の日の始まりとなりました。"
+   },
+   "zh": {
+    "title": "国际学生日的由来",
+    "place": "捷克斯洛伐克布拉格",
+    "text": "抗议活动之后,九名捷克学生被纳粹政权处决。这一事件后来成为国际学生日的由来,每年11月17日纪念。"
+   },
+   "es": {
+    "title": "Origen del Día Internacional de los Estudiantes",
+    "place": "Praga, Checoslovaquia",
+    "text": "Nueve estudiantes checos fueron ejecutados por el régimen nazi tras unas protestas. Este hecho dio origen al Día Internacional de los Estudiantes, que se celebra cada 17 de noviembre."
+   },
+   "sw": {
+    "title": "Chanzo cha Siku ya Kimataifa ya Wanafunzi",
+    "place": "Prague, Chekoslovakia",
+    "text": "Wanafunzi tisa wa Kicheki waliuawa na utawala wa Kinazi baada ya maandamano. Tukio hili baadaye likawa chanzo cha Siku ya Kimataifa ya Wanafunzi, inayoadhimishwa kila tarehe 17 Novemba."
+   }
+  }
+ },
+ {
+  "slug": "uhuru-1961",
+  "year": 1961,
+  "month": 12,
+  "day": 9,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "Tanganyika gains independence",
+   "place": "Dar es Salaam",
+   "text": "Tanganyika gained its independence from Britain, with Mwalimu Julius Kambarage Nyerere as Prime Minister. A year later Tanganyika became a republic, with Nyerere as its first President."
+  },
+  "translations": {
+   "fr": {
+    "title": "Le Tanganyika obtient son indépendance",
+    "place": "Dar es Salaam",
+    "text": "Le Tanganyika obtient son indépendance du Royaume-Uni, avec Mwalimu Julius Kambarage Nyerere comme Premier ministre. Un an plus tard, le Tanganyika devient une république, avec Nyerere comme premier président."
+   },
+   "ar": {
+    "title": "تنجانيقا تنال استقلالها",
+    "place": "دار السلام",
+    "text": "نالت تنجانيقا استقلالها عن بريطانيا، وتولّى المعلم جوليوس كامباراجي نيريري رئاسة الوزراء. وبعد عام أصبحت تنجانيقا جمهورية، وكان نيريري أول رئيس لها."
+   },
+   "ko": {
+    "title": "탕가니카 독립",
+    "place": "다르에스살람",
+    "text": "탕가니카가 영국으로부터 독립했고, 므왈리무 줄리어스 캄바라게 니에레레가 총리가 되었습니다. 1년 뒤 탕가니카는 공화국이 되었고 니에레레가 초대 대통령이 되었습니다."
+   },
+   "ja": {
+    "title": "タンガニーカが独立",
+    "place": "ダルエスサラーム",
+    "text": "タンガニーカがイギリスから独立し、ムワリム・ジュリウス・カンバラゲ・ニエレレが首相に就任しました。1年後、タンガニーカは共和国となり、ニエレレが初代大統領となりました。"
+   },
+   "zh": {
+    "title": "坦噶尼喀独立",
+    "place": "达累斯萨拉姆",
+    "text": "坦噶尼喀脱离英国获得独立,姆瓦利姆·朱利叶斯·坎巴拉吉·尼雷尔出任总理。一年后,坦噶尼喀成为共和国,尼雷尔成为首任总统。"
+   },
+   "es": {
+    "title": "Tanganica obtiene su independencia",
+    "place": "Dar es Salaam",
+    "text": "Tanganica obtuvo su independencia del Reino Unido, con Mwalimu Julius Kambarage Nyerere como primer ministro. Un año después, Tanganica se convirtió en república, con Nyerere como su primer presidente."
+   },
+   "sw": {
+    "title": "Tanganyika yapata uhuru",
+    "place": "Dar es Salaam",
+    "text": "Tanganyika ilipata uhuru wake kutoka kwa Uingereza, na Mwalimu Julius Kambarage Nyerere akawa Waziri Mkuu. Mwaka mmoja baadaye Tanganyika ikawa Jamhuri, Nyerere akiwa Rais wake wa kwanza."
+   }
+  }
+ },
+ {
+  "slug": "muungano-1964",
+  "year": 1964,
+  "month": 4,
+  "day": 26,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "The Union of Tanganyika and Zanzibar",
+   "place": "Tanganyika and Zanzibar",
+   "text": "Tanganyika and Zanzibar united to form the United Republic, which was named Tanzania later that same year. This day is celebrated every year as Union Day."
+  },
+  "translations": {
+   "fr": {
+    "title": "Union du Tanganyika et de Zanzibar",
+    "place": "Tanganyika et Zanzibar",
+    "text": "Le Tanganyika et Zanzibar s'unissent pour former la République unie, nommée Tanzanie plus tard la même année. Ce jour est célébré chaque année comme la Journée de l'Union."
+   },
+   "ar": {
+    "title": "اتحاد تنجانيقا وزنجبار",
+    "place": "تنجانيقا وزنجبار",
+    "text": "اتحدت تنجانيقا وزنجبار لتشكيل الجمهورية المتحدة، التي سُمّيت تنزانيا في وقت لاحق من العام نفسه. ويُحتفل بهذا اليوم سنويًا باسم يوم الاتحاد."
+   },
+   "ko": {
+    "title": "탕가니카와 잔지바르의 통합",
+    "place": "탕가니카와 잔지바르",
+    "text": "탕가니카와 잔지바르가 통합하여 연합공화국을 세웠고, 같은 해 말 탄자니아라는 이름을 갖게 되었습니다. 이날은 매년 연합의 날로 기념됩니다."
+   },
+   "ja": {
+    "title": "タンガニーカとザンジバルの連合",
+    "place": "タンガニーカとザンジバル",
+    "text": "タンガニーカとザンジバルが統合して連合共和国が誕生し、同じ年のうちにタンザニアと名付けられました。この日は毎年「連合の日」として祝われています。"
+   },
+   "zh": {
+    "title": "坦噶尼喀与桑给巴尔联合",
+    "place": "坦噶尼喀和桑给巴尔",
+    "text": "坦噶尼喀与桑给巴尔联合组成联合共和国,并于同年晚些时候定名为坦桑尼亚。每年这一天都作为联合日庆祝。"
+   },
+   "es": {
+    "title": "Unión de Tanganica y Zanzíbar",
+    "place": "Tanganica y Zanzíbar",
+    "text": "Tanganica y Zanzíbar se unieron para formar la República Unida, que ese mismo año recibió el nombre de Tanzania. Este día se celebra cada año como el Día de la Unión."
+   },
+   "sw": {
+    "title": "Muungano wa Tanganyika na Zanzibar",
+    "place": "Tanganyika na Zanzibar",
+    "text": "Tanganyika na Zanzibar ziliungana na kuunda Jamhuri ya Muungano, ambayo baadaye mwaka huo huo ilipewa jina Tanzania. Siku hii huadhimishwa kila mwaka kama Siku ya Muungano."
+   }
+  }
+ },
+ {
+  "slug": "mapinduzi-1964",
+  "year": 1964,
+  "month": 1,
+  "day": 12,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "The Zanzibar Revolution",
+   "place": "Zanzibar",
+   "text": "The revolution overthrew the rule of the Sultan of Zanzibar. This day is celebrated every year as Zanzibar Revolution Day."
+  },
+  "translations": {
+   "fr": {
+    "title": "Révolution de Zanzibar",
+    "place": "Zanzibar",
+    "text": "La révolution renverse le pouvoir du sultan de Zanzibar. Ce jour est célébré chaque année comme la Journée de la révolution de Zanzibar."
+   },
+   "ar": {
+    "title": "ثورة زنجبار",
+    "place": "زنجبار",
+    "text": "أطاحت الثورة بحكم سلطان زنجبار. ويُحتفل بهذا اليوم سنويًا باسم يوم ثورة زنجبار."
+   },
+   "ko": {
+    "title": "잔지바르 혁명",
+    "place": "잔지바르",
+    "text": "혁명으로 잔지바르 술탄의 통치가 무너졌습니다. 이날은 매년 잔지바르 혁명 기념일로 기념됩니다."
+   },
+   "ja": {
+    "title": "ザンジバル革命",
+    "place": "ザンジバル",
+    "text": "革命によってザンジバルのスルタンの支配が倒されました。この日は毎年「ザンジバル革命記念日」として祝われています。"
+   },
+   "zh": {
+    "title": "桑给巴尔革命",
+    "place": "桑给巴尔",
+    "text": "革命推翻了桑给巴尔苏丹的统治。每年这一天都作为桑给巴尔革命纪念日庆祝。"
+   },
+   "es": {
+    "title": "Revolución de Zanzíbar",
+    "place": "Zanzíbar",
+    "text": "La revolución derrocó el gobierno del sultán de Zanzíbar. Este día se celebra cada año como el Día de la Revolución de Zanzíbar."
+   },
+   "sw": {
+    "title": "Mapinduzi ya Zanzibar",
+    "place": "Zanzibar",
+    "text": "Mapinduzi yaliuondoa utawala wa Sultani wa Zanzibar. Siku hii huadhimishwa kila mwaka kama Siku ya Mapinduzi ya Zanzibar."
+   }
+  }
+ },
+ {
+  "slug": "tanu-1954",
+  "year": 1954,
+  "month": 7,
+  "day": 7,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "The founding of TANU",
+   "place": "Dar es Salaam",
+   "text": "TANU (Tanganyika African National Union) was founded under the leadership of Julius Nyerere. The party led the struggle for Tanganyika's independence. It is the origin of Saba Saba Day."
+  },
+  "translations": {
+   "fr": {
+    "title": "Fondation de la TANU",
+    "place": "Dar es Salaam",
+    "text": "La TANU (Tanganyika African National Union) est fondée sous la direction de Julius Nyerere. Le parti mène la lutte pour l'indépendance du Tanganyika. C'est l'origine de la journée de Saba Saba."
+   },
+   "ar": {
+    "title": "تأسيس حزب تانو",
+    "place": "دار السلام",
+    "text": "تأسس حزب تانو (الاتحاد الوطني الأفريقي لتنجانيقا) بقيادة جوليوس نيريري. وقاد الحزب النضال من أجل استقلال تنجانيقا، ومنه نشأ يوم «سابا سابا»."
+   },
+   "ko": {
+    "title": "TANU 창당",
+    "place": "다르에스살람",
+    "text": "줄리어스 니에레레의 지도 아래 TANU(탕가니카 아프리카 민족연합)가 창당되었습니다. 이 정당은 탕가니카 독립운동을 이끌었으며, '사바 사바' 기념일의 기원이 되었습니다."
+   },
+   "ja": {
+    "title": "TANUの結成",
+    "place": "ダルエスサラーム",
+    "text": "ジュリウス・ニエレレの指導のもと、TANU(タンガニーカ・アフリカ民族同盟)が結成されました。この政党はタンガニーカ独立運動を率い、「サバ・サバ」の日の由来となりました。"
+   },
+   "zh": {
+    "title": "坦盟(TANU)成立",
+    "place": "达累斯萨拉姆",
+    "text": "在朱利叶斯·尼雷尔的领导下,坦噶尼喀非洲民族联盟(TANU)成立。该党领导了坦噶尼喀的独立运动,也是“萨巴萨巴”节的由来。"
+   },
+   "es": {
+    "title": "Fundación de la TANU",
+    "place": "Dar es Salaam",
+    "text": "La TANU (Tanganyika African National Union) se fundó bajo el liderazgo de Julius Nyerere. El partido encabezó la lucha por la independencia de Tanganica. Es el origen del día de Saba Saba."
+   },
+   "sw": {
+    "title": "Kuanzishwa kwa chama cha TANU",
+    "place": "Dar es Salaam",
+    "text": "Chama cha TANU (Tanganyika African National Union) kilianzishwa chini ya uongozi wa Julius Nyerere. Chama hiki kiliongoza harakati za kudai uhuru wa Tanganyika. Ndiyo asili ya Siku ya Saba Saba."
+   }
+  }
+ },
+ {
+  "slug": "nyerere-1999",
+  "year": 1999,
+  "month": 10,
+  "day": 14,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "The death of Mwalimu Julius Nyerere",
+   "place": "London, United Kingdom",
+   "text": "The Father of the Nation, Mwalimu Julius Kambarage Nyerere, died in London. This date is commemorated in Tanzania as Mwalimu Nyerere Day."
+  },
+  "translations": {
+   "fr": {
+    "title": "Décès de Mwalimu Julius Nyerere",
+    "place": "Londres, Royaume-Uni",
+    "text": "Le Père de la Nation, Mwalimu Julius Kambarage Nyerere, meurt à Londres. Cette date est commémorée en Tanzanie comme la Journée de Mwalimu Nyerere."
+   },
+   "ar": {
+    "title": "وفاة المعلم جوليوس نيريري",
+    "place": "لندن، المملكة المتحدة",
+    "text": "توفي أبو الأمة، المعلم جوليوس كامباراجي نيريري، في لندن. وتُحيي تنزانيا هذا التاريخ باسم يوم المعلم نيريري."
+   },
+   "ko": {
+    "title": "므왈리무 줄리어스 니에레레 서거",
+    "place": "영국 런던",
+    "text": "국부 므왈리무 줄리어스 캄바라게 니에레레가 런던에서 세상을 떠났습니다. 탄자니아에서는 이날을 므왈리무 니에레레의 날로 기념합니다."
+   },
+   "ja": {
+    "title": "ムワリム・ジュリウス・ニエレレの死去",
+    "place": "イギリス・ロンドン",
+    "text": "建国の父ムワリム・ジュリウス・カンバラゲ・ニエレレがロンドンで亡くなりました。タンザニアではこの日を「ムワリム・ニエレレの日」として記念しています。"
+   },
+   "zh": {
+    "title": "姆瓦利姆·朱利叶斯·尼雷尔逝世",
+    "place": "英国伦敦",
+    "text": "国父姆瓦利姆·朱利叶斯·坎巴拉吉·尼雷尔在伦敦逝世。坦桑尼亚将这一天定为“尼雷尔纪念日”。"
+   },
+   "es": {
+    "title": "Muerte de Mwalimu Julius Nyerere",
+    "place": "Londres, Reino Unido",
+    "text": "El Padre de la Nación, Mwalimu Julius Kambarage Nyerere, falleció en Londres. Esta fecha se conmemora en Tanzania como el Día de Mwalimu Nyerere."
+   },
+   "sw": {
+    "title": "Kifo cha Mwalimu Julius Nyerere",
+    "place": "London, Uingereza",
+    "text": "Baba wa Taifa, Mwalimu Julius Kambarage Nyerere, alifariki dunia jijini London. Tarehe hii huadhimishwa Tanzania kama Siku ya Mwalimu Nyerere."
+   }
+  }
+ },
+ {
+  "slug": "kilimanjaro-1889",
+  "year": 1889,
+  "month": 10,
+  "day": 6,
+  "topic": "Afrika",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "The summit of Kilimanjaro is reached",
+   "place": "Kilimanjaro, Tanzania",
+   "text": "Hans Meyer and Ludwig Purtscheller reached the Kibo summit of Mount Kilimanjaro, the highest mountain in Africa. It was the first recorded ascent to the summit."
+  },
+  "translations": {
+   "fr": {
+    "title": "Le sommet du Kilimandjaro est atteint",
+    "place": "Kilimandjaro, Tanzanie",
+    "text": "Hans Meyer et Ludwig Purtscheller atteignent le sommet Kibo du Kilimandjaro, la plus haute montagne d'Afrique. C'est la première ascension du sommet attestée."
+   },
+   "ar": {
+    "title": "الوصول إلى قمة كليمنجارو",
+    "place": "كليمنجارو، تنزانيا",
+    "text": "وصل هانز ماير ولودفيغ بورتشيلر إلى قمة كيبو في جبل كليمنجارو، أعلى جبل في أفريقيا. وكان ذلك أول صعود مسجَّل إلى القمة."
+   },
+   "ko": {
+    "title": "킬리만자로 정상 등정",
+    "place": "탄자니아 킬리만자로",
+    "text": "한스 마이어와 루트비히 푸르첼러가 아프리카 최고봉인 킬리만자로산의 키보 정상에 올랐습니다. 이는 기록으로 남은 최초의 정상 등정이었습니다."
+   },
+   "ja": {
+    "title": "キリマンジャロ山頂に到達",
+    "place": "タンザニア・キリマンジャロ",
+    "text": "ハンス・マイヤーとルートヴィヒ・プルトシェラーが、アフリカ最高峰キリマンジャロのキボ峰山頂に到達しました。記録に残る初の登頂でした。"
+   },
+   "zh": {
+    "title": "登顶乞力马扎罗山",
+    "place": "坦桑尼亚乞力马扎罗",
+    "text": "汉斯·迈耶和路德维希·普尔切勒登上了非洲最高峰乞力马扎罗山的基博峰顶。这是有记录的首次登顶。"
+   },
+   "es": {
+    "title": "Se alcanza la cima del Kilimanjaro",
+    "place": "Kilimanjaro, Tanzania",
+    "text": "Hans Meyer y Ludwig Purtscheller llegaron a la cima Kibo del Kilimanjaro, la montaña más alta de África. Fue el primer ascenso registrado a la cumbre."
+   },
+   "sw": {
+    "title": "Kilele cha Kilimanjaro chafikiwa",
+    "place": "Kilimanjaro, Tanzania",
+    "text": "Hans Meyer na Ludwig Purtscheller walifika kilele cha Kibo cha Mlima Kilimanjaro, mlima mrefu zaidi barani Afrika. Ni mara ya kwanza iliyorekodiwa kwa wapandaji kufika kileleni."
+   }
+  }
+ },
+ {
+  "slug": "oau-1963",
+  "year": 1963,
+  "month": 5,
+  "day": 25,
+  "topic": "Afrika",
+  "region": "africa",
+  "featured": false,
+  "en": {
+   "title": "The Organisation of African Unity (OAU) is founded",
+   "place": "Addis Ababa, Ethiopia",
+   "text": "Leaders of independent African states founded the OAU, the forerunner of the African Union (AU). This date is now celebrated as Africa Day."
+  },
+  "translations": {
+   "fr": {
+    "title": "Fondation de l'Organisation de l'unité africaine (OUA)",
+    "place": "Addis-Abeba, Éthiopie",
+    "text": "Les dirigeants des États africains indépendants fondent l'OUA, ancêtre de l'Union africaine (UA). Cette date est aujourd'hui célébrée comme la Journée de l'Afrique."
+   },
+   "ar": {
+    "title": "تأسيس منظمة الوحدة الأفريقية",
+    "place": "أديس أبابا، إثيوبيا",
+    "text": "أسس قادة الدول الأفريقية المستقلة منظمة الوحدة الأفريقية، التي سبقت الاتحاد الأفريقي. ويُحتفل بهذا التاريخ اليوم باسم يوم أفريقيا."
+   },
+   "ko": {
+    "title": "아프리카 통일기구(OAU) 창설",
+    "place": "에티오피아 아디스아바바",
+    "text": "독립한 아프리카 국가들의 지도자들이 아프리카연합(AU)의 전신인 OAU를 창설했습니다. 이날은 오늘날 아프리카의 날로 기념됩니다."
+   },
+   "ja": {
+    "title": "アフリカ統一機構(OAU)の設立",
+    "place": "エチオピア・アディスアベバ",
+    "text": "独立したアフリカ諸国の指導者たちが、アフリカ連合(AU)の前身であるOAUを設立しました。この日は現在「アフリカの日」として祝われています。"
+   },
+   "zh": {
+    "title": "非洲统一组织(OAU)成立",
+    "place": "埃塞俄比亚亚的斯亚贝巴",
+    "text": "独立的非洲国家领导人成立了非洲统一组织,即非洲联盟(AU)的前身。这一天如今被定为“非洲日”。"
+   },
+   "es": {
+    "title": "Fundación de la Organización para la Unidad Africana (OUA)",
+    "place": "Adís Abeba, Etiopía",
+    "text": "Los líderes de los Estados africanos independientes fundaron la OUA, predecesora de la Unión Africana (UA). Esta fecha se celebra hoy como el Día de África."
+   },
+   "sw": {
+    "title": "Kuanzishwa kwa Umoja wa Nchi Huru za Afrika (OAU)",
+    "place": "Addis Ababa, Ethiopia",
+    "text": "Viongozi wa nchi huru za Afrika walianzisha OAU, chombo kilichotangulia Umoja wa Afrika (AU). Tarehe hii sasa huadhimishwa kama Siku ya Afrika."
+   }
+  }
+ },
+ {
+  "slug": "mandela-1990",
+  "year": 1990,
+  "month": 2,
+  "day": 11,
+  "topic": "Afrika",
+  "region": "africa",
+  "featured": false,
+  "en": {
+   "title": "Nelson Mandela is released",
+   "place": "South Africa",
+   "text": "Nelson Mandela was released after 27 years in prison. Four years later he became South Africa's first president elected in a fully democratic election."
+  },
+  "translations": {
+   "fr": {
+    "title": "Nelson Mandela est libéré",
+    "place": "Afrique du Sud",
+    "text": "Nelson Mandela est libéré après 27 ans de prison. Quatre ans plus tard, il devient le premier président de l'Afrique du Sud élu lors d'une élection pleinement démocratique."
+   },
+   "ar": {
+    "title": "الإفراج عن نيلسون مانديلا",
+    "place": "جنوب أفريقيا",
+    "text": "أُفرج عن نيلسون مانديلا بعد 27 عامًا في السجن. وبعد أربع سنوات أصبح أول رئيس لجنوب أفريقيا يُنتخب في انتخابات ديمقراطية شاملة."
+   },
+   "ko": {
+    "title": "넬슨 만델라 석방",
+    "place": "남아프리카공화국",
+    "text": "넬슨 만델라가 27년간의 수감 생활 끝에 석방되었습니다. 4년 뒤 그는 완전한 민주 선거로 선출된 남아프리카공화국 최초의 대통령이 되었습니다."
+   },
+   "ja": {
+    "title": "ネルソン・マンデラが釈放される",
+    "place": "南アフリカ",
+    "text": "ネルソン・マンデラが27年間の獄中生活を経て釈放されました。4年後、彼は完全な民主選挙で選ばれた南アフリカ初の大統領となりました。"
+   },
+   "zh": {
+    "title": "纳尔逊·曼德拉获释",
+    "place": "南非",
+    "text": "纳尔逊·曼德拉在狱中度过27年后获释。四年后,他成为南非首位通过全面民主选举产生的总统。"
+   },
+   "es": {
+    "title": "Nelson Mandela es liberado",
+    "place": "Sudáfrica",
+    "text": "Nelson Mandela fue liberado tras 27 años en prisión. Cuatro años después se convirtió en el primer presidente de Sudáfrica elegido en unas elecciones plenamente democráticas."
+   },
+   "sw": {
+    "title": "Nelson Mandela aachiliwa huru",
+    "place": "Afrika Kusini",
+    "text": "Nelson Mandela aliachiliwa huru baada ya miaka 27 gerezani. Miaka minne baadaye akawa Rais wa kwanza wa Afrika Kusini kuchaguliwa katika uchaguzi wa kidemokrasia wa watu wote."
+   }
+  }
+ },
+ {
+  "slug": "ghana-1957",
+  "year": 1957,
+  "month": 3,
+  "day": 6,
+  "topic": "Afrika",
+  "region": "africa",
+  "featured": false,
+  "en": {
+   "title": "Ghana gains independence",
+   "place": "Accra, Ghana",
+   "text": "Ghana, led by Kwame Nkrumah, gained independence from Britain and became an example for independence movements across Africa."
+  },
+  "translations": {
+   "fr": {
+    "title": "Le Ghana obtient son indépendance",
+    "place": "Accra, Ghana",
+    "text": "Le Ghana, dirigé par Kwame Nkrumah, obtient son indépendance du Royaume-Uni et devient un exemple pour les mouvements d'indépendance de toute l'Afrique."
+   },
+   "ar": {
+    "title": "غانا تنال استقلالها",
+    "place": "أكرا، غانا",
+    "text": "نالت غانا، بقيادة كوامي نكروما، استقلالها عن بريطانيا، وأصبحت قدوة لحركات الاستقلال في جميع أنحاء أفريقيا."
+   },
+   "ko": {
+    "title": "가나 독립",
+    "place": "가나 아크라",
+    "text": "콰메 은크루마가 이끄는 가나가 영국으로부터 독립하여 아프리카 전역의 독립운동에 본보기가 되었습니다."
+   },
+   "ja": {
+    "title": "ガーナが独立",
+    "place": "ガーナ・アクラ",
+    "text": "クワメ・エンクルマ率いるガーナがイギリスから独立し、アフリカ各地の独立運動の模範となりました。"
+   },
+   "zh": {
+    "title": "加纳独立",
+    "place": "加纳阿克拉",
+    "text": "在克瓦米·恩克鲁玛的领导下,加纳脱离英国获得独立,成为整个非洲独立运动的榜样。"
+   },
+   "es": {
+    "title": "Ghana obtiene su independencia",
+    "place": "Acra, Ghana",
+    "text": "Ghana, liderada por Kwame Nkrumah, obtuvo su independencia del Reino Unido y se convirtió en un ejemplo para los movimientos de independencia de toda África."
+   },
+   "sw": {
+    "title": "Ghana yapata uhuru",
+    "place": "Accra, Ghana",
+    "text": "Ghana, chini ya uongozi wa Kwame Nkrumah, ilipata uhuru kutoka kwa Uingereza na kuwa mfano kwa harakati za uhuru kote barani Afrika."
+   }
+  }
+ },
+ {
+  "slug": "apollo-1969",
+  "year": 1969,
+  "month": 7,
+  "day": 20,
+  "topic": "Sayansi",
+  "region": "space",
+  "featured": false,
+  "en": {
+   "title": "Humans walk on the Moon",
+   "place": "The Moon",
+   "text": "Neil Armstrong and Buzz Aldrin of Apollo 11 became the first humans to walk on the Moon, while Michael Collins orbited the Moon in the command module."
+  },
+  "translations": {
+   "fr": {
+    "title": "L'homme marche sur la Lune",
+    "place": "Lune",
+    "text": "Neil Armstrong et Buzz Aldrin, de la mission Apollo 11, deviennent les premiers êtres humains à marcher sur la Lune, tandis que Michael Collins reste en orbite dans le module de commande."
+   },
+   "ar": {
+    "title": "الإنسان يمشي على القمر",
+    "place": "القمر",
+    "text": "أصبح نيل أرمسترونغ وباز ألدرين من مهمة أبولو 11 أول إنسانين يمشيان على سطح القمر، بينما كان مايكل كولينز يدور حول القمر في وحدة القيادة."
+   },
+   "ko": {
+    "title": "인류, 달에 발을 딛다",
+    "place": "달",
+    "text": "아폴로 11호의 닐 암스트롱과 버즈 올드린이 달 위를 걸은 최초의 인류가 되었고, 마이클 콜린스는 사령선을 타고 달 궤도를 돌았습니다."
+   },
+   "ja": {
+    "title": "人類が月面を歩く",
+    "place": "月",
+    "text": "アポロ11号のニール・アームストロングとバズ・オルドリンが月面を歩いた最初の人類となり、マイケル・コリンズは司令船で月の周回軌道を回りました。"
+   },
+   "zh": {
+    "title": "人类登上月球",
+    "place": "月球",
+    "text": "阿波罗11号的尼尔·阿姆斯特朗和巴兹·奥尔德林成为首批在月球上行走的人类,迈克尔·柯林斯则驾驶指令舱环绕月球飞行。"
+   },
+   "es": {
+    "title": "El ser humano pisa la Luna",
+    "place": "La Luna",
+    "text": "Neil Armstrong y Buzz Aldrin, del Apolo 11, se convirtieron en los primeros seres humanos en pisar la Luna, mientras Michael Collins orbitaba la Luna en el módulo de mando."
+   },
+   "sw": {
+    "title": "Binadamu wakanyaga Mwezi",
+    "place": "Mwezi",
+    "text": "Neil Armstrong na Buzz Aldrin wa chombo Apollo 11 wakawa binadamu wa kwanza kukanyaga Mwezi, huku Michael Collins akizunguka Mwezi ndani ya chombo kikuu."
+   }
+  }
+ },
+ {
+  "slug": "gagarin-1961",
+  "year": 1961,
+  "month": 4,
+  "day": 12,
+  "topic": "Sayansi",
+  "region": "space",
+  "featured": false,
+  "en": {
+   "title": "The first human in space",
+   "place": "Outer space",
+   "text": "Yuri Gagarin of the Soviet Union became the first human to travel into space, orbiting the Earth once aboard Vostok 1."
+  },
+  "translations": {
+   "fr": {
+    "title": "Le premier humain dans l'espace",
+    "place": "Espace",
+    "text": "Youri Gagarine, de l'Union soviétique, devient le premier être humain à voyager dans l'espace, en faisant une fois le tour de la Terre à bord de Vostok 1."
+   },
+   "ar": {
+    "title": "أول إنسان في الفضاء",
+    "place": "الفضاء",
+    "text": "أصبح يوري غاغارين من الاتحاد السوفيتي أول إنسان يسافر إلى الفضاء، إذ دار حول الأرض مرة واحدة على متن المركبة فوستوك 1."
+   },
+   "ko": {
+    "title": "인류 최초의 우주 비행",
+    "place": "우주",
+    "text": "소련의 유리 가가린이 보스토크 1호를 타고 지구를 한 바퀴 돌며 우주로 나간 최초의 인간이 되었습니다."
+   },
+   "ja": {
+    "title": "人類初の宇宙飛行",
+    "place": "宇宙",
+    "text": "ソ連のユーリイ・ガガーリンがボストーク1号で地球を1周し、宇宙へ行った最初の人間となりました。"
+   },
+   "zh": {
+    "title": "人类首次进入太空",
+    "place": "太空",
+    "text": "苏联的尤里·加加林乘坐东方1号绕地球飞行一圈,成为第一个进入太空的人类。"
+   },
+   "es": {
+    "title": "El primer ser humano en el espacio",
+    "place": "El espacio",
+    "text": "Yuri Gagarin, de la Unión Soviética, se convirtió en el primer ser humano en viajar al espacio, dando una vuelta a la Tierra a bordo de la Vostok 1."
+   },
+   "sw": {
+    "title": "Binadamu wa kwanza angani",
+    "place": "Anga za juu",
+    "text": "Yuri Gagarin wa Umoja wa Kisovieti akawa binadamu wa kwanza kusafiri angani, akizunguka Dunia mara moja ndani ya chombo Vostok 1."
+   }
+  }
+ },
+ {
+  "slug": "worldcup-1930",
+  "year": 1930,
+  "month": 7,
+  "day": 30,
+  "topic": "Michezo",
+  "region": "americas",
+  "featured": false,
+  "en": {
+   "title": "The first World Cup final",
+   "place": "Montevideo, Uruguay",
+   "text": "Uruguay beat Argentina 4–2 to become the first FIFA World Cup champions."
+  },
+  "translations": {
+   "fr": {
+    "title": "La première finale de la Coupe du monde",
+    "place": "Montevideo, Uruguay",
+    "text": "L'Uruguay bat l'Argentine 4–2 et devient le premier champion de la Coupe du monde de la FIFA."
+   },
+   "ar": {
+    "title": "أول نهائي لكأس العالم",
+    "place": "مونتيفيديو، الأوروغواي",
+    "text": "فازت الأوروغواي على الأرجنتين 4–2 لتصبح أول بطل لكأس العالم لكرة القدم."
+   },
+   "ko": {
+    "title": "첫 월드컵 결승전",
+    "place": "우루과이 몬테비데오",
+    "text": "우루과이가 아르헨티나를 4–2로 꺾고 FIFA 월드컵 초대 챔피언이 되었습니다."
+   },
+   "ja": {
+    "title": "初のワールドカップ決勝",
+    "place": "ウルグアイ・モンテビデオ",
+    "text": "ウルグアイがアルゼンチンを4–2で破り、FIFAワールドカップ初代王者となりました。"
+   },
+   "zh": {
+    "title": "首届世界杯决赛",
+    "place": "乌拉圭蒙得维的亚",
+    "text": "乌拉圭以4–2击败阿根廷,成为首届国际足联世界杯冠军。"
+   },
+   "es": {
+    "title": "La primera final de la Copa del Mundo",
+    "place": "Montevideo, Uruguay",
+    "text": "Uruguay venció a Argentina 4–2 y se convirtió en el primer campeón de la Copa Mundial de la FIFA."
+   },
+   "sw": {
+    "title": "Fainali ya kwanza ya Kombe la Dunia",
+    "place": "Montevideo, Uruguay",
+    "text": "Uruguay iliifunga Argentina mabao 4–2 na kuwa bingwa wa kwanza wa Kombe la Dunia la FIFA."
+   }
+  }
+ },
+ {
+  "slug": "worldcup-2010",
+  "year": 2010,
+  "month": 6,
+  "day": 11,
+  "topic": "Michezo",
+  "region": "africa",
+  "featured": false,
+  "en": {
+   "title": "The World Cup comes to Africa",
+   "place": "Johannesburg, South Africa",
+   "text": "The FIFA World Cup kicked off in South Africa, the first time the tournament was held on the African continent."
+  },
+  "translations": {
+   "fr": {
+    "title": "La Coupe du monde arrive en Afrique",
+    "place": "Johannesburg, Afrique du Sud",
+    "text": "La Coupe du monde de la FIFA débute en Afrique du Sud, la première fois que le tournoi se déroule sur le continent africain."
+   },
+   "ar": {
+    "title": "كأس العالم تصل إلى أفريقيا",
+    "place": "جوهانسبرغ، جنوب أفريقيا",
+    "text": "انطلقت بطولة كأس العالم لكرة القدم في جنوب أفريقيا، في أول مرة تُقام فيها البطولة على القارة الأفريقية."
+   },
+   "ko": {
+    "title": "아프리카에 온 월드컵",
+    "place": "남아프리카공화국 요하네스버그",
+    "text": "FIFA 월드컵이 남아프리카공화국에서 개막했습니다. 아프리카 대륙에서 대회가 열린 것은 처음이었습니다."
+   },
+   "ja": {
+    "title": "ワールドカップがアフリカへ",
+    "place": "南アフリカ・ヨハネスブルグ",
+    "text": "FIFAワールドカップが南アフリカで開幕しました。アフリカ大陸で大会が開かれたのは初めてでした。"
+   },
+   "zh": {
+    "title": "世界杯来到非洲",
+    "place": "南非约翰内斯堡",
+    "text": "国际足联世界杯在南非开幕,这是该赛事首次在非洲大陆举办。"
+   },
+   "es": {
+    "title": "La Copa del Mundo llega a África",
+    "place": "Johannesburgo, Sudáfrica",
+    "text": "La Copa Mundial de la FIFA comenzó en Sudáfrica, la primera vez que el torneo se celebró en el continente africano."
+   },
+   "sw": {
+    "title": "Kombe la Dunia lafika Afrika",
+    "place": "Johannesburg, Afrika Kusini",
+    "text": "Kombe la Dunia la FIFA lilianza nchini Afrika Kusini, ikiwa ni mara ya kwanza mashindano hayo kufanyika barani Afrika."
+   }
+  }
+ },
+ {
+  "slug": "bayi-1974",
+  "year": 1974,
+  "month": 2,
+  "day": 2,
+  "topic": "Michezo",
+  "region": "tanzania",
+  "featured": false,
+  "en": {
+   "title": "Filbert Bayi sets a world record",
+   "place": "Christchurch, New Zealand",
+   "text": "Tanzanian runner Filbert Bayi won the 1500 metres at the Commonwealth Games and set a new world record, leading from start to finish."
+  },
+  "translations": {
+   "fr": {
+    "title": "Filbert Bayi bat le record du monde",
+    "place": "Christchurch, Nouvelle-Zélande",
+    "text": "Le coureur tanzanien Filbert Bayi remporte le 1 500 mètres aux Jeux du Commonwealth et établit un nouveau record du monde, en menant la course du début à la fin."
+   },
+   "ar": {
+    "title": "فيلبرت باي يحطم الرقم القياسي العالمي",
+    "place": "كرايستشيرش، نيوزيلندا",
+    "text": "فاز العدّاء التنزاني فيلبرت باي بسباق 1500 متر في ألعاب الكومنولث وسجّل رقمًا قياسيًا عالميًا جديدًا، متصدرًا السباق من البداية حتى النهاية."
+   },
+   "ko": {
+    "title": "필버트 바이, 세계 신기록 수립",
+    "place": "뉴질랜드 크라이스트처치",
+    "text": "탄자니아의 육상 선수 필버트 바이가 영연방 경기대회 1500m에서 처음부터 끝까지 선두를 지키며 우승하고 세계 신기록을 세웠습니다."
+   },
+   "ja": {
+    "title": "フィルバート・バイが世界新記録",
+    "place": "ニュージーランド・クライストチャーチ",
+    "text": "タンザニアのランナー、フィルバート・バイがコモンウェルスゲームズの1500メートルでスタートからゴールまで先頭を走り続けて優勝し、世界新記録を樹立しました。"
+   },
+   "zh": {
+    "title": "菲尔伯特·巴伊打破世界纪录",
+    "place": "新西兰克赖斯特彻奇",
+    "text": "坦桑尼亚跑步运动员菲尔伯特·巴伊在英联邦运动会1500米比赛中从头领跑到尾夺冠,并创造了新的世界纪录。"
+   },
+   "es": {
+    "title": "Filbert Bayi bate el récord mundial",
+    "place": "Christchurch, Nueva Zelanda",
+    "text": "El atleta tanzano Filbert Bayi ganó los 1500 metros en los Juegos de la Mancomunidad y estableció un nuevo récord mundial, liderando la carrera de principio a fin."
+   },
+   "sw": {
+    "title": "Filbert Bayi aweka rekodi ya dunia",
+    "place": "Christchurch, New Zealand",
+    "text": "Mwanariadha wa Tanzania, Filbert Bayi, alishinda mbio za mita 1500 katika Michezo ya Jumuiya ya Madola na kuweka rekodi mpya ya dunia, akiongoza tangu mwanzo hadi mwisho."
+   }
+  }
+ },
+ {
+  "slug": "titanic-1912",
+  "year": 1912,
+  "month": 4,
+  "day": 15,
+  "topic": "Bahari",
+  "region": "world",
+  "featured": false,
+  "en": {
+   "title": "The Titanic sinks",
+   "place": "Atlantic Ocean",
+   "text": "The large passenger ship Titanic sank on its maiden voyage after striking an iceberg. More than 1,500 people lost their lives."
+  },
+  "translations": {
+   "fr": {
+    "title": "Le Titanic sombre",
+    "place": "Océan Atlantique",
+    "text": "Le grand paquebot Titanic sombre lors de son voyage inaugural après avoir heurté un iceberg. Plus de 1 500 personnes perdent la vie."
+   },
+   "ar": {
+    "title": "غرق سفينة تيتانيك",
+    "place": "المحيط الأطلسي",
+    "text": "غرقت سفينة الركاب الضخمة تيتانيك في رحلتها الأولى بعد اصطدامها بجبل جليدي. ولقي أكثر من 1500 شخص حتفهم."
+   },
+   "ko": {
+    "title": "타이타닉호 침몰",
+    "place": "대서양",
+    "text": "대형 여객선 타이타닉호가 첫 항해 중 빙산과 충돌해 침몰했습니다. 1,500명이 넘는 사람이 목숨을 잃었습니다."
+   },
+   "ja": {
+    "title": "タイタニック号が沈没",
+    "place": "大西洋",
+    "text": "大型客船タイタニック号が処女航海中に氷山と衝突して沈没しました。1,500人以上が命を落としました。"
+   },
+   "zh": {
+    "title": "泰坦尼克号沉没",
+    "place": "大西洋",
+    "text": "大型客轮泰坦尼克号在处女航中撞上冰山后沉没,超过1500人遇难。"
+   },
+   "es": {
+    "title": "El Titanic se hunde",
+    "place": "Océano Atlántico",
+    "text": "El gran transatlántico Titanic se hundió en su viaje inaugural tras chocar contra un iceberg. Más de 1500 personas perdieron la vida."
+   },
+   "sw": {
+    "title": "Meli ya Titanic yazama",
+    "place": "Bahari ya Atlantiki",
+    "text": "Meli kubwa ya abiria, Titanic, ilizama katika safari yake ya kwanza baada ya kugonga jabali la barafu. Zaidi ya watu 1,500 walipoteza maisha."
+   }
+  }
+ },
+ {
+  "slug": "great-pyramid",
+  "year": -2560,
+  "circa": true,
+  "topic": "Afrika",
+  "region": "africa",
+  "en": {
+   "title": "The Great Pyramid of Giza is built",
+   "place": "Giza, Egypt",
+   "text": "Workers in ancient Egypt completed the Great Pyramid of Giza as a tomb for Pharaoh Khufu. For more than 3,800 years it was the tallest structure ever built by humans."
+  },
+  "translations": {
+   "sw": {
+    "title": "Piramidi Kuu ya Giza yajengwa",
+    "place": "Giza, Misri",
+    "text": "Wafanyakazi wa Misri ya kale walikamilisha Piramidi Kuu ya Giza kama kaburi la Farao Khufu. Kwa zaidi ya miaka 3,800 ilikuwa jengo refu zaidi lililowahi kujengwa na binadamu."
+   }
+  }
+ },
+ {
+  "slug": "mansa-musa",
+  "year": 1324,
+  "topic": "Afrika",
+  "region": "africa",
+  "en": {
+   "title": "Mansa Musa's journey to Mecca",
+   "place": "Mali Empire",
+   "text": "Mansa Musa, ruler of the Mali Empire, travelled to Mecca with a huge caravan carrying so much gold that his journey became famous across Africa, the Middle East and Europe."
+  },
+  "translations": {
+   "sw": {
+    "title": "Safari ya Mansa Musa kwenda Makka",
+    "place": "Dola ya Mali",
+    "text": "Mansa Musa, mtawala wa Dola ya Mali, alisafiri kwenda Makka akiwa na msafara mkubwa uliobeba dhahabu nyingi, kiasi kwamba safari yake ilijulikana kote Afrika, Mashariki ya Kati na Ulaya."
+   }
+  }
+ },
+ {
+  "slug": "ibn-battuta-kilwa",
+  "year": 1331,
+  "circa": true,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "en": {
+   "title": "Ibn Battuta visits Kilwa",
+   "place": "Kilwa Kisiwani, Tanzania",
+   "text": "The Moroccan traveller Ibn Battuta visited Kilwa, a rich Swahili trading city on the East African coast, and described it as one of the most beautiful cities in the world."
+  },
+  "translations": {
+   "sw": {
+    "title": "Ibn Battuta azuru Kilwa",
+    "place": "Kilwa Kisiwani, Tanzania",
+    "text": "Msafiri kutoka Morocco, Ibn Battuta, aliizuru Kilwa, mji tajiri wa biashara wa Waswahili kwenye pwani ya Afrika Mashariki, na akauelezea kuwa mmoja wa miji mizuri zaidi duniani."
+   }
+  }
+ },
+ {
+  "slug": "gutenberg-press",
+  "year": 1440,
+  "circa": true,
+  "topic": "Sayansi",
+  "region": "europe",
+  "en": {
+   "title": "Gutenberg's printing press",
+   "place": "Mainz, Germany",
+   "text": "Johannes Gutenberg developed a printing press with movable metal type. Books could now be made quickly and cheaply, and knowledge spread faster than ever before."
+  },
+  "translations": {
+   "sw": {
+    "title": "Mashine ya uchapishaji ya Gutenberg",
+    "place": "Mainz, Ujerumani",
+    "text": "Johannes Gutenberg alibuni mashine ya uchapishaji yenye herufi za chuma zinazohamishika. Vitabu vikaweza kutengenezwa haraka na kwa bei nafuu, na maarifa yakaenea kwa kasi kuliko wakati wowote."
+   }
+  }
+ },
+ {
+  "slug": "vasco-da-gama-east-africa",
+  "year": 1498,
+  "topic": "Bahari",
+  "region": "east_africa",
+  "en": {
+   "title": "Vasco da Gama reaches the East African coast",
+   "place": "Mombasa and Malindi, Kenya",
+   "text": "Portuguese explorer Vasco da Gama sailed around the Cape of Good Hope and reached Mombasa and Malindi on his way to India — the start of Portuguese influence along the Swahili coast."
+  },
+  "translations": {
+   "sw": {
+    "title": "Vasco da Gama afika pwani ya Afrika Mashariki",
+    "place": "Mombasa na Malindi, Kenya",
+    "text": "Mvumbuzi wa Kireno Vasco da Gama alizunguka Rasi ya Tumaini Jema na kufika Mombasa na Malindi akiwa njiani kwenda India — mwanzo wa ushawishi wa Wareno kwenye pwani ya Waswahili."
+   }
+  }
+ },
+ {
+  "slug": "zanzibar-slave-market-closed",
+  "year": 1873,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "en": {
+   "title": "Zanzibar's slave market is closed",
+   "place": "Zanzibar",
+   "text": "Under a treaty with Britain, Sultan Barghash closed the slave market in Zanzibar. A cathedral was later built on the site of the old market."
+  },
+  "translations": {
+   "sw": {
+    "title": "Soko la watumwa la Zanzibar lafungwa",
+    "place": "Zanzibar",
+    "text": "Kwa mkataba na Uingereza, Sultani Barghash alilifunga soko la watumwa la Zanzibar. Baadaye kanisa kuu lilijengwa mahali lilipokuwa soko hilo."
+   }
+  }
+ },
+ {
+  "slug": "berlin-conference",
+  "year": 1884,
+  "month": 11,
+  "day": 15,
+  "topic": "Afrika",
+  "region": "africa",
+  "en": {
+   "title": "The Berlin Conference begins",
+   "place": "Berlin, Germany",
+   "text": "European powers met in Berlin to set rules for claiming land in Africa. No African leaders were invited. The conference sped up the colonial 'Scramble for Africa'."
+  },
+  "translations": {
+   "sw": {
+    "title": "Mkutano wa Berlin waanza",
+    "place": "Berlin, Ujerumani",
+    "text": "Mataifa ya Ulaya yalikutana Berlin kuweka kanuni za kugawana ardhi ya Afrika. Hakuna kiongozi wa Kiafrika aliyealikwa. Mkutano huo uliharakisha 'Kinyang'anyiro cha Afrika' cha kikoloni."
+   }
+  }
+ },
+ {
+  "slug": "battle-of-adwa",
+  "year": 1896,
+  "month": 3,
+  "day": 1,
+  "topic": "Afrika",
+  "region": "africa",
+  "en": {
+   "title": "Victory at Adwa",
+   "place": "Adwa, Ethiopia",
+   "text": "Ethiopian forces led by Emperor Menelik II defeated the Italian army at Adwa. The victory kept Ethiopia independent and became a symbol of African resistance to colonial rule."
+  },
+  "translations": {
+   "sw": {
+    "title": "Ushindi wa Adwa",
+    "place": "Adwa, Ethiopia",
+    "text": "Majeshi ya Ethiopia yakiongozwa na Mfalme Menelik II yalishinda jeshi la Italia huko Adwa. Ushindi huo ulilinda uhuru wa Ethiopia na ukawa alama ya upinzani wa Afrika dhidi ya ukoloni."
+   }
+  }
+ },
+ {
+  "slug": "maji-maji",
+  "year": 1905,
+  "topic": "Tanzania",
+  "region": "tanzania",
+  "en": {
+   "title": "The Maji Maji uprising begins",
+   "place": "Southern Tanganyika",
+   "text": "Communities in southern Tanganyika rose up against German colonial rule and forced cotton growing. The uprising was crushed by 1907, but it is remembered as one of Africa's great struggles against colonialism."
+  },
+  "translations": {
+   "sw": {
+    "title": "Vita vya Maji Maji vyaanza",
+    "place": "Kusini mwa Tanganyika",
+    "text": "Jamii za kusini mwa Tanganyika ziliinuka dhidi ya utawala wa kikoloni wa Wajerumani na kilimo cha lazima cha pamba. Vita hivyo vilizimwa kufikia 1907, lakini vinakumbukwa kama moja ya mapambano makubwa dhidi ya ukoloni barani Afrika."
+   }
+  }
+ },
+ {
+  "slug": "berlin-wall-falls",
+  "year": 1989,
+  "month": 11,
+  "day": 9,
+  "topic": "Dunia",
+  "region": "europe",
+  "en": {
+   "title": "The Berlin Wall falls",
+   "place": "Berlin, Germany",
+   "text": "East German authorities opened the border crossings in the Berlin Wall, and crowds began tearing it down. Germany was reunited less than a year later."
+  },
+  "translations": {
+   "sw": {
+    "title": "Ukuta wa Berlin waanguka",
+    "place": "Berlin, Ujerumani",
+    "text": "Mamlaka ya Ujerumani Mashariki yalifungua vivuko vya mpaka katika Ukuta wa Berlin, na umati ukaanza kuubomoa. Ujerumani iliunganishwa tena chini ya mwaka mmoja baadaye."
+   }
+  }
+ }
+]
