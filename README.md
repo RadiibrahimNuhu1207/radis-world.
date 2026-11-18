@@ -1,6 +1,6 @@
 # Radi's World
 
-Stories, world history, audiobooks and comics by **Radi the Storyteller**, in one app.
+Stories, world history, books, audiobooks, comics and art by **Radi the Storyteller**, in one app.
 It works on phones and laptops, can be installed like an app, and speaks 8 languages (English is the default).
 
 | Section | What's inside | How you add content |
@@ -8,7 +8,9 @@ It works on phones and laptops, can be installed like an app, and speaks 8 langu
 | **Radi Stories** | Your YouTube videos (stories, features, shorts) | Automatic from your channel, or paste a link in Admin |
 | **History** | World history from the pyramids to today, by era, region, topic and date | Admin → History entries |
 | **Audiobooks** | Books with chapters; listeners resume where they stopped | Admin → Audiobooks (upload MP3 per chapter) |
+| **Books** | Your e-books, read inside the app with the book-flip effect and page sounds | Admin → Ebooks (upload a PDF, or type the chapters) |
 | **Comics** | Picture books read page by page with the book-flip effect | Admin → Comics (upload page images) |
+| **Art** | Drawings, paintings, poems, photos, designs | Admin → Artworks |
 
 Every history story can be **read as a book** (with page-flip sounds), **watched** (9:16 or 16:9), **downloaded** as an MP4 for YouTube,
 and **listened to** with a female, male or child voice. Your own recordings play first; if none exists for that language,
@@ -45,8 +47,8 @@ cp .env.example .env
 nano .env
 ```
 
-In nano, set `DJANGO_SECRET_KEY` to any long random text and `YOUTUBE_CHANNEL` to your channel link
-(e.g. `https://www.youtube.com/@yourhandle`). Save with **Ctrl+O, Enter**, exit with **Ctrl+X**.
+In nano, set `DJANGO_SECRET_KEY` to any long random text. `YOUTUBE_CHANNEL` is already set to
+`https://www.youtube.com/@radibrahimnuhu`. Save with **Ctrl+O, Enter**, exit with **Ctrl+X**.
 
 ```bash
 python manage.py vapid_keys
@@ -112,8 +114,12 @@ Go to **https://radisworld.pythonanywhere.com/admin/** and log in.
   - *Translations* (bottom of the page): add the same story in Kiswahili, French, Arabic, etc.
   - *Narrations*: upload an MP3 for a language and a voice (female / male / child). Your recordings go here; AI voice files (for English or other languages) go here too.
   - *Videos*: upload the 9:16 and 16:9 MP4s plus their poster images. Visitors can download them.
+- **Ebooks** — title, cover, language, then either:
+  - upload the **PDF** (from Word: *File → Save As → PDF*). Each PDF page becomes a page in the flip-book. Tick *Allow download* if readers may download it; or
+  - leave the PDF empty and add **chapters** (title + text) at the bottom of the page.
 - **Audiobooks** — title, cover, language, then one chapter per MP3.
 - **Comics** — title, cover, then one image per page in order.
+- **Artworks** — choose the kind (illustration, painting, poem, photo, design), upload the image, and/or type the poem text.
 
 Set **Status → Published** for anything you want visitors to see. Drafts stay hidden.
 
@@ -144,4 +150,6 @@ Then press **Reload** on the Web tab.
   History stories show in the chosen language when a translation exists, otherwise in English.
 - **Device voices:** the phone's AI voice depends on the phone. Most phones have English, French, Spanish, Arabic, Chinese, Japanese and Korean; Kiswahili is less common, so upload your recordings for Kiswahili.
 - **YouTube on the free plan:** if `sync_youtube` is ever blocked by PythonAnywhere's internet whitelist, just paste video links in Admin → Videos.
+- **Notifications on/off:** visitors tap the bell 🔔 at the top of the app (or the switch in Settings) to turn the daily notification on or off at any time.
+- **Big PDFs:** free PythonAnywhere accounts have 512 MB of storage. Keep each PDF under about 20 MB (Word → *Save As PDF → Minimum size*).
 - **iPhone notifications:** visitors must first add the app to their Home Screen (Share → Add to Home Screen).

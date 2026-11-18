@@ -10,7 +10,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 
-from world.models import Audiobook, Comic, HistoryEntry, PushSubscription, Status, Video, date_label
+from world.models import Artwork, Audiobook, Comic, Ebook, HistoryEntry, PushSubscription, Status, Video, date_label
 
 NEW = {"en": "New on Radi's World", "sw": "Mpya kwenye Radi's World", "fr": "Nouveau sur Radi's World",
        "ar": "جديد على Radi's World", "ko": "Radi's World 새 콘텐츠", "ja": "Radi's World の新着",
@@ -32,7 +32,9 @@ class Command(BaseCommand):
         since = timezone.now() - timedelta(days=1)
         fresh = (list(Video.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]) +
                  list(Audiobook.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]) +
-                 list(Comic.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]))
+                 list(Ebook.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]) +
+                 list(Comic.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]) +
+                 list(Artwork.objects.filter(status=Status.PUBLISHED, created__gte=since)[:1]))
         if not history and not fresh:
             self.stdout.write("Nothing for today — no notification sent.")
             return
@@ -50,8 +52,8 @@ class Command(BaseCommand):
                            "body": f"{e.year} — {title}", "url": f"/#h-{e.slug}"}
             else:
                 item = fresh[0]
-                anchor = f"v-{item.youtube_id}" if isinstance(item, Video) else (
-                    f"a-{item.slug}" if isinstance(item, Audiobook) else f"c-{item.slug}")
+                prefix = {Video: "v", Audiobook: "a", Comic: "c", Ebook: "b", Artwork: "r"}[type(item)]
+                anchor = f"{prefix}-{item.youtube_id if isinstance(item, Video) else item.slug}"
                 payload = {"title": NEW.get(sub.lang, NEW["en"]), "body": item.title, "url": f"/#{anchor}"}
             if opts["dry_run"]:
                 self.stdout.write(f"[dry-run] {sub.lang}: {payload['title']} — {payload['body']}")

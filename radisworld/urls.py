@@ -11,6 +11,7 @@ urlpatterns = [
     path("watch/<str:vid>/", views.share_video, name="share_video"),
     path("api/data/", views.api_data, name="api_data"),
     path("api/subscribe/", views.api_subscribe, name="api_subscribe"),
+    path("api/unsubscribe/", views.api_unsubscribe, name="api_unsubscribe"),
     path("manifest.webmanifest", views.manifest, name="manifest"),
     path("sw.js", views.service_worker, name="sw"),
     path("admin/", admin.site.urls),

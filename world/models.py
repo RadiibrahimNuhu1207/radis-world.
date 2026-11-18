@@ -244,6 +244,72 @@ class ComicPage(models.Model):
         ordering = ["order"]
 
 
+# ---------------------------------------------------------------- books (e-books)
+class Ebook(models.Model):
+    slug = models.SlugField(unique=True)
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=120, default="Radi the Storyteller")
+    description = models.TextField(blank=True)
+    cover = models.ImageField(upload_to="books/covers/", blank=True)
+    pdf = models.FileField(upload_to="books/pdf/", blank=True,
+                           help_text="Upload the book as a PDF (Word: File → Save as PDF). Or leave empty and type chapters below.")
+    allow_download = models.BooleanField(default=False, help_text="Show a Download button for the PDF")
+    language = models.CharField(max_length=5, choices=LANGUAGES, default="sw")
+    status = models.CharField(max_length=12, choices=Status.choices, default=Status.DRAFT)
+    featured = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-featured", "-created"]
+
+    def __str__(self):
+        return self.title
+
+    def as_dict(self):
+        return {"id": self.slug, "title": self.title, "author": self.author, "desc": self.description,
+                "cover": url(self.cover), "pdf": url(self.pdf), "dl": self.allow_download and bool(self.pdf),
+                "lang": self.language, "featured": self.featured,
+                "chapters": [{"title": c.title, "text": c.text} for c in self.chapters.all()]}
+
+
+class BookChapter(models.Model):
+    book = models.ForeignKey(Ebook, on_delete=models.CASCADE, related_name="chapters")
+    order = models.PositiveSmallIntegerField(default=1)
+    title = models.CharField(max_length=200, blank=True)
+    text = models.TextField()
+
+    class Meta:
+        ordering = ["order"]
+
+
+# ---------------------------------------------------------------- art
+ART_KINDS = [("illustration", "Illustration"), ("painting", "Painting"), ("poem", "Poem"),
+             ("photo", "Photo"), ("design", "Design"), ("other", "Other")]
+
+
+class Artwork(models.Model):
+    slug = models.SlugField(unique=True)
+    title = models.CharField(max_length=200)
+    kind = models.CharField(max_length=20, choices=ART_KINDS, default="illustration")
+    image = models.ImageField(upload_to="art/", blank=True, help_text="The artwork (optional for a poem)")
+    text = models.TextField(blank=True, help_text="For poems or written pieces")
+    description = models.TextField(blank=True)
+    language = models.CharField(max_length=5, choices=LANGUAGES, default="sw")
+    status = models.CharField(max_length=12, choices=Status.choices, default=Status.DRAFT)
+    featured = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-featured", "-created"]
+
+    def __str__(self):
+        return self.title
+
+    def as_dict(self):
+        return {"id": self.slug, "title": self.title, "kind": self.kind, "image": url(self.image), "text": self.text,
+                "desc": self.description, "lang": self.language, "featured": self.featured}
+
+
 # ---------------------------------------------------------------- notifications
 class PushSubscription(models.Model):
     endpoint = models.URLField(max_length=600, unique=True)

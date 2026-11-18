@@ -48,9 +48,24 @@ img{display:block;max-width:100%}
 .tools{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
 .search{background:var(--s1);border:1px solid var(--line);border-radius:999px;padding:8px 14px;width:220px;color:var(--ink);font:inherit;font-size:15px}
 .search::placeholder{color:var(--dim)}
+#bell[aria-pressed="true"]{border-color:var(--gold);background:rgba(242,184,75,.12)}
+.switch{display:inline-flex;align-items:center;gap:12px;cursor:pointer;background:none;border:0;padding:0;font-weight:700;font-size:16px}
+.switch i{width:52px;height:30px;border-radius:999px;background:var(--s3);position:relative;transition:background .2s;flex:none}
+.switch i::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--ink);transition:transform .2s}
+.switch[aria-checked="true"] i{background:var(--blue)}
+.switch[aria-checked="true"] i::after{transform:translateX(22px)}
+[dir=rtl] .switch[aria-checked="true"] i::after{transform:translateX(-22px)}
+[dir=rtl] .switch i::after{left:auto;right:3px}
+.poem{position:absolute;inset:0;padding:42px 16px 16px;background:linear-gradient(160deg,#241B33,#0B0F1A);font-family:var(--serif);font-style:italic;
+  font-size:15px;line-height:1.45;color:#E3E9F5;white-space:pre-line;overflow:hidden;-webkit-mask-image:linear-gradient(#000 70%,transparent)}
+.art-full{display:flex;justify-content:center;background:#05070C;padding:12px}
+.art-full img{max-height:78vh;width:auto;max-width:100%;object-fit:contain;border-radius:6px}
+.pg .pdf-wait{margin:auto;color:var(--p-ink-2);font-family:var(--sans)}
+.pg.pdf{padding:0;background:#fff}
+.pg.pdf img{width:100%;height:100%;object-fit:contain}
 .icon-btn{width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--s1);cursor:pointer;display:grid;place-items:center;font-size:17px}
 .lang-sel{background:var(--s1);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
-@media (max-width:980px){ .nav{display:none} }
+@media (max-width:1180px){ .nav{display:none} }
 @media (max-width:640px){
   .brand{font-size:18px} .brand svg{width:26px;height:26px}
   .search{width:110px;padding:7px 11px}
@@ -65,8 +80,8 @@ img{display:block;max-width:100%}
 .tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;font-weight:600;color:var(--dim);padding:4px 6px;min-width:58px}
 .tabs a i{font-style:normal;font-size:20px;line-height:1.1;filter:grayscale(1) brightness(1.4);opacity:.75}
 .tabs a.on{color:var(--ink)} .tabs a.on i{filter:none;opacity:1}
-@media (max-width:980px){ .tabs{display:flex} }
-@media (min-width:981px){ body{padding-bottom:40px} }
+@media (max-width:1180px){ .tabs{display:flex} }
+@media (min-width:1181px){ body{padding-bottom:40px} }
 
 /* hero */
 .hero{position:relative;min-height:min(74vh,640px);display:flex;align-items:flex-end;margin-top:-58px;overflow:hidden}
@@ -310,10 +325,11 @@ footer{color:var(--dim);font-size:13.5px;padding:40px clamp(16px,4vw,48px) 20px}
   <a class="brand" href="#home" aria-label="Radi's World"><svg><use href="#logo"/></svg><span>Radi's <b>World</b></span></a>
   <nav class="nav" id="nav">
     <a href="#home" data-i="home"></a><a href="#stories" data-i="stories"></a><a href="#history" data-i="history"></a>
-    <a href="#audiobooks" data-i="audiobooks"></a><a href="#comics" data-i="comics"></a>
+    <a href="#books" data-i="books"></a><a href="#audiobooks" data-i="audiobooks"></a><a href="#comics" data-i="comics"></a><a href="#art" data-i="art"></a>
   </nav>
   <div class="tools">
     <input class="search" id="q" type="search" data-ph="search" aria-label="Search">
+    <button class="icon-btn" id="bell" data-title="notifications" aria-pressed="false">🔕</button>
     <a class="icon-btn opt" href="#mylist" data-title="mylist">♡</a>
     <a class="icon-btn" href="#settings" data-title="settings">⚙</a>
     <select class="lang-sel" id="lang-sel" aria-label="Language"></select>
@@ -326,6 +342,9 @@ footer{color:var(--dim);font-size:13.5px;padding:40px clamp(16px,4vw,48px) 20px}
   <section class="view" id="v-history"></section>
   <section class="view" id="v-audiobooks"></section>
   <section class="view" id="v-comics"></section>
+  <section class="view" id="v-books"></section>
+  <section class="view" id="v-art"></section>
+  <section class="view" id="v-library"></section>
   <section class="view" id="v-list"></section>
   <section class="view" id="v-mylist"></section>
   <section class="view" id="v-settings"></section>
@@ -336,8 +355,7 @@ footer{color:var(--dim);font-size:13.5px;padding:40px clamp(16px,4vw,48px) 20px}
   <a href="#home"><i>⌂</i><span data-i="home"></span></a>
   <a href="#stories"><i>▶</i><span data-i="stories_short"></span></a>
   <a href="#history"><i>⏳</i><span data-i="history"></span></a>
-  <a href="#audiobooks"><i>🎧</i><span data-i="audio_short"></span></a>
-  <a href="#comics"><i>💥</i><span data-i="comics"></span></a>
+  <a href="#library"><i>📚</i><span data-i="library"></span></a>
   <a href="#mylist"><i>♡</i><span data-i="mylist"></span></a>
 </nav>
 
@@ -400,7 +418,7 @@ const ERAS = [["ancient",-1e6,500,"🏺","linear-gradient(140deg,#5A3A15,#0B0F1A
   ["early",1500,1800,"⚓","linear-gradient(140deg,#123A4A,#0B0F1A)"],["c19",1800,1900,"🚂","linear-gradient(140deg,#4A2414,#0B0F1A)"],
   ["c20",1900,2000,"✈","linear-gradient(140deg,#14324A,#0B0F1A)"],["c21",2000,1e6,"🛰","linear-gradient(140deg,#24154A,#0B0F1A)"]];
 const eraOf = y => ERAS.find(e => y >= e[1] && y < e[2])[0];
-let H = [], V = [], A = [], C = [], byKey = {};
+let H = [], V = [], A = [], C = [], B = [], R = [], byKey = {};
 const fmt = (o, d) => new Intl.DateTimeFormat(LANG_LOCALE[LANG], Object.assign({ timeZone: "UTC" }, o)).format(d);
 const dayLabel = (day, m) => fmt({ day: "numeric", month: "long" }, new Date(Date.UTC(2000, m - 1, day)));
 const monthName = m => fmt({ month: "long" }, new Date(Date.UTC(2000, m - 1, 1)));
@@ -417,7 +435,9 @@ function build(){
   V = DATA.videos.map(v => Object.assign({}, v, { key: "v:" + v.id, type: "v" })).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   A = DATA.audiobooks.map(a => Object.assign({}, a, { key: "a:" + a.id, type: "a" }));
   C = DATA.comics.map(c => Object.assign({}, c, { key: "c:" + c.id, type: "c" }));
-  byKey = {}; [...H, ...V, ...A, ...C].forEach(x => byKey[x.key] = x);
+  B = (DATA.books || []).map(b => Object.assign({}, b, { key: "b:" + b.id, type: "b" }));
+  R = (DATA.art || []).map(r => Object.assign({}, r, { key: "r:" + r.id, type: "r" }));
+  byKey = {}; [...H, ...V, ...A, ...C, ...B, ...R].forEach(x => byKey[x.key] = x);
 }
 const regName = r => t("reg_" + r), catName = c => t("cat_" + c);
 const ytChannel = () => { const c = (DATA.channel || "").trim(); if(!c) return "";
@@ -438,6 +458,10 @@ function card(x){
     <span class="play">🎧</span></div><div class="cap"><b>${esc(x.title)}</b><small>${esc(x.author)} · ${esc(LANG_NAMES[x.lang] || "")}</small></div></button>`;
   if(x.type === "c") return `<button class="card tall" data-open="${x.key}"><div class="art">${x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x, t("tag_comic"))}</div>
     <div class="cap"><b>${esc(x.title)}</b><small>${esc(t("pages", { n: x.pages.length }))}</small></div></button>`;
+  if(x.type === "b") return `<button class="card tall" data-open="${x.key}"><div class="art">${x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x, t("tag_book"))}</div>
+    <div class="cap"><b>${esc(x.title)}</b><small>${esc(x.author)} · ${esc(LANG_NAMES[x.lang] || "")}</small></div></button>`;
+  if(x.type === "r") return `<button class="card sq" data-open="${x.key}"><div class="art">${x.image ? `<img loading="lazy" src="${x.image}" alt="">` : `<div class="poem">${esc(x.text)}</div>`}
+    <span class="tag gold">${esc(t("art_" + x.kind))}</span></div><div class="cap"><b>${esc(x.title)}</b><small>Radi the Storyteller</small></div></button>`;
   return "";
 }
 
@@ -456,8 +480,10 @@ const LISTS = {
   stories: () => ({ title: t("latest_stories"), items: V, empty: t("empty_stories") }),
   audiobooks: () => ({ title: t("audiobooks"), items: A, empty: t("empty_audio") }),
   comics: () => ({ title: t("comics"), items: C, empty: t("empty_comics") }),
+  books: () => ({ title: t("books"), items: B, empty: t("empty_books") }),
+  art: () => ({ title: t("art"), items: R, empty: t("empty_art") }),
   foryou: () => ({ title: t("for_you"), items: H.filter(e => state.topics.includes(e.cat)).slice().reverse() }),
-  featured: () => ({ title: t("featured"), items: [...V, ...H, ...A, ...C].filter(x => x.featured) }),
+  featured: () => ({ title: t("featured"), items: [...V, ...H, ...B, ...A, ...C, ...R].filter(x => x.featured) }),
   continue: () => ({ title: t("continue"), items: A.filter(a => store.get("ab:" + a.id, null)) }),
   history: () => ({ title: t("history"), items: H })
 };
@@ -472,14 +498,14 @@ function rowHTML(id, opts = {}){
 
 /* ---------- views ---------- */
 function heroItem(){
-  return V.find(v => v.featured) || onThisDay(TODAY.d, TODAY.m).items.find(e => e.video) || H.find(e => e.featured) || V[0] || H[H.length - 1];
+  return V.find(v => v.featured) || B.find(b => b.featured) || onThisDay(TODAY.d, TODAY.m).items.find(e => e.video) || H.find(e => e.featured) || V[0] || H[H.length - 1];
 }
 function renderHome(){
   const x = heroItem(); let hero = "";
   if(x){
     const bg = x.type === "v" ? `https://i.ytimg.com/vi/${x.id}/maxresdefault.jpg` : "";
-    const eb = x.type === "v" ? t("stories") : t("history") + " · " + x.ylab;
-    const desc = x.type === "v" ? x.desc : x.text;
+    const eb = x.type === "v" ? t("stories") : x.type === "b" ? t("books") : t("history") + " · " + x.ylab;
+    const desc = x.type === "h" ? x.text : x.desc;
     hero = `<div class="hero">${x.type === "h" ? `<div class="hero-yr">${esc(x.ylab)}</div>` : ""}<div class="hero-bg" style="${bg ? `background-image:url('${bg}')` : `background:${(REGION_STYLE[x.region] || REGION_STYLE.world)[1]}`}"></div>
       <div class="hero-in"><div class="eyebrow">⚡ ${esc(eb)}</div><h1>${esc(x.title)}</h1><p>${esc(desc)}</p>
       <div class="btns"><button class="btn" data-open="${x.key}" data-play="1">${x.type === "v" || x.video ? t("watch") : t("read")}</button>
@@ -490,7 +516,7 @@ function renderHome(){
     <div class="track">${ERAS.map(([k, , , g, bg]) => `<button class="era" style="--eg:${bg}" data-go="#list/era-${k}"><i>${g}</i><b>${esc(t("era_" + k))}</b>
     <small>${H.filter(e => e.era === k).length} · ${esc(t("history"))}</small></button>`).join("")}</div></section>`;
   $("#v-home").innerHTML = hero + rowHTML("continue") + rowHTML("today") + rowHTML("stories") + eraTiles
-    + rowHTML("foryou") + rowHTML("audiobooks") + rowHTML("comics");
+    + rowHTML("foryou") + rowHTML("books") + rowHTML("audiobooks") + rowHTML("comics") + rowHTML("art");
 }
 function renderStories(){
   const ch = ytChannel(), kinds = ["all", ...new Set(V.map(v => v.kind))];
@@ -538,15 +564,19 @@ function renderList(id){
   if(id.startsWith("search:")){
     const q = decodeURIComponent(id.slice(7)).toLowerCase().trim();
     const hit = x => [x.title, x.place, x.text, x.desc, x.author, x.ylab, x.type === "h" ? regName(x.region) + " " + catName(x.cat) : ""].join(" ").toLowerCase().includes(q);
-    const items = [...V, ...H, ...A, ...C].filter(hit);
+    const items = [...V, ...H, ...B, ...A, ...C, ...R].filter(hit);
     L = { title: t("results", { q }), items, empty: t("no_results", { q }) };
   } else if(id.startsWith("date-")){
     const [, d, m] = id.split("-").map(Number); L = onThisDay(d, m);
   } else L = (LISTS[id] || LISTS.history)();
-  const tall = L.items.length && L.items.every(x => x.type === "c");
+  const tall = L.items.length && L.items.every(x => x.type === "c" || x.type === "b");
   $("#v-list").innerHTML = `<div class="page-h"><a href="javascript:history.back()" style="color:var(--blue);font-weight:700">‹</a>
     <h1>${esc(L.title)}</h1>${L.sub ? `<p>${esc(L.sub)}</p>` : ""}</div>` +
     (L.items.length ? `<div class="grid ${tall ? "tall" : ""}">${L.items.map(card).join("")}</div>` : `<div class="wrap"><div class="empty">${esc(L.empty || t("no_match"))}</div></div>`);
+}
+function renderLibrary(){
+  $("#v-library").innerHTML = `<div class="page-h"><h1>${t("library")}</h1><p>${t("library_p")}</p></div>`
+    + rowHTML("books", { always: 1 }) + rowHTML("audiobooks", { always: 1 }) + rowHTML("comics", { always: 1 }) + rowHTML("art", { always: 1 });
 }
 function inList(k){ return state.list.includes(k); }
 function toggleList(k){
@@ -566,9 +596,19 @@ function renderSettings(){
     <div class="panel"><h2>${t("voice_pref_h")}</h2><div class="chips">${["female", "male", "child"].map(v => ch("voice", v, state.voice === v, t("voice_" + v))).join("")}</div></div>
     <div class="panel"><h2>${t("ratio_h")}</h2><div class="chips">${[["auto", "r_auto"], ["9x16", "r_v"], ["16x9", "r_h"]].map(([v, k]) => ch("ratio", v, state.ratio === v, t(k))).join("")}</div></div>
     <div class="panel"><h2>${t("notify_h")}</h2><p>${t("notify_p")}</p>
-      <button class="btn" id="push-btn">${store.get("push", false) ? t("notify_on") : t("notify_btn")}</button>
+      <button class="switch" id="push-btn" role="switch" aria-checked="${store.get("push", false)}"><i></i><span>${store.get("push", false) ? t("notif_on_t") : t("notif_off_t")}</span></button>
       <div class="note">${t("notify_note")}</div></div>`;
-  $("#push-btn").onclick = enablePush;
+  $("#push-btn").onclick = togglePush;
+}
+function paintBell(){ const on = store.get("push", false); const b = $("#bell"); b.textContent = on ? "🔔" : "🔕"; b.setAttribute("aria-pressed", on);
+  const s = $("#push-btn"); if(s){ s.setAttribute("aria-checked", on); s.querySelector("span").textContent = on ? t("notif_on_t") : t("notif_off_t"); } }
+async function togglePush(){ if(store.get("push", false)) await disablePush(); else await enablePush(); paintBell(); }
+async function disablePush(){
+  store.set("push", false);
+  try{ const reg = await navigator.serviceWorker.ready; const sub = await reg.pushManager.getSubscription();
+    if(sub){ await fetch("/api/unsubscribe/", { method: "POST", headers: { "Content-Type": "application/json", "X-CSRFToken": csrf() },
+      body: JSON.stringify({ endpoint: sub.endpoint }) }).catch(() => {}); await sub.unsubscribe(); } }catch(e){}
+  toast(t("notif_off_t"));
 }
 async function enablePush(){
   try{
@@ -576,7 +616,7 @@ async function enablePush(){
     const perm = await Notification.requestPermission(); if(perm !== "granted") return toast(t("err_denied"));
     const reg = await navigator.serviceWorker.ready;
     const sub = (await reg.pushManager.getSubscription()) || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToU8(VAPID) });
-    await sendSub(sub); store.set("push", true); $("#push-btn").textContent = t("notify_on");
+    await sendSub(sub); store.set("push", true); toast(t("notif_on_t"));
   }catch(e){ toast(t("err_generic")); }
 }
 async function sendSub(sub){
@@ -599,7 +639,7 @@ function applyStatic(){
   $$("[data-ph]").forEach(el => el.placeholder = t(el.dataset.ph));
   $$("[data-title]").forEach(el => { el.title = t(el.dataset.title); el.setAttribute("aria-label", t(el.dataset.title)); });
   $("#lang-sel").innerHTML = LANGS.map(l => `<option value="${l}" ${l === LANG ? "selected" : ""}>${LANG_NAMES[l]}</option>`).join("");
-  $("#bk-close").textContent = t("book_close"); $("#bk-prev").textContent = t("prev"); $("#bk-next").textContent = t("next"); paintSound();
+  paintBell(); $("#bk-close").textContent = t("book_close"); $("#bk-prev").textContent = t("prev"); $("#bk-next").textContent = t("next"); paintSound();
 }
 function setLang(l){
   if(!LANGS.includes(l)) return; LANG = l; store.set("lang", l); stopNarration();
@@ -613,11 +653,11 @@ function showSheet(html){ $("#sheet-in").innerHTML = html; $("#sheet").classList
   const c = $("#sheet .close"); c && c.focus({ preventScroll: true }); }
 function closeSheet(){ $$("#sheet video, #sheet audio").forEach(m => m.pause()); stopNarration(); $("#sheet").classList.remove("on");
   $("#sheet-in").innerHTML = ""; document.body.style.overflow = ""; state.current = null;
-  if(/^#[hvac]-/.test(location.hash)) history.replaceState(null, "", "#" + (current || "home")); }
+  if(/^#[hvacbr]-/.test(location.hash)) history.replaceState(null, "", "#" + (current || "home")); }
 const listBtn = k => `<button class="btn ghost" data-toggle="${k}">${inList(k) ? t("in_list") : t("add_list")}</button>`;
 function openItem(k, play){
   const x = byKey[k]; if(!x) return; state.current = k;
-  if(x.type === "h") openHistory(x, play); else if(x.type === "v") openVideo(x); else if(x.type === "a") openAudio(x); else if(x.type === "c") openBook(k);
+  if(x.type === "h") openHistory(x, play); else if(x.type === "v") openVideo(x); else if(x.type === "a") openAudio(x); else if(x.type === "c") openBook(k); else if(x.type === "b") openEbook(x); else if(x.type === "r") openArt(x);
 }
 function related(x){
   const same = H.filter(e => e.d && e.d === x.d && e.id !== x.id);
@@ -696,6 +736,26 @@ function openAudio(a){
   au.onended = () => { if(ch + 1 < a.chapters.length) load(ch + 1, 0, true); else store.set("ab:" + a.id, null); };
   const r = $("#ab-resume"); if(r) r.onclick = () => load(saved.ch, saved.t, true);
 }
+function openEbook(b){
+  const more = B.filter(o => o.id !== b.id).slice(0, 6);
+  showSheet(`<div class="sheet-bar"><div class="eyebrow">📖 ${t("tag_book")}</div><button class="close" data-close aria-label="${t("close")}">✕</button></div>
+    <div class="ab"><div class="cover" style="position:relative;aspect-ratio:2/3">${b.cover ? `<img src="${b.cover}" alt="">` : genCover(b, t("tag_book"))}</div>
+    <div><h2>${esc(b.title)}</h2><div class="meta" style="color:var(--mist)">${esc(t("by", { a: b.author }))} · ${esc(LANG_NAMES[b.lang] || "")}</div>
+      ${b.desc ? `<p style="margin-top:12px;color:#D5DDEB;white-space:pre-line">${esc(b.desc)}</p>` : ""}
+      <div class="btns"><button class="btn gold" data-book="${b.key}">${t("read")}</button>${listBtn(b.key)}
+        ${b.dl ? `<a class="btn ghost" href="${b.pdf}" download>${t("download_pdf")}</a>` : ""}</div>
+      ${b.chapters.length ? `<h3 style="margin:22px 0 4px;font-size:16px;color:var(--mist)">${t("chapters")}</h3>` + b.chapters.map((c, i) => `<div class="ch" style="cursor:default"><span>${i + 1}. ${esc(c.title)}</span></div>`).join("") : ""}
+      ${more.length ? `<h3 style="margin:22px 0 8px;font-size:16px;color:var(--mist)">${t("books")}</h3><div class="track" style="padding:4px 0">${more.map(card).join("")}</div>` : ""}
+    </div></div>`);
+}
+function openArt(r){
+  showSheet(`<div class="sheet-bar"><div class="eyebrow">🎨 ${esc(t("art_" + r.kind))}</div><button class="close" data-close aria-label="${t("close")}">✕</button></div>
+    ${r.image ? `<div class="art-full"><img src="${r.image}" alt="${esc(r.title)}"></div>` : ""}
+    <div class="sheet-body" style="grid-template-columns:1fr"><div><h2>${esc(r.title)}</h2><div class="meta">Radi the Storyteller · ${esc(LANG_NAMES[r.lang] || "")}</div>
+      <div class="btns">${listBtn(r.key)}</div>
+      ${r.text ? `<div class="txt" style="font-style:italic">${esc(r.text)}</div>` : ""}
+      ${r.desc ? `<p style="margin-top:14px;color:var(--mist);white-space:pre-line">${esc(r.desc)}</p>` : ""}</div></div>`);
+}
 const mmss = s => { s = Math.floor(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
 async function copy(txt){ try{ await navigator.clipboard.writeText(txt); toast(t("copied")); }catch(e){ toast(t("copy_fail")); } }
 
@@ -760,7 +820,15 @@ function chunkText(text, max){ const s = text.match(/[^.!?。!?؟]+[.!?。!?؟]+
   s.forEach(p => { if((cur + p).length > max && cur){ out.push(cur.trim()); cur = p; } else cur += p; }); if(cur.trim()) out.push(cur.trim()); return out; }
 function buildPages(x, single){
   const P = []; let n = 0;
-  if(x.type === "c"){
+  if(x.type === "b"){
+    P.push(x.cover ? { cls: "img", html: `<img src="${x.cover}" alt="">` } : { cls: "cover", html: `${LOGO}<div class="c-eb">${t("tag_book")}</div><h2 style="margin-top:14px">${esc(x.title)}</h2><div class="c-by">${esc(x.author)}</div>` });
+    if(x.pdf && bk.pdfN){ for(let i = 1; i <= bk.pdfN; i++) P.push({ cls: "pdf", pdf: i, html: "" }); }
+    else {
+      const wide = ["ja", "zh", "ko"].includes(x.lang);
+      x.chapters.forEach(ch => chunkText(ch.text.replace(/\s*\n+\s*/g, " "), (single ? 300 : 380) / (wide ? 2.2 : 1)).forEach((c, k) =>
+        P.push({ n: ++n, lang: x.lang, html: (k === 0 && ch.title ? `<h3>${esc(ch.title)}</h3>` : "") + `<p class="${k === 0 ? "first" : ""}">${esc(c)}</p>` })));
+    }
+  } else if(x.type === "c"){
     P.push(x.cover ? { cls: "img", html: `<img src="${x.cover}" alt="">` } : { cls: "cover", html: `${LOGO}<div class="c-eb">${t("tag_comic")}</div><h2 style="margin-top:14px">${esc(x.title)}</h2><div class="c-by">Radi the Storyteller</div>` });
     x.pages.forEach((src, i) => { if(i === 0 && src === x.cover) return; P.push({ cls: "img", html: `<img src="${src}" alt="">` }); });
   } else {
@@ -780,13 +848,37 @@ function buildPages(x, single){
   if(!single){ P.unshift(null); if(P.length % 2) P.push({ cls: "blank", html: "" }); }
   return P;
 }
-const pageHTML = p => p ? `<div class="pg ${p.cls || ""}" dir="${LANG === "ar" ? "rtl" : "ltr"}" lang="${LANG}">${p.html}${p.n ? `<div class="pn">${p.n}</div>` : ""}</div>` : "";
+const pdfImg = {};
+const pageHTML = p => { if(!p) return ""; const lg = p.lang || LANG;
+  const body = p.pdf ? (pdfImg[p.pdf] ? `<img src="${pdfImg[p.pdf]}" alt="">` : `<div class="pdf-wait" data-pdfp="${p.pdf}">${t("loading")}</div>`) : p.html;
+  return `<div class="pg ${p.cls || ""}" dir="${lg === "ar" ? "rtl" : "ltr"}" lang="${lg}">${body}${p.n ? `<div class="pn">${p.n}</div>` : ""}</div>`; };
+let pdfLib = null;
+async function loadPdf(url){
+  if(!pdfLib){ pdfLib = await import("{% static 'world/pdfjs/pdf.min.js' %}");
+    pdfLib.GlobalWorkerOptions.workerSrc = "{% static 'world/pdfjs/pdf.worker.min.js' %}"; }
+  return pdfLib.getDocument(url).promise;
+}
+const pdfBusy = {};
+async function renderPdfPage(n){
+  if(pdfImg[n] || pdfBusy[n] || !bk.pdf) return; pdfBusy[n] = 1;
+  try{
+    const page = await bk.pdf.getPage(n), vp0 = page.getViewport({ scale: 1 });
+    const scale = Math.min(2.5, (innerHeight * (devicePixelRatio || 1) * 1.1) / vp0.height), vp = page.getViewport({ scale });
+    const cv = document.createElement("canvas"); cv.width = vp.width; cv.height = vp.height;
+    await page.render({ canvasContext: cv.getContext("2d"), viewport: vp }).promise;
+    pdfImg[n] = cv.toDataURL("image/jpeg", .85);
+    $$(`[data-pdfp="${n}"]`).forEach(el => { el.outerHTML = `<img src="${pdfImg[n]}" alt="">`; });
+  }catch(e){} finally{ delete pdfBusy[n]; }
+}
+function fillPdf(){ if(!bk.pdf) return; const i = bk.single ? bk.i : 2 * bk.i;
+  for(let k = Math.max(0, i - 1); k < Math.min(bk.pages.length, i + 5); k++){ const p = bk.pages[k]; if(p && p.pdf) renderPdfPage(p.pdf); } }
 const setHalf = (side, p) => { $("#bk-" + side).innerHTML = pageHTML(p); };
 const bookSteps = () => bk.single ? bk.pages.length : bk.pages.length / 2;
 function renderBook(){
   if(bk.single){ setHalf("left", null); setHalf("right", bk.pages[bk.i]); } else { setHalf("left", bk.pages[2 * bk.i]); setHalf("right", bk.pages[2 * bk.i + 1]); }
   const s = bookSteps(); $("#bk-prev").disabled = bk.i === 0; $("#bk-next").disabled = bk.i >= s - 1;
   $("#bk-pos").textContent = bk.i === 0 ? t("cover") : bk.i === s - 1 ? t("the_end") : t("page_of", { a: bk.i, b: s - 2 });
+  fillPdf();
 }
 function layoutBook(){
   const single = innerWidth < 760 || innerWidth / innerHeight < 1.15;
@@ -794,9 +886,14 @@ function layoutBook(){
   if(single !== bk.single || !bk.pages.length){ bk.single = single; bk.pages = buildPages(bk.x, single); bk.i = 0; }
   renderBook();
 }
-function openBook(k){
+async function openBook(k){
   const x = byKey[k]; if(!x) return; $$("#sheet video").forEach(v => v.pause()); stopNarration();
-  bk = { x, pages: [], i: 0, single: null, busy: false };
+  bk = { x, pages: [], i: 0, single: null, busy: false, pdf: null, pdfN: 0 };
+  for(const key in pdfImg) delete pdfImg[key];
+  if(x.type === "b" && x.pdf){
+    toast(t("loading"));
+    try{ bk.pdf = await loadPdf(x.pdf); bk.pdfN = bk.pdf.numPages; }catch(e){ toast(t("err_generic")); return; }
+  }
   $("#book-ov").classList.add("on"); document.body.style.overflow = "hidden"; layoutBook(); sfx(SFX.open); $("#bk-next").focus();
 }
 function closeBook(){ $("#book-ov").classList.remove("on"); sfx(SFX.close); if(!$("#sheet").classList.contains("on")) document.body.style.overflow = "";
@@ -859,6 +956,7 @@ document.addEventListener("keydown", ev => {
   }
   if(ev.key === "Escape" && $("#sheet").classList.contains("on")) closeSheet();
 });
+$("#bell").onclick = togglePush;
 $("#lang-sel").onchange = ev => { setLang(ev.target.value); toast(t("lang_toast")); };
 let qTimer; $("#q").addEventListener("input", ev => { clearTimeout(qTimer); const q = ev.target.value.trim();
   qTimer = setTimeout(() => { if(q.length >= 2) location.hash = "#list/search:" + encodeURIComponent(q); else if(!q && current === "list") location.hash = "#home"; }, 300); });
@@ -866,10 +964,13 @@ let qTimer; $("#q").addEventListener("input", ev => { clearTimeout(qTimer); cons
 let current = null, rendered = {};
 const RENDER = { home: renderHome, stories: renderStories, history: renderHistory, mylist: renderMyList, settings: renderSettings,
   audiobooks: () => renderSimple("audiobooks", A, t("audiobooks"), t("audio_p"), t("empty_audio")),
-  comics: () => renderSimple("comics", C, t("comics"), t("comics_p"), t("empty_comics"), true) };
+  comics: () => renderSimple("comics", C, t("comics"), t("comics_p"), t("empty_comics"), true),
+  books: () => renderSimple("books", B, t("books"), t("books_p"), t("empty_books"), true),
+  art: () => renderSimple("art", R, t("art"), t("art_p"), t("empty_art")),
+  library: renderLibrary };
 function route(){
   let h = decodeURIComponent((location.hash || "#home").slice(1));
-  const deep = h.match(/^([hvac])-(.+)$/);
+  const deep = h.match(/^([hvacbr])-(.+)$/);
   if(deep){ if(!current){ RENDER.home(); rendered.home = 1; show("home"); } const k = deep[1] + ":" + deep[2]; if(byKey[k]) openItem(k); return; }
   if($("#sheet").classList.contains("on")) closeSheet();
   if(h.startsWith("list/")){ renderList(h.slice(5)); show("list"); return; }
@@ -880,7 +981,7 @@ function route(){
 function show(v){
   if(current !== v) scrollTo(0, 0); current = v;
   $$(".view").forEach(s => s.classList.toggle("on", s.id === "v-" + v));
-  const tab = v === "list" ? null : v; $$("#nav a, #tabs a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + tab));
+  const tab = v === "list" ? null : ["books", "audiobooks", "comics", "art"].includes(v) && innerWidth <= 1180 ? "library" : v; $$("#nav a, #tabs a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + tab));
 }
 addEventListener("hashchange", route);
 

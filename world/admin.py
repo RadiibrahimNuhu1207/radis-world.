@@ -6,12 +6,12 @@ from django import forms
 from django.contrib import admin, messages
 from django.utils.html import format_html
 
-from .models import (Audiobook, Chapter, Comic, ComicPage, HistoryEntry, HistoryTranslation, Narration,
+from .models import (Artwork, Audiobook, BookChapter, Chapter, Ebook, Comic, ComicPage, HistoryEntry, HistoryTranslation, Narration,
                      PushSubscription, Status, Video)
 
 admin.site.site_header = "Radi's World — Admin"
 admin.site.site_title = "Radi's World"
-admin.site.index_title = "Stories, history, audiobooks and comics"
+admin.site.index_title = "Stories, history, books, audiobooks, comics and art"
 
 
 @admin.action(description="Publish selected")
@@ -159,3 +159,35 @@ class ComicAdmin(admin.ModelAdmin):
 class PushSubscriptionAdmin(admin.ModelAdmin):
     list_display = ("created", "lang", "topics", "last_sent", "failures")
     readonly_fields = ("endpoint", "p256dh", "auth", "created", "last_sent", "failures")
+
+
+# ---------------------------------------------------------------- books + art
+class BookChapterInline(admin.StackedInline):
+    model = BookChapter
+    extra = 0
+
+
+@admin.register(Ebook)
+class EbookAdmin(admin.ModelAdmin):
+    inlines = [BookChapterInline]
+    list_display = ("title", "author", "language", "has_pdf", "status", "featured")
+    list_editable = ("status", "featured")
+    prepopulated_fields = {"slug": ("title",)}
+    actions = [publish, unpublish]
+
+    @admin.display(boolean=True, description="PDF")
+    def has_pdf(self, o):
+        return bool(o.pdf)
+
+
+@admin.register(Artwork)
+class ArtworkAdmin(admin.ModelAdmin):
+    list_display = ("title", "kind", "language", "status", "featured", "thumb")
+    list_editable = ("status", "featured")
+    list_filter = ("kind", "status")
+    prepopulated_fields = {"slug": ("title",)}
+    actions = [publish, unpublish]
+
+    @admin.display(description="")
+    def thumb(self, o):
+        return format_html('<img src="{}" style="height:40px;border-radius:4px">', o.image.url) if o.image else ""

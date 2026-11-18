@@ -8,7 +8,7 @@ from django.views.decorators.cache import cache_control
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_POST
 
-from .models import (LANGUAGES, REGIONS, TOPICS, Audiobook, Comic, HistoryEntry, PushSubscription, Status,
+from .models import (LANGUAGES, REGIONS, TOPICS, Artwork, Audiobook, Comic, Ebook, HistoryEntry, PushSubscription, Status,
                      Video)
 
 PUB = Status.PUBLISHED
@@ -23,6 +23,8 @@ def app_data():
         "videos": [v.as_dict() for v in Video.objects.filter(status=PUB)],
         "audiobooks": [a.as_dict() for a in Audiobook.objects.filter(status=PUB).prefetch_related("chapters")],
         "comics": [c.as_dict() for c in Comic.objects.filter(status=PUB).prefetch_related("pages")],
+        "books": [b.as_dict() for b in Ebook.objects.filter(status=PUB).prefetch_related("chapters")],
+        "art": [a.as_dict() for a in Artwork.objects.filter(status=PUB)],
         "channel": settings.YOUTUBE_CHANNEL,
     }
 
@@ -67,10 +69,20 @@ def api_subscribe(request):
     return JsonResponse({"ok": True})
 
 
+@require_POST
+def api_unsubscribe(request):
+    try:
+        endpoint = json.loads(request.body)["endpoint"]
+    except (KeyError, ValueError, TypeError):
+        return HttpResponseBadRequest("bad request")
+    PushSubscription.objects.filter(endpoint=endpoint).delete()
+    return JsonResponse({"ok": True})
+
+
 def manifest(request):
     data = {
         "name": "Radi's World", "short_name": "Radi's World",
-        "description": "Stories, history, audiobooks and comics by Radi the Storyteller.",
+        "description": "Stories, history, books, audiobooks, comics and art by Radi the Storyteller.",
         "lang": "en", "start_url": "/", "scope": "/", "display": "standalone", "orientation": "any",
         "background_color": "#0B0F1A", "theme_color": "#0B0F1A",
         "icons": [
