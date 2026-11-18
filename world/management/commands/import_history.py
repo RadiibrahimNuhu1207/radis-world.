@@ -2,7 +2,7 @@
 
 Item: {"slug","year","circa","month","day","topic","region","featured","status",
        "en": {"title","place","text"}, "translations": {"sw": {...}, "fr": {...}},
-       "image_vertical","image_horizontal","video_vertical","video_horizontal"}   (file paths relative to the JSON)
+       "artwork","image_vertical","image_horizontal","video_vertical","video_horizontal"}   (file paths relative to the JSON)
 """
 import json
 from pathlib import Path
@@ -12,7 +12,7 @@ from django.core.management.base import BaseCommand
 
 from world.models import HistoryEntry, HistoryTranslation
 
-FILES = ["image_vertical", "image_horizontal", "video_vertical", "video_horizontal"]
+FILES = ["artwork", "image_vertical", "image_horizontal", "video_vertical", "video_horizontal"]
 
 
 class Command(BaseCommand):

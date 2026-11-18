@@ -74,6 +74,8 @@ class HistoryEntry(models.Model):
     video_horizontal = models.FileField(upload_to="history/videos/", blank=True, help_text="16:9 video")
     image_vertical = models.ImageField(upload_to="history/images/", blank=True)
     image_horizontal = models.ImageField(upload_to="history/images/", blank=True)
+    artwork = models.ImageField(upload_to="history/art/", blank=True,
+                                help_text="Picture shown on cards and the home page. Landscape (16:9), with no words on it.")
     sources = models.TextField(blank=True, help_text="Where the facts come from (not shown to users)")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -99,7 +101,7 @@ class HistoryEntry(models.Model):
             "d": f"{self.day:02d}-{self.month:02d}" if self.day and self.month else None,
             "m": self.month, "cat": self.topic, "region": self.region, "featured": self.featured, "tr": tr,
             "v916": url(self.video_vertical), "v169": url(self.video_horizontal),
-            "h916": url(self.image_vertical), "h169": url(self.image_horizontal),
+            "h916": url(self.image_vertical), "h169": url(self.image_horizontal), "art": url(self.artwork),
             "narr": [{"lang": n.lang, "voice": n.voice, "url": n.audio.url, "by": n.narrator} for n in self.narrations.all() if n.audio],
         }
 

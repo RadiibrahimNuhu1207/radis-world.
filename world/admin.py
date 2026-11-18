@@ -51,7 +51,8 @@ class HistoryEntryAdmin(admin.ModelAdmin):
         ("When", {"fields": (("year", "circa"), ("month", "day"))}),
         ("Story (English)", {"fields": ("title", "slug", "place", "text", "topic", "region", "sources")}),
         ("Publishing", {"fields": ("status", "featured")}),
-        ("Media", {"fields": (("image_vertical", "image_horizontal"), ("video_vertical", "video_horizontal"))}),
+        ("Artwork", {"fields": ("artwork",)}),
+        ("Video", {"fields": (("image_vertical", "image_horizontal"), ("video_vertical", "video_horizontal"))}),
     )
 
     def get_queryset(self, request):
