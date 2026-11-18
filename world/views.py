@@ -25,7 +25,7 @@ def app_data():
         "comics": [c.as_dict() for c in Comic.objects.filter(status=PUB).prefetch_related("pages")],
         "books": [b.as_dict() for b in Ebook.objects.filter(status=PUB).prefetch_related("chapters")],
         "art": [a.as_dict() for a in Artwork.objects.filter(status=PUB)],
-        "channel": settings.YOUTUBE_CHANNEL,
+        "channel": settings.YOUTUBE_CHANNEL, "channel_id": settings.YOUTUBE_CHANNEL_ID,
     }
 
 

@@ -106,6 +106,8 @@ if not DEBUG:
 # --- YouTube (Radi Stories) ---
 # Your channel: either the channel id (starts with UC...) or the handle (@yourname)
 YOUTUBE_CHANNEL = env("YOUTUBE_CHANNEL", "https://www.youtube.com/@radibrahimnuhu")
+YOUTUBE_CHANNEL_ID = env("YOUTUBE_CHANNEL_ID", "UCRIlohC4_mOWN-eQs3QFnAg")
+YOUTUBE_API_KEY = env("YOUTUBE_API_KEY", "")
 
 # Large uploads (audiobook chapters, comic pages)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 50 * 1024 * 1024

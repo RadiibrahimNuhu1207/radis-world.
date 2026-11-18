@@ -27,7 +27,7 @@ class Command(BaseCommand):
         for it in json.loads(src.read_text(encoding="utf-8")):
             en = it["en"]
             entry, is_new = HistoryEntry.objects.update_or_create(slug=it["slug"], defaults={
-                "year": it["year"], "circa": it.get("circa", False), "month": it.get("month"), "day": it.get("day"),
+                "year": it["year"], "circa": it.get("circa", False), "undated": it.get("undated", False), "month": it.get("month"), "day": it.get("day"),
                 "topic": it["topic"], "region": it["region"], "featured": it.get("featured", False),
                 "status": it.get("status", "published"),
                 "title": en["title"], "place": en.get("place", ""), "text": en["text"],

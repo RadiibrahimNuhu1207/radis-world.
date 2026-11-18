@@ -12,9 +12,9 @@ It works on phones and laptops, can be installed like an app, and speaks 8 langu
 | **Comics** | Picture books read page by page with the book-flip effect | Admin → Comics (upload page images) |
 | **Art** | Drawings, paintings, poems, photos, designs | Admin → Artworks |
 
-Every history story can be **read as a book** (with page-flip sounds), **watched** (9:16 or 16:9), **downloaded** as an MP4 for YouTube,
-and **listened to** with a female, male or child voice. Your own recordings play first; if none exists for that language,
-the phone's built-in AI voice reads it.
+Every history story can be **read as a book** (with page-flip sounds), **watched** (9:16 or 16:9) and **downloaded** as an MP4 for YouTube.
+Readers can play calm music while they read (Calm pages, Storm night, Swahili coast). When you upload your own narration
+(History entry → Narrations), a "Radi reads this" button appears.
 
 ---
 
@@ -104,7 +104,22 @@ This pulls in your newest YouTube uploads and sends the daily notification.
 
 ---
 
+## Your YouTube videos
+
+The **Radi Stories** page always shows your channel's own player with every upload (no setup needed).
+To also import each video as its own card (and send notifications for new ones), get a free Google key once:
+
+1. Go to **console.cloud.google.com** and sign in with your Google account. Create a project (any name).
+2. Open **APIs & Services → Library**, search **YouTube Data API v3**, click **Enable**.
+3. Open **APIs & Services → Credentials → Create credentials → API key**. Copy the key.
+4. On PythonAnywhere: `cd ~/radis-world && nano .env`, add the line `YOUTUBE_API_KEY=your-key`, save, then run
+   `workon radi && python manage.py sync_youtube` and press **Reload** on the Web tab.
+
+The daily task then keeps your videos up to date automatically.
+
 ## 3. Adding content (Admin)
+
+Admin is at **https://radisworld.pythonanywhere.com/admin/** (also linked at the bottom of every page and in Settings).
 
 Go to **https://radisworld.pythonanywhere.com/admin/** and log in.
 

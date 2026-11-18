@@ -1,11 +1,13 @@
-"""Pull the latest videos from your YouTube channel into Radi Stories (no API key needed).
+"""Pull your YouTube videos into Radi Stories.
 
-Uses the channel's public RSS feed (the newest ~15 uploads). Run it daily as a scheduled task:
-    python manage.py sync_youtube
-Older videos: add them once in the admin (Videos → Add → paste the link).
+Two ways, chosen automatically:
+  * YOUTUBE_API_KEY set in .env  -> uses Google's YouTube Data API (works on PythonAnywhere's free plan,
+    imports ALL your uploads). Get a free key: console.cloud.google.com -> APIs -> "YouTube Data API v3" -> Credentials.
+  * no key -> the public RSS feed (newest ~15). Blocked on PythonAnywhere's free plan.
 
-Set YOUTUBE_CHANNEL in .env to your channel id (UC...) or handle (@yourname).
+Run daily:  python manage.py sync_youtube
 """
+import json
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -15,6 +17,24 @@ from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
 from world.models import Video
+
+
+def api_items(cid, key):
+    playlist, token = "UU" + cid[2:], ""
+    while True:
+        url = ("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50"
+               f"&playlistId={playlist}&key={key}" + (f"&pageToken={token}" if token else ""))
+        data = json.loads(fetch(url))
+        for it in data.get("items", []):
+            sn = it["snippet"]; vid = sn.get("resourceId", {}).get("videoId")
+            if not vid or sn.get("title") in ("Private video", "Deleted video"):
+                continue
+            pub = sn.get("publishedAt")
+            yield {"id": vid, "title": sn.get("title", ""), "desc": sn.get("description", ""), "short": False,
+                   "published": datetime.fromisoformat(pub.replace("Z", "+00:00")) if pub else None}
+        token = data.get("nextPageToken")
+        if not token:
+            break
 
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
       "media": "http://search.yahoo.com/mrss/"}
@@ -64,12 +84,19 @@ class Command(BaseCommand):
         parser.add_argument("--channel", help="Override YOUTUBE_CHANNEL (id, handle or link)")
 
     def handle(self, *args, **opts):
-        channel = opts.get("channel") or settings.YOUTUBE_CHANNEL
+        channel = opts.get("channel") or settings.YOUTUBE_CHANNEL_ID or settings.YOUTUBE_CHANNEL
         if not channel:
-            raise CommandError("Set YOUTUBE_CHANNEL in .env (your channel id UC... or @handle).")
-        cid = resolve_channel_id(channel)
+            raise CommandError("Set YOUTUBE_CHANNEL_ID in .env (your channel id UC...).")
+        key = getattr(settings, "YOUTUBE_API_KEY", "")
+        try:
+            cid = resolve_channel_id(channel)
+            items = list(api_items(cid, key)) if key else list(parse_feed(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}")))
+        except Exception as exc:
+            raise CommandError(f"Couldn't reach YouTube ({exc}). On PythonAnywhere's free plan add YOUTUBE_API_KEY to .env "
+                               "(see the README), or paste video links in Admin -> Videos. The Stories page still shows "
+                               "your channel's player either way.")
         added = updated = 0
-        for item in parse_feed(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}")):
+        for item in items:
             v, created = Video.objects.get_or_create(youtube_id=item["id"], defaults={
                 "title": item["title"], "description": item["desc"], "published": item["published"],
                 "kind": Video.Kind.SHORT if item["short"] else Video.Kind.STORY,

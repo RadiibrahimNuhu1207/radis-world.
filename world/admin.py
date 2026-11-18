@@ -48,7 +48,7 @@ class HistoryEntryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     actions = [publish, unpublish]
     fieldsets = (
-        ("When", {"fields": (("year", "circa"), ("month", "day"))}),
+        ("When", {"fields": (("year", "circa", "undated"), ("month", "day"))}),
         ("Story (English)", {"fields": ("title", "slug", "place", "text", "topic", "region", "sources")}),
         ("Publishing", {"fields": ("status", "featured")}),
         ("Artwork", {"fields": ("artwork",)}),

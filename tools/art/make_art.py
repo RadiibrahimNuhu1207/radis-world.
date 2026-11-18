@@ -19,9 +19,12 @@ SPOTS = {
  "zanzibar-slave-market-closed":(39.31,-6.13,4,None), "berlin-conference":(13.4,52.52,34,None),
  "battle-of-adwa":(38.9,14.16,10,None), "maji-maji":(37.5,-9.5,10,None), "berlin-wall-falls":(13.4,52.52,8,None),
 }
+import os
+if os.environ.get("SPOTS"):
+    SPOTS.update({k: (v[0], v[1], v[2], tuple(v[3]) if v[3] else None) for k, v in json.load(open(os.environ["SPOTS"])).items()})
 SPACE = {"lunokhod-1970":"moon_imbrium", "apollo-1969":"moon_tranq", "gagarin-1961":"orbit"}
 
-feats = [shape(f["geometry"]) for f in json.load(open(sys.argv[0].replace("make_art.py","countries.geojson")))["features"]]
+feats = [shape(f["geometry"]) for f in json.load(open(sys.argv[0].replace("make_art.py", "countries.geojson")))["features"]]
 
 def backdrop():
     im = Image.new("RGB", (W*S, H*S), NIGHT)

@@ -17,7 +17,7 @@ LANGUAGES = [
     ("zh", "中文"),
     ("es", "Español"),
 ]
-TOPICS = [(c, c) for c in ["Tanzania", "Afrika", "Dunia", "Sayansi", "Michezo", "Bahari"]]
+TOPICS = [(c, c) for c in ["Tanzania", "Afrika", "Dunia", "Sayansi", "Michezo", "Bahari", "Hadithi", "Utamaduni", "Siasa", "Vita"]]
 REGIONS = [
     ("tanzania", "Tanzania"), ("east_africa", "East Africa"), ("africa", "Africa"),
     ("europe", "Europe"), ("asia", "Asia"), ("middle_east", "Middle East"),
@@ -60,6 +60,7 @@ class HistoryEntry(models.Model):
 
     slug = models.SlugField(unique=True)
     year = models.IntegerField(help_text="Negative for BCE, e.g. -2560")
+    undated = models.BooleanField(default=False, help_text="An old tradition with no fixed date (myths). The year is then only used for ordering.")
     circa = models.BooleanField(default=False, help_text="Approximate year (shown as 'c.')")
     month = models.PositiveSmallIntegerField(null=True, blank=True, help_text="Optional — needed for 'On this day'")
     day = models.PositiveSmallIntegerField(null=True, blank=True)
@@ -97,7 +98,7 @@ class HistoryEntry(models.Model):
         tr = {"en": {"title": self.title, "place": self.place, "text": self.text}}
         tr.update({t.lang: {"title": t.title, "place": t.place, "text": t.text} for t in self.translations.all()})
         return {
-            "id": self.slug, "y": self.year, "circa": self.circa,
+            "id": self.slug, "y": self.year, "circa": self.circa, "und": self.undated,
             "d": f"{self.day:02d}-{self.month:02d}" if self.day and self.month else None,
             "m": self.month, "cat": self.topic, "region": self.region, "featured": self.featured, "tr": tr,
             "v916": url(self.video_vertical), "v169": url(self.video_horizontal),
