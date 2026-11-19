@@ -1,0 +1,4449 @@
+{
+  "title": "RADI Encyclopedia Master Catalogue — Volume 01",
+  "version": "1.0",
+  "created": "2026-11-20",
+  "description": "A planning catalogue of new article topics. These are proposed topics, not researched or published articles.",
+  "planned_topics": 546,
+  "editorial_standard": {
+    "major_history": "2500–4000 words",
+    "civilizations": "3000–5000 words",
+    "biographies": "2500–4000 words",
+    "science": "2000–3500 words",
+    "mythology": "1500–3000 words",
+    "requirements": [
+      "clear historical context",
+      "chronology and key people/places",
+      "causes, developments and consequences",
+      "regional and global significance",
+      "distinguish evidence, debate and tradition",
+      "bibliography with verifiable sources"
+    ]
+  },
+  "collections": [
+    {
+      "name": "African kingdoms, states and societies",
+      "default_region": "Africa",
+      "count": 50
+    },
+    {
+      "name": "African resistance, independence and modern history",
+      "default_region": "Africa",
+      "count": 49
+    },
+    {
+      "name": "East African and Indian Ocean worlds",
+      "default_region": "East Africa",
+      "count": 49
+    },
+    {
+      "name": "Asia: civilizations, states and turning points",
+      "default_region": "Asia",
+      "count": 49
+    },
+    {
+      "name": "Middle East, North Africa and Islamic worlds",
+      "default_region": "Middle East",
+      "count": 50
+    },
+    {
+      "name": "Europe: states, societies and transformations",
+      "default_region": "Europe",
+      "count": 50
+    },
+    {
+      "name": "Americas: Indigenous worlds, states and revolutions",
+      "default_region": "Americas",
+      "count": 50
+    },
+    {
+      "name": "People, thinkers, leaders and innovators",
+      "default_region": "Global",
+      "count": 50
+    },
+    {
+      "name": "Science, technology, medicine and discovery",
+      "default_region": "Global",
+      "count": 50
+    },
+    {
+      "name": "Culture, literature, religion, art and sport",
+      "default_region": "Global",
+      "count": 50
+    },
+    {
+      "name": "Global systems, economics, environment and contemporary history",
+      "default_region": "Global",
+      "count": 49
+    }
+  ],
+  "entries": [
+    {
+      "slug": "ancient-egypt-in-the-old-kingdom",
+      "title": "Ancient Egypt in the Old Kingdom",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-middle-kingdom-of-egypt",
+      "title": "The Middle Kingdom of Egypt",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-new-kingdom-of-egypt",
+      "title": "The New Kingdom of Egypt",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-kerma",
+      "title": "The Kingdom of Kerma",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-napatan-kingdom-of-kush",
+      "title": "The Napatan Kingdom of Kush",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-meroitic-kingdom-of-kush",
+      "title": "The Meroitic Kingdom of Kush",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-nobatia",
+      "title": "The Kingdom of Nobatia",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-makuria",
+      "title": "The Kingdom of Makuria",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-alodia",
+      "title": "The Kingdom of Alodia",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-garamantes-of-the-sahara",
+      "title": "The Garamantes of the Sahara",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-carthaginian-empire",
+      "title": "The Carthaginian Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-numidian-kingdoms",
+      "title": "The Numidian Kingdoms",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-mauretania",
+      "title": "The Kingdom of Mauretania",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-ghana",
+      "title": "The Kingdom of Ghana",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mali-empire-under-sundiata-keita",
+      "title": "The Mali Empire under Sundiata Keita",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-songhai-empire-under-askia-muhammad",
+      "title": "The Songhai Empire under Askia Muhammad",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kanem-bornu-empire",
+      "title": "The Kanem-Bornu Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-hausa-city-states",
+      "title": "The Hausa city-states",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-oyo-empire",
+      "title": "The Oyo Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-dahomey",
+      "title": "The Kingdom of Dahomey",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-asante-empire",
+      "title": "The Asante Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-benin-and-its-court-arts",
+      "title": "The Kingdom of Benin and its court arts",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-kongo",
+      "title": "The Kingdom of Kongo",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-luba-kingdom",
+      "title": "The Luba Kingdom",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-lunda-empire",
+      "title": "The Lunda Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mutapa-empire",
+      "title": "The Mutapa Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rozvi-empire",
+      "title": "The Rozvi Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-mapungubwe",
+      "title": "The Kingdom of Mapungubwe",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-zulu-kingdom-under-shaka",
+      "title": "The Zulu Kingdom under Shaka",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-xhosa-kingdoms-and-frontier-wars",
+      "title": "The Xhosa kingdoms and frontier wars",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mossi-kingdoms",
+      "title": "The Mossi kingdoms",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-jolof-empire",
+      "title": "The Jolof Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-swahili-city-states",
+      "title": "The Swahili city-states",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sultanate-of-zanzibar",
+      "title": "The Sultanate of Zanzibar",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kilwa-sultanate",
+      "title": "The Kilwa Sultanate",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ajuran-sultanate",
+      "title": "The Ajuran Sultanate",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-adal-sultanate",
+      "title": "The Adal Sultanate",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ifat-sultanate",
+      "title": "The Ifat Sultanate",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ethiopian-empire-under-zara-yaqob",
+      "title": "The Ethiopian Empire under Zara Yaqob",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-solomonic-dynasty-of-ethiopia",
+      "title": "The Solomonic dynasty of Ethiopia",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-buganda",
+      "title": "The Kingdom of Buganda",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bunyoro-kitara-kingdom",
+      "title": "The Bunyoro-Kitara Kingdom",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ankole-kingdom",
+      "title": "The Ankole Kingdom",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rwanda-kingdom-before-colonial-rule",
+      "title": "The Rwanda kingdom before colonial rule",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-burundi-kingdom",
+      "title": "The Burundi kingdom",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-merina-kingdom-of-madagascar",
+      "title": "The Merina Kingdom of Madagascar",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sokoto-caliphate",
+      "title": "The Sokoto Caliphate",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-toucouleur-empire",
+      "title": "The Toucouleur Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-wassoulou-empire",
+      "title": "The Wassoulou Empire",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mahdist-state-in-sudan",
+      "title": "The Mahdist State in Sudan",
+      "collection": "African kingdoms, states and societies",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "samori-ture-and-the-wassoulou-resistance",
+      "title": "Samori Ture and the Wassoulou resistance",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "yaa-asantewaa-and-the-war-of-the-golden-stool",
+      "title": "Yaa Asantewaa and the War of the Golden Stool",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-battle-of-isandlwana",
+      "title": "The Battle of Isandlwana",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-anglo-zulu-war",
+      "title": "The Anglo-Zulu War",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bambatha-rebellion",
+      "title": "The Bambatha Rebellion",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-herero-and-nama-genocide",
+      "title": "The Herero and Nama genocide",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maji-maji-war-in-local-memory",
+      "title": "The Maji Maji War in local memory",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ethiopian-victory-at-adwa-global-consequences",
+      "title": "The Ethiopian victory at Adwa: global consequences",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-italian-invasion-of-ethiopia-in-1935",
+      "title": "The Italian invasion of Ethiopia in 1935",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mau-mau-movement-and-kenyan-independence",
+      "title": "The Mau Mau movement and Kenyan independence",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-algerian-war-of-independence",
+      "title": "The Algerian War of Independence",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-congo-crisis",
+      "title": "The Congo Crisis",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "patrice-lumumba-and-congolese-independence",
+      "title": "Patrice Lumumba and Congolese independence",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-biafran-war",
+      "title": "The Biafran War",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-nigerian-independence-movement",
+      "title": "The Nigerian independence movement",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ghanaian-independence-movement",
+      "title": "The Ghanaian independence movement",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-algerian-revolutionaries-and-the-fln",
+      "title": "The Algerian revolutionaries and the FLN",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-soweto-uprising-of-1976",
+      "title": "The Soweto uprising of 1976",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-anti-apartheid-movement",
+      "title": "The anti-apartheid movement",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sharpeville-massacre",
+      "title": "The Sharpeville massacre",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-end-of-portuguese-colonial-rule-in-africa",
+      "title": "The end of Portuguese colonial rule in Africa",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-carnation-revolution-and-african-decolonisation",
+      "title": "The Carnation Revolution and African decolonisation",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-liberation-struggle-in-mozambique",
+      "title": "The liberation struggle in Mozambique",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-liberation-struggle-in-angola",
+      "title": "The liberation struggle in Angola",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-zimbabwe-liberation-war",
+      "title": "The Zimbabwe liberation war",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-namibian-independence-struggle",
+      "title": "The Namibian independence struggle",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-eritrean-war-of-independence",
+      "title": "The Eritrean War of Independence",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ethiopian-revolution-of-1974",
+      "title": "The Ethiopian Revolution of 1974",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-somali-revolution-of-1969",
+      "title": "The Somali Revolution of 1969",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ogaden-war",
+      "title": "The Ogaden War",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rwandan-genocide-and-its-aftermath",
+      "title": "The Rwandan genocide and its aftermath",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-darfur-conflict",
+      "title": "The Darfur conflict",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-south-african-truth-and-reconciliation-commission",
+      "title": "The South African Truth and Reconciliation Commission",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-african-union-replaces-the-oau",
+      "title": "The African Union replaces the OAU",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-arusha-declaration-and-ujamaa",
+      "title": "The Arusha Declaration and Ujamaa",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-zanzibar-revolution-social-and-political-change",
+      "title": "The Zanzibar Revolution: social and political change",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tanganyika-african-national-union-and-mass-politics",
+      "title": "The Tanganyika African National Union and mass politics",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-congo-free-state-under-leopold-ii",
+      "title": "The Congo Free State under Leopold II",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-french-conquest-of-algeria",
+      "title": "The French conquest of Algeria",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-scramble-for-africa",
+      "title": "The Scramble for Africa",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-fashoda-incident",
+      "title": "The Fashoda Incident",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-suez-crisis",
+      "title": "The Suez Crisis",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-1952-egyptian-revolution",
+      "title": "The 1952 Egyptian Revolution",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-libyan-revolution-of-1969",
+      "title": "The Libyan revolution of 1969",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tunisian-revolution-of-2011",
+      "title": "The Tunisian Revolution of 2011",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-arab-spring-in-egypt",
+      "title": "The Arab Spring in Egypt",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-african-national-congress-and-its-history",
+      "title": "The African National Congress and its history",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-pan-african-congresses",
+      "title": "The Pan-African Congresses",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-organisation-of-african-unity-and-liberation",
+      "title": "The Organisation of African Unity and liberation",
+      "collection": "African resistance, independence and modern history",
+      "region": "Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "early-human-communities-of-the-east-african-rift",
+      "title": "Early human communities of the East African Rift",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-acheulean-handaxe-tradition-in-east-africa",
+      "title": "The Acheulean handaxe tradition in East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "olduvai-gorge-and-early-human-research",
+      "title": "Olduvai Gorge and early human research",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "laetoli-footprints-and-human-origins",
+      "title": "Laetoli footprints and human origins",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-neolithic-pastoral-communities-of-east-africa",
+      "title": "The Neolithic pastoral communities of East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spread-of-ironworking-in-east-africa",
+      "title": "The spread of ironworking in East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bantu-expansions-in-eastern-africa",
+      "title": "The Bantu expansions in eastern Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rise-of-the-swahili-language",
+      "title": "The rise of the Swahili language",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-origins-of-swahili-coastal-towns",
+      "title": "The origins of Swahili coastal towns",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-shanga-archaeological-site",
+      "title": "The Shanga archaeological site",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "manda-island-and-early-indian-ocean-trade",
+      "title": "Manda Island and early Indian Ocean trade",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "pate-island-and-the-swahili-coast",
+      "title": "Pate Island and the Swahili coast",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "lamu-old-town-and-its-history",
+      "title": "Lamu Old Town and its history",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mombasa-as-an-indian-ocean-port",
+      "title": "Mombasa as an Indian Ocean port",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "malindi-and-the-portuguese-arrival",
+      "title": "Malindi and the Portuguese arrival",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-portuguese-on-the-swahili-coast",
+      "title": "The Portuguese on the Swahili coast",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-omani-ya-aruba-dynasty-and-east-africa",
+      "title": "The Omani Ya'aruba dynasty and East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-omani-al-bu-said-dynasty-in-zanzibar",
+      "title": "The Omani Al Bu Said dynasty in Zanzibar",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-clove-economy-of-nineteenth-century-zanzibar",
+      "title": "The clove economy of nineteenth-century Zanzibar",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-caravan-trade-of-nineteenth-century-east-africa",
+      "title": "The caravan trade of nineteenth-century East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mirambo-and-the-nyamwezi-state",
+      "title": "Mirambo and the Nyamwezi state",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "nyungu-ya-mawe-and-the-unyanyembe-region",
+      "title": "Nyungu ya Mawe and the Unyanyembe region",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mkwawa-and-the-hehe-state",
+      "title": "Mkwawa and the Hehe state",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-coastal-hinterland-trade-networks",
+      "title": "The coastal hinterland trade networks",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-yao-traders-and-long-distance-commerce",
+      "title": "The Yao traders and long-distance commerce",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ngoni-migrations-in-east-africa",
+      "title": "The Ngoni migrations in East Africa",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maasai-and-the-nineteenth-century-east-african-frontier",
+      "title": "The Maasai and the nineteenth-century East African frontier",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kamba-long-distance-traders",
+      "title": "The Kamba long-distance traders",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-chagga-societies-of-kilimanjaro",
+      "title": "The Chagga societies of Kilimanjaro",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-meru-communities-of-mount-meru",
+      "title": "The Meru communities of Mount Meru",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-haya-kingdoms-of-the-great-lakes",
+      "title": "The Haya kingdoms of the Great Lakes",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-buganda-kingdom-and-the-nile-trade",
+      "title": "The Buganda kingdom and the Nile trade",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kabaka-and-the-politics-of-buganda",
+      "title": "The Kabaka and the politics of Buganda",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-1900-buganda-agreement",
+      "title": "The 1900 Buganda Agreement",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-uganda-railway-and-east-african-transformation",
+      "title": "The Uganda Railway and East African transformation",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-east-african-campaign-of-the-first-world-war",
+      "title": "The East African campaign of the First World War",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maji-maji-war-in-southern-tanzania",
+      "title": "The Maji Maji War in southern Tanzania",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "german-east-africa-and-colonial-rule",
+      "title": "German East Africa and colonial rule",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "british-tanganyika-under-the-mandate-system",
+      "title": "British Tanganyika under the mandate system",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-east-african-community-first-integration",
+      "title": "The East African Community: first integration",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-collapse-of-the-first-east-african-community",
+      "title": "The collapse of the first East African Community",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-revival-of-the-east-african-community",
+      "title": "The revival of the East African Community",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-indian-ocean-dhow-networks",
+      "title": "The Indian Ocean dhow networks",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "monsoon-winds-and-indian-ocean-navigation",
+      "title": "Monsoon winds and Indian Ocean navigation",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-comoros-in-the-indian-ocean-world",
+      "title": "The Comoros in the Indian Ocean world",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-seychelles-and-the-western-indian-ocean",
+      "title": "The Seychelles and the western Indian Ocean",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-mauritius-and-indenture",
+      "title": "The history of Mauritius and indenture",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-reunion-and-colonial-society",
+      "title": "The history of Réunion and colonial society",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-madagascar-slave-trade-and-merina-state",
+      "title": "The Madagascar slave trade and Merina state",
+      "collection": "East African and Indian Ocean worlds",
+      "region": "East Africa",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-indus-valley-civilization",
+      "title": "The Indus Valley Civilization",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mohenjo-daro-and-urban-life",
+      "title": "Mohenjo-daro and urban life",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "harappa-and-the-indus-world",
+      "title": "Harappa and the Indus world",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-vedic-period-in-south-asia",
+      "title": "The Vedic period in South Asia",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mahajanapadas-of-ancient-india",
+      "title": "The Mahajanapadas of ancient India",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maurya-empire-under-ashoka",
+      "title": "The Maurya Empire under Ashoka",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-gupta-empire-and-classical-india",
+      "title": "The Gupta Empire and classical India",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-chola-empire-and-maritime-power",
+      "title": "The Chola Empire and maritime power",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-vijayanagara-empire",
+      "title": "The Vijayanagara Empire",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-delhi-sultanate",
+      "title": "The Delhi Sultanate",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mughal-empire-under-akbar",
+      "title": "The Mughal Empire under Akbar",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mughal-empire-under-aurangzeb",
+      "title": "The Mughal Empire under Aurangzeb",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maratha-confederacy",
+      "title": "The Maratha Confederacy",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sikh-empire-under-ranjit-singh",
+      "title": "The Sikh Empire under Ranjit Singh",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-partition-of-british-india-in-1947",
+      "title": "The partition of British India in 1947",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bangladesh-liberation-war",
+      "title": "The Bangladesh Liberation War",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-sri-lanka-s-ancient-kingdoms",
+      "title": "The history of Sri Lanka's ancient kingdoms",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-khmer-empire-and-angkor",
+      "title": "The Khmer Empire and Angkor",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "angkor-wat-architecture-and-meaning",
+      "title": "Angkor Wat: architecture and meaning",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-champa-kingdoms-of-vietnam",
+      "title": "The Champa kingdoms of Vietnam",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dai-viet-state-and-its-expansion",
+      "title": "The Dai Viet state and its expansion",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tran-dynasty-and-mongol-invasions-of-vietnam",
+      "title": "The Tran dynasty and Mongol invasions of Vietnam",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ayutthaya-kingdom-of-siam",
+      "title": "The Ayutthaya Kingdom of Siam",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sukhothai-kingdom",
+      "title": "The Sukhothai Kingdom",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-pagan-kingdom-of-myanmar",
+      "title": "The Pagan Kingdom of Myanmar",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-konbaung-dynasty-of-burma",
+      "title": "The Konbaung dynasty of Burma",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-lan-xang-kingdom-of-laos",
+      "title": "The Lan Xang Kingdom of Laos",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-majapahit-empire",
+      "title": "The Majapahit Empire",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-srivijaya-maritime-empire",
+      "title": "The Srivijaya maritime empire",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sailendra-dynasty-and-borobudur",
+      "title": "The Sailendra dynasty and Borobudur",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sultanate-of-malacca",
+      "title": "The Sultanate of Malacca",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spread-of-islam-in-maritime-southeast-asia",
+      "title": "The spread of Islam in maritime Southeast Asia",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spanish-conquest-of-the-philippines",
+      "title": "The Spanish conquest of the Philippines",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-philippine-revolution-against-spain",
+      "title": "The Philippine Revolution against Spain",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-khmer-rouge",
+      "title": "The history of the Khmer Rouge",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-korean-three-kingdoms",
+      "title": "The Korean Three Kingdoms",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-silla-unification-of-korea",
+      "title": "The Silla unification of Korea",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-goryeo-dynasty",
+      "title": "The Goryeo dynasty",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-joseon-dynasty",
+      "title": "The Joseon dynasty",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-imjin-war-and-japanese-invasions-of-korea",
+      "title": "The Imjin War and Japanese invasions of Korea",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-meiji-restoration",
+      "title": "The Meiji Restoration",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tokugawa-period-and-japanese-society",
+      "title": "The Tokugawa period and Japanese society",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sengoku-period-of-japan",
+      "title": "The Sengoku period of Japan",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mongol-empire-under-kublai-khan",
+      "title": "The Mongol Empire under Kublai Khan",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-yuan-dynasty-in-china",
+      "title": "The Yuan dynasty in China",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ming-dynasty-and-maritime-expeditions",
+      "title": "The Ming dynasty and maritime expeditions",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-qing-dynasty-and-its-transformation",
+      "title": "The Qing dynasty and its transformation",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-taiping-rebellion",
+      "title": "The Taiping Rebellion",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-xinhai-revolution-and-the-end-of-imperial-china",
+      "title": "The Xinhai Revolution and the end of imperial China",
+      "collection": "Asia: civilizations, states and turning points",
+      "region": "Asia",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sumerian-city-states",
+      "title": "The Sumerian city-states",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-akkadian-empire-of-sargon",
+      "title": "The Akkadian Empire of Sargon",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-babylonian-empire-under-hammurabi",
+      "title": "The Babylonian Empire under Hammurabi",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-assyrian-empire",
+      "title": "The Assyrian Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-neo-babylonian-empire",
+      "title": "The Neo-Babylonian Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-hittite-empire",
+      "title": "The Hittite Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-phoenician-trading-cities",
+      "title": "The Phoenician trading cities",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ancient-kingdom-of-israel",
+      "title": "The ancient kingdom of Israel",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-judah-and-the-babylonian-exile",
+      "title": "The Kingdom of Judah and the Babylonian exile",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-achaemenid-persian-empire",
+      "title": "The Achaemenid Persian Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-persian-royal-road",
+      "title": "The Persian Royal Road",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-seleucid-empire",
+      "title": "The Seleucid Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-parthian-empire",
+      "title": "The Parthian Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sasanian-empire",
+      "title": "The Sasanian Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-nabataean-kingdom-and-petra",
+      "title": "The Nabataean Kingdom and Petra",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "palmyra-and-queen-zenobia",
+      "title": "Palmyra and Queen Zenobia",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rise-of-the-umayyad-caliphate",
+      "title": "The rise of the Umayyad Caliphate",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-abbasid-revolution",
+      "title": "The Abbasid Revolution",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "baghdad-under-the-abbasid-caliphate",
+      "title": "Baghdad under the Abbasid Caliphate",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-house-of-wisdom-and-translation-movement",
+      "title": "The House of Wisdom and translation movement",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-fatimid-caliphate",
+      "title": "The Fatimid Caliphate",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ayyubid-dynasty-under-saladin",
+      "title": "The Ayyubid dynasty under Saladin",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mamluk-sultanate-of-egypt",
+      "title": "The Mamluk Sultanate of Egypt",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-seljuk-empire",
+      "title": "The Seljuk Empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ottoman-empire-under-suleiman",
+      "title": "The Ottoman Empire under Suleiman",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-fall-of-constantinople-in-1453",
+      "title": "The fall of Constantinople in 1453",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-safavid-empire-of-persia",
+      "title": "The Safavid Empire of Persia",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-qajar-dynasty-of-iran",
+      "title": "The Qajar dynasty of Iran",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-iranian-constitutional-revolution",
+      "title": "The Iranian Constitutional Revolution",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-young-turk-revolution",
+      "title": "The Young Turk Revolution",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-arab-revolt-of-1916",
+      "title": "The Arab Revolt of 1916",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sykes-picot-agreement",
+      "title": "The Sykes-Picot Agreement",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mandate-system-in-the-middle-east",
+      "title": "The mandate system in the Middle East",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-creation-of-modern-iraq",
+      "title": "The creation of modern Iraq",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-creation-of-modern-jordan",
+      "title": "The creation of modern Jordan",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-founding-of-saudi-arabia",
+      "title": "The founding of Saudi Arabia",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-modern-lebanon",
+      "title": "The history of modern Lebanon",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-palestinian-nakba-of-1948",
+      "title": "The Palestinian Nakba of 1948",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-arab-israeli-war-of-1948",
+      "title": "The Arab-Israeli War of 1948",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-six-day-war-of-1967",
+      "title": "The Six-Day War of 1967",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-yom-kippur-war-of-1973",
+      "title": "The Yom Kippur War of 1973",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-iranian-revolution-of-1979",
+      "title": "The Iranian Revolution of 1979",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-iran-iraq-war",
+      "title": "The Iran-Iraq War",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-gulf-war-of-1990-1991",
+      "title": "The Gulf War of 1990–1991",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-yemen-s-ancient-kingdoms",
+      "title": "The history of Yemen's ancient kingdoms",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-kingdom-of-himyar",
+      "title": "The Kingdom of Himyar",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dilmun-civilization-of-bahrain",
+      "title": "The Dilmun civilization of Bahrain",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-oman-and-its-maritime-empire",
+      "title": "The history of Oman and its maritime empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-berber-dynasties-of-north-africa",
+      "title": "The Berber dynasties of North Africa",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-almoravid-movement-and-empire",
+      "title": "The Almoravid movement and empire",
+      "collection": "Middle East, North Africa and Islamic worlds",
+      "region": "Middle East",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "minoan-civilization-on-crete",
+      "title": "Minoan civilization on Crete",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mycenaean-greece",
+      "title": "Mycenaean Greece",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-greek-persian-wars",
+      "title": "The Greek Persian Wars",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-peloponnesian-war",
+      "title": "The Peloponnesian War",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rise-of-alexander-the-great",
+      "title": "The rise of Alexander the Great",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-hellenistic-kingdoms-after-alexander",
+      "title": "The Hellenistic kingdoms after Alexander",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-roman-republic",
+      "title": "The Roman Republic",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-punic-wars-between-rome-and-carthage",
+      "title": "The Punic Wars between Rome and Carthage",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-roman-empire-under-augustus",
+      "title": "The Roman Empire under Augustus",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-crisis-of-the-third-century",
+      "title": "The crisis of the third century",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-division-of-the-roman-empire",
+      "title": "The division of the Roman Empire",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-byzantine-empire-under-justinian",
+      "title": "The Byzantine Empire under Justinian",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-byzantine-iconoclasm",
+      "title": "The Byzantine Iconoclasm",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-carolingian-empire-under-charlemagne",
+      "title": "The Carolingian Empire under Charlemagne",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-viking-age-in-europe",
+      "title": "The Viking Age in Europe",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-norman-conquest-of-england",
+      "title": "The Norman conquest of England",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-crusades-and-the-eastern-mediterranean",
+      "title": "The Crusades and the eastern Mediterranean",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-magna-carta-and-english-political-power",
+      "title": "The Magna Carta and English political power",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-black-death-and-european-society",
+      "title": "The Black Death and European society",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-italian-renaissance",
+      "title": "The Italian Renaissance",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-northern-renaissance",
+      "title": "The Northern Renaissance",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-reformation-under-martin-luther",
+      "title": "The Reformation under Martin Luther",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-english-reformation",
+      "title": "The English Reformation",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-thirty-years-war",
+      "title": "The Thirty Years' War",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dutch-revolt-and-the-dutch-republic",
+      "title": "The Dutch Revolt and the Dutch Republic",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spanish-empire-in-the-americas-and-europe",
+      "title": "The Spanish Empire in the Americas and Europe",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-portuguese-maritime-empire",
+      "title": "The Portuguese maritime empire",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-french-revolution-and-the-end-of-monarchy",
+      "title": "The French Revolution and the end of monarchy",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-napoleonic-wars",
+      "title": "The Napoleonic Wars",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-congress-of-vienna",
+      "title": "The Congress of Vienna",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-revolutions-of-1848",
+      "title": "The Revolutions of 1848",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-unification-of-italy",
+      "title": "The unification of Italy",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-unification-of-germany",
+      "title": "The unification of Germany",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-russian-revolution-of-1905",
+      "title": "The Russian Revolution of 1905",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-russian-revolution-of-1917",
+      "title": "The Russian Revolution of 1917",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spanish-civil-war",
+      "title": "The Spanish Civil War",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rise-of-fascism-in-italy",
+      "title": "The rise of fascism in Italy",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-nazi-seizure-of-power-in-germany",
+      "title": "The Nazi seizure of power in Germany",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-holocaust-history-and-remembrance",
+      "title": "The Holocaust: history and remembrance",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-battle-of-britain",
+      "title": "The Battle of Britain",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-d-day-landings",
+      "title": "The D-Day landings",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-cold-war-in-europe",
+      "title": "The Cold War in Europe",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-hungarian-revolution-of-1956",
+      "title": "The Hungarian Revolution of 1956",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-prague-spring-of-1968",
+      "title": "The Prague Spring of 1968",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-fall-of-communist-governments-in-eastern-europe",
+      "title": "The fall of communist governments in Eastern Europe",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dissolution-of-the-soviet-union",
+      "title": "The dissolution of the Soviet Union",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-yugoslav-wars",
+      "title": "The Yugoslav Wars",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-formation-of-the-european-union",
+      "title": "The formation of the European Union",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-balkans",
+      "title": "The history of the Balkans",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-hanseatic-league-and-baltic-trade",
+      "title": "The Hanseatic League and Baltic trade",
+      "collection": "Europe: states, societies and transformations",
+      "region": "Europe",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-olmec-civilization",
+      "title": "The Olmec civilization",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maya-civilization-and-its-city-states",
+      "title": "The Maya civilization and its city-states",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-maya-calendar-and-astronomy",
+      "title": "The Maya calendar and astronomy",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "teotihuacan-and-its-urban-world",
+      "title": "Teotihuacan and its urban world",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-toltec-civilization",
+      "title": "The Toltec civilization",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-aztec-triple-alliance",
+      "title": "The Aztec Triple Alliance",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-inca-empire-under-pachacuti",
+      "title": "The Inca Empire under Pachacuti",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-inca-road-system",
+      "title": "The Inca road system",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-moche-civilization-of-peru",
+      "title": "The Moche civilization of Peru",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-nazca-culture-and-geoglyphs",
+      "title": "The Nazca culture and geoglyphs",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tiwanaku-civilization",
+      "title": "The Tiwanaku civilization",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-wari-empire-of-the-andes",
+      "title": "The Wari Empire of the Andes",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mississippian-culture-and-cahokia",
+      "title": "The Mississippian culture and Cahokia",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-haudenosaunee-confederacy",
+      "title": "The Haudenosaunee Confederacy",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ancestral-puebloans",
+      "title": "The Ancestral Puebloans",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-inuit-worlds-of-the-arctic",
+      "title": "The Inuit worlds of the Arctic",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tlingit-and-northwest-coast-cultures",
+      "title": "The Tlingit and Northwest Coast cultures",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mapuche-resistance-to-spanish-rule",
+      "title": "The Mapuche resistance to Spanish rule",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-taino-peoples-of-the-caribbean",
+      "title": "The Taino peoples of the Caribbean",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-portuguese-colonization-of-brazil",
+      "title": "The Portuguese colonization of Brazil",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spanish-conquest-of-the-aztec-empire",
+      "title": "The Spanish conquest of the Aztec Empire",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spanish-conquest-of-the-inca-empire",
+      "title": "The Spanish conquest of the Inca Empire",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-columbian-exchange",
+      "title": "The Columbian Exchange",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-atlantic-plantation-system",
+      "title": "The Atlantic plantation system",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-american-revolution",
+      "title": "The American Revolution",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-united-states-constitution-and-its-creation",
+      "title": "The United States Constitution and its creation",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-louisiana-purchase",
+      "title": "The Louisiana Purchase",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-trail-of-tears-and-indian-removal",
+      "title": "The Trail of Tears and Indian Removal",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mexican-war-of-independence",
+      "title": "The Mexican War of Independence",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mexican-revolution",
+      "title": "The Mexican Revolution",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-haitian-revolution-and-abolition",
+      "title": "The Haitian Revolution and abolition",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-independence-of-gran-colombia",
+      "title": "The independence of Gran Colombia",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "simon-bolivar-and-south-american-independence",
+      "title": "Simón Bolívar and South American independence",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-brazilian-independence-movement",
+      "title": "The Brazilian independence movement",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-abolition-of-slavery-in-brazil",
+      "title": "The abolition of slavery in Brazil",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-american-civil-war",
+      "title": "The American Civil War",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "reconstruction-in-the-united-states",
+      "title": "Reconstruction in the United States",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-abolitionist-movement-in-the-americas",
+      "title": "The abolitionist movement in the Americas",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-california-gold-rush",
+      "title": "The California Gold Rush",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-building-of-the-panama-canal",
+      "title": "The building of the Panama Canal",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-cuban-revolution",
+      "title": "The Cuban Revolution",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mexican-american-war",
+      "title": "The Mexican-American War",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-war-of-the-triple-alliance",
+      "title": "The War of the Triple Alliance",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-war-of-the-pacific",
+      "title": "The War of the Pacific",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dirty-wars-in-latin-america",
+      "title": "The Dirty Wars in Latin America",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-zapatista-movement-in-mexico",
+      "title": "The Zapatista movement in Mexico",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-civil-rights-movement-in-the-united-states",
+      "title": "The civil rights movement in the United States",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-harlem-renaissance",
+      "title": "The history of the Harlem Renaissance",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-indigenous-rights-movements-of-the-americas",
+      "title": "The Indigenous rights movements of the Americas",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-caribbean-sugar-economies",
+      "title": "The history of the Caribbean sugar economies",
+      "collection": "Americas: Indigenous worlds, states and revolutions",
+      "region": "Americas",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "imhotep-architect-and-scholar-of-ancient-egypt",
+      "title": "Imhotep: architect and scholar of ancient Egypt",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "hatshepsut-pharaoh-and-ruler",
+      "title": "Hatshepsut: pharaoh and ruler",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "akhenaten-and-religious-change-in-egypt",
+      "title": "Akhenaten and religious change in Egypt",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "ramesses-ii-and-imperial-egypt",
+      "title": "Ramesses II and imperial Egypt",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "hannibal-barca-and-the-second-punic-war",
+      "title": "Hannibal Barca and the Second Punic War",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "julius-caesar-and-the-fall-of-the-roman-republic",
+      "title": "Julius Caesar and the fall of the Roman Republic",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "augustus-and-the-creation-of-the-roman-empire",
+      "title": "Augustus and the creation of the Roman Empire",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "cleopatra-vii-and-ptolemaic-egypt",
+      "title": "Cleopatra VII and Ptolemaic Egypt",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "hypatia-of-alexandria-and-late-antique-scholarship",
+      "title": "Hypatia of Alexandria and late antique scholarship",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "constantine-the-great-and-christian-rome",
+      "title": "Constantine the Great and Christian Rome",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "justinian-i-and-byzantine-law",
+      "title": "Justinian I and Byzantine law",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mansa-musa-and-the-mali-empire",
+      "title": "Mansa Musa and the Mali Empire",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "sundiata-keita-and-the-founding-of-mali",
+      "title": "Sundiata Keita and the founding of Mali",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "ibn-battuta-journeys-across-the-medieval-world",
+      "title": "Ibn Battuta: journeys across the medieval world",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "ibn-sina-and-the-history-of-medicine",
+      "title": "Ibn Sina and the history of medicine",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "al-khwarizmi-and-algebra",
+      "title": "Al-Khwarizmi and algebra",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "al-biruni-and-comparative-scholarship",
+      "title": "Al-Biruni and comparative scholarship",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "fatima-al-fihri-and-the-qarawiyyin-tradition",
+      "title": "Fatima al-Fihri and the Qarawiyyin tradition",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "razia-sultan-and-the-delhi-sultanate",
+      "title": "Razia Sultan and the Delhi Sultanate",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "rani-lakshmibai-and-the-indian-rebellion",
+      "title": "Rani Lakshmibai and the Indian Rebellion",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "akbar-the-great-and-mughal-governance",
+      "title": "Akbar the Great and Mughal governance",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "shivaji-and-the-maratha-state",
+      "title": "Shivaji and the Maratha state",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "confucius-and-the-foundations-of-chinese-thought",
+      "title": "Confucius and the foundations of Chinese thought",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "laozi-and-daoist-traditions",
+      "title": "Laozi and Daoist traditions",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "sun-tzu-and-the-art-of-war",
+      "title": "Sun Tzu and the Art of War",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "qin-shi-huang-and-imperial-unification",
+      "title": "Qin Shi Huang and imperial unification",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "empress-wu-zetian-and-tang-china",
+      "title": "Empress Wu Zetian and Tang China",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "murasaki-shikibu-and-the-tale-of-genji",
+      "title": "Murasaki Shikibu and The Tale of Genji",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "prince-shotoku-and-early-japanese-statecraft",
+      "title": "Prince Shotoku and early Japanese statecraft",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "genghis-khan-and-the-mongol-empire",
+      "title": "Genghis Khan and the Mongol Empire",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "kublai-khan-and-yuan-china",
+      "title": "Kublai Khan and Yuan China",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "zheng-he-and-the-ming-treasure-voyages",
+      "title": "Zheng He and the Ming treasure voyages",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "suleiman-the-magnificent-and-ottoman-power",
+      "title": "Suleiman the Magnificent and Ottoman power",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "saladin-and-the-ayyubid-state",
+      "title": "Saladin and the Ayyubid state",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "joan-of-arc-and-the-hundred-years-war",
+      "title": "Joan of Arc and the Hundred Years' War",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "leonardo-da-vinci-art-and-engineering",
+      "title": "Leonardo da Vinci: art and engineering",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "nicolaus-copernicus-and-heliocentrism",
+      "title": "Nicolaus Copernicus and heliocentrism",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "galileo-galilei-and-modern-astronomy",
+      "title": "Galileo Galilei and modern astronomy",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "isaac-newton-and-classical-physics",
+      "title": "Isaac Newton and classical physics",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "mary-wollstonecraft-and-political-philosophy",
+      "title": "Mary Wollstonecraft and political philosophy",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "toussaint-louverture-and-the-haitian-revolution",
+      "title": "Toussaint Louverture and the Haitian Revolution",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "simon-bolivar-and-independence",
+      "title": "Simón Bolívar and independence",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "harriet-tubman-and-the-underground-railroad",
+      "title": "Harriet Tubman and the Underground Railroad",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "frederick-douglass-and-abolition",
+      "title": "Frederick Douglass and abolition",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "sojourner-truth-and-human-rights",
+      "title": "Sojourner Truth and human rights",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "marie-curie-and-radioactivity",
+      "title": "Marie Curie and radioactivity",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "albert-einstein-and-modern-physics",
+      "title": "Albert Einstein and modern physics",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "alan-turing-and-computing",
+      "title": "Alan Turing and computing",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "wangari-maathai-and-environmental-activism",
+      "title": "Wangari Maathai and environmental activism",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "nelson-mandela-and-democratic-south-africa",
+      "title": "Nelson Mandela and democratic South Africa",
+      "collection": "People, thinkers, leaders and innovators",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-invention-of-the-wheel",
+      "title": "The invention of the wheel",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-origins-of-agriculture",
+      "title": "The origins of agriculture",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-domestication-of-animals",
+      "title": "The domestication of animals",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-writing-systems",
+      "title": "The invention of writing systems",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-ancient-mathematics",
+      "title": "The development of ancient mathematics",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-zero-and-place-value-notation",
+      "title": "The history of zero and place-value notation",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-geometry-in-antiquity",
+      "title": "The development of geometry in antiquity",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-antikythera-mechanism",
+      "title": "The Antikythera mechanism",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-papermaking",
+      "title": "The history of papermaking",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-spread-of-printing-in-east-asia",
+      "title": "The spread of printing in East Asia",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-gutenberg-printing-revolution",
+      "title": "The Gutenberg printing revolution",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-navigation-instruments",
+      "title": "The history of navigation instruments",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-magnetic-compass-and-global-navigation",
+      "title": "The magnetic compass and global navigation",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-cartography",
+      "title": "The development of cartography",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-clocks-and-timekeeping",
+      "title": "The history of clocks and timekeeping",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-the-telescope",
+      "title": "The invention of the telescope",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-scientific-revolution-and-experimental-method",
+      "title": "The scientific revolution and experimental method",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-the-microscope",
+      "title": "The history of the microscope",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-discovery-of-oxygen",
+      "title": "The discovery of oxygen",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-vaccination",
+      "title": "The development of vaccination",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "edward-jenner-and-smallpox-vaccination",
+      "title": "Edward Jenner and smallpox vaccination",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-germ-theory-of-disease",
+      "title": "The germ theory of disease",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-discovery-of-antibiotics",
+      "title": "The discovery of antibiotics",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-discovery-of-penicillin",
+      "title": "The discovery of penicillin",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-anaesthesia",
+      "title": "The history of anaesthesia",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-modern-surgery",
+      "title": "The development of modern surgery",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-discovery-of-dna-s-structure",
+      "title": "The discovery of DNA's structure",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-human-genome-project",
+      "title": "The Human Genome Project",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-evolution-by-natural-selection",
+      "title": "The history of evolution by natural selection",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "charles-darwin-and-the-voyage-of-the-beagle",
+      "title": "Charles Darwin and the voyage of the Beagle",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-plate-tectonics",
+      "title": "The development of plate tectonics",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-discovery-of-radioactivity",
+      "title": "The discovery of radioactivity",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-nuclear-energy",
+      "title": "The development of nuclear energy",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-manhattan-project-and-the-atomic-age",
+      "title": "The Manhattan Project and the atomic age",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-the-transistor",
+      "title": "The invention of the transistor",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-the-integrated-circuit",
+      "title": "The development of the integrated circuit",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-the-personal-computer",
+      "title": "The history of the personal computer",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-the-world-wide-web",
+      "title": "The invention of the World Wide Web",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-artificial-intelligence",
+      "title": "The history of artificial intelligence",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-machine-learning",
+      "title": "The development of machine learning",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-robotics",
+      "title": "The history of robotics",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-the-steam-engine",
+      "title": "The invention of the steam engine",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-industrial-revolution-and-mechanisation",
+      "title": "The Industrial Revolution and mechanisation",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-electric-power-grids",
+      "title": "The history of electric power grids",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-the-telephone",
+      "title": "The invention of the telephone",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-development-of-radio-broadcasting",
+      "title": "The development of radio broadcasting",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-invention-of-television",
+      "title": "The invention of television",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-history-of-aviation",
+      "title": "The history of aviation",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-first-satellite-and-the-space-age",
+      "title": "The first satellite and the Space Age",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-apollo-programme-and-lunar-exploration",
+      "title": "The Apollo programme and lunar exploration",
+      "collection": "Science, technology, medicine and discovery",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 2500
+    },
+    {
+      "slug": "the-epic-of-atrahasis",
+      "title": "The Epic of Atrahasis",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-epic-of-enuma-elish",
+      "title": "The Epic of Enuma Elish",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-egyptian-book-of-the-dead",
+      "title": "The Egyptian Book of the Dead",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mahabharata-and-its-cultural-legacy",
+      "title": "The Mahabharata and its cultural legacy",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bhagavad-gita-in-world-thought",
+      "title": "The Bhagavad Gita in world thought",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ramayana-across-south-and-southeast-asia",
+      "title": "The Ramayana across South and Southeast Asia",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-homeric-epics-and-oral-tradition",
+      "title": "The Homeric epics and oral tradition",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-tragedies-of-sophocles",
+      "title": "The tragedies of Sophocles",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-library-of-alexandria-and-ancient-learning",
+      "title": "The Library of Alexandria and ancient learning",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-talmud-and-jewish-intellectual-history",
+      "title": "The Talmud and Jewish intellectual history",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-qur-an-compilation-and-transmission",
+      "title": "The Qur'an: compilation and transmission",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-bible-and-its-translations",
+      "title": "The history of the Bible and its translations",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-spread-of-buddhism-along-the-silk-roads",
+      "title": "The spread of Buddhism along the Silk Roads",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-hindu-temple-architecture",
+      "title": "The history of Hindu temple architecture",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-sikhism-and-the-sikh-tradition",
+      "title": "The history of Sikhism and the Sikh tradition",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-sufi-orders-and-their-global-networks",
+      "title": "The Sufi orders and their global networks",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-orthodox-christianity",
+      "title": "The history of Orthodox Christianity",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-protestant-reformation-and-print-culture",
+      "title": "The Protestant Reformation and print culture",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-swahili-literary-tradition",
+      "title": "The history of the Swahili literary tradition",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-poetry-of-shaaban-robert",
+      "title": "The poetry of Shaaban Robert",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-oral-epics-of-west-africa",
+      "title": "The oral epics of West Africa",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-griot-tradition-of-the-mande-world",
+      "title": "The griot tradition of the Mande world",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ethiopian-ge-ez-manuscript-tradition",
+      "title": "The Ethiopian Ge'ez manuscript tradition",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-art-of-benin-bronzes",
+      "title": "The art of Benin bronzes",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-ife-heads-and-yoruba-art",
+      "title": "The Ife heads and Yoruba art",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rock-art-of-the-sahara",
+      "title": "The rock art of the Sahara",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rock-art-of-southern-africa",
+      "title": "The rock art of southern Africa",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-architecture-of-ancient-greek-temples",
+      "title": "The architecture of ancient Greek temples",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-gothic-cathedral-and-medieval-society",
+      "title": "The Gothic cathedral and medieval society",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-renaissance-art-workshop",
+      "title": "The Renaissance art workshop",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-chinese-landscape-painting",
+      "title": "The history of Chinese landscape painting",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-japanese-woodblock-print-tradition",
+      "title": "The Japanese woodblock print tradition",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-calligraphy-in-the-islamic-world",
+      "title": "The history of calligraphy in the Islamic world",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-origins-of-jazz",
+      "title": "The origins of jazz",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-taarab-music",
+      "title": "The history of taarab music",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-development-of-reggae",
+      "title": "The development of reggae",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-hip-hop",
+      "title": "The history of hip-hop",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-classical-indian-music",
+      "title": "The history of classical Indian music",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-gamelan-in-indonesia",
+      "title": "The history of gamelan in Indonesia",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-origins-of-ballet",
+      "title": "The origins of ballet",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-modern-theatre",
+      "title": "The history of modern theatre",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-olympic-games-in-antiquity",
+      "title": "The Olympic Games in antiquity",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-revival-of-the-modern-olympic-games",
+      "title": "The revival of the modern Olympic Games",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-fifa-world-cup",
+      "title": "The history of the FIFA World Cup",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-origins-of-cricket-in-the-british-empire",
+      "title": "The origins of cricket in the British Empire",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-marathon-running",
+      "title": "The history of marathon running",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-women-s-football",
+      "title": "The history of women's football",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-african-cinema",
+      "title": "The history of African cinema",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-nollywood",
+      "title": "The history of Nollywood",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-global-history-of-photography",
+      "title": "The global history of photography",
+      "collection": "Culture, literature, religion, art and sport",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-silk-roads-and-eurasian-exchange",
+      "title": "The Silk Roads and Eurasian exchange",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-trans-saharan-trade-routes",
+      "title": "The trans-Saharan trade routes",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-indian-ocean-trade-system",
+      "title": "The Indian Ocean trade system",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-mediterranean-as-a-connected-world",
+      "title": "The Mediterranean as a connected world",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-money-and-coinage",
+      "title": "The history of money and coinage",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-origins-of-banking",
+      "title": "The origins of banking",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-insurance-and-maritime-trade",
+      "title": "The history of insurance and maritime trade",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-rise-of-joint-stock-companies",
+      "title": "The rise of joint-stock companies",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-dutch-east-india-company",
+      "title": "The Dutch East India Company",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-british-east-india-company",
+      "title": "The British East India Company",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-global-commodity-chains",
+      "title": "The history of global commodity chains",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-industrial-revolution-and-global-inequality",
+      "title": "The Industrial Revolution and global inequality",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-great-depression-of-1929",
+      "title": "The Great Depression of 1929",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bretton-woods-system",
+      "title": "The Bretton Woods system",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-creation-of-the-world-bank-and-imf",
+      "title": "The creation of the World Bank and IMF",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-establishment-of-the-world-trade-organization",
+      "title": "The establishment of the World Trade Organization",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-united-nations-and-the-postwar-order",
+      "title": "The United Nations and the postwar order",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-universal-declaration-of-human-rights",
+      "title": "The Universal Declaration of Human Rights",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-geneva-conventions-and-international-humanitarian-law",
+      "title": "The Geneva Conventions and international humanitarian law",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-international-courts",
+      "title": "The history of international courts",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-non-aligned-movement",
+      "title": "The Non-Aligned Movement",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-bandung-conference-of-1955",
+      "title": "The Bandung Conference of 1955",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-nuclear-arms-race",
+      "title": "The nuclear arms race",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-cuban-missile-crisis",
+      "title": "The Cuban Missile Crisis",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-end-of-the-cold-war",
+      "title": "The end of the Cold War",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-internet-economy",
+      "title": "The history of the internet economy",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-global-financial-crisis-of-2008",
+      "title": "The global financial crisis of 2008",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-public-health-systems",
+      "title": "The history of public health systems",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-eradication-of-smallpox",
+      "title": "The eradication of smallpox",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-global-response-to-hiv-and-aids",
+      "title": "The global response to HIV and AIDS",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-climate-science",
+      "title": "The history of climate science",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-industrial-age-and-carbon-emissions",
+      "title": "The Industrial Age and carbon emissions",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-montreal-protocol-and-ozone-protection",
+      "title": "The Montreal Protocol and ozone protection",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-paris-agreement-on-climate-change",
+      "title": "The Paris Agreement on climate change",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-national-parks",
+      "title": "The history of national parks",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-creation-of-yellowstone-national-park",
+      "title": "The creation of Yellowstone National Park",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-conservation-of-mountain-gorillas",
+      "title": "The conservation of mountain gorillas",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-great-barrier-reef",
+      "title": "The history of the Great Barrier Reef",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-aral-sea-environmental-disaster",
+      "title": "The Aral Sea environmental disaster",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-chernobyl-nuclear-disaster",
+      "title": "The Chernobyl nuclear disaster",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-fukushima-daiichi-nuclear-disaster",
+      "title": "The Fukushima Daiichi nuclear disaster",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-global-migration",
+      "title": "The history of global migration",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-refugees-and-international-protection",
+      "title": "The history of refugees and international protection",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-women-s-suffrage-movements-worldwide",
+      "title": "The women's suffrage movements worldwide",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-labour-movement",
+      "title": "The history of the labour movement",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-global-history-of-education",
+      "title": "The global history of education",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-development-of-public-libraries",
+      "title": "The development of public libraries",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-universities",
+      "title": "The history of universities",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    },
+    {
+      "slug": "the-history-of-the-modern-humanitarian-movement",
+      "title": "The history of the modern humanitarian movement",
+      "collection": "Global systems, economics, environment and contemporary history",
+      "region": "Global",
+      "status": "planned",
+      "target_words": 3000
+    }
+  ]
+}
