@@ -1,7 +1,7 @@
 """Load history entries from a JSON file (e.g. seed/history.json). Existing slugs are updated.
 
 Item: {"slug","year","circa","month","day","topic","region","featured","status",
-       "en": {"title","place","text"}, "translations": {"sw": {...}, "fr": {...}},
+       "en": {"title","place","text"}, "translations": {"sw": {...}, "fr": {...}}, "sources",
        "artwork","image_vertical","image_horizontal","video_vertical","video_horizontal"}   (file paths relative to the JSON)
 """
 import json
@@ -31,6 +31,7 @@ class Command(BaseCommand):
                 "topic": it["topic"], "region": it["region"], "featured": it.get("featured", False),
                 "status": it.get("status", "published"),
                 "title": en["title"], "place": en.get("place", ""), "text": en["text"],
+                "sources": it.get("sources", ""),
             })
             for f in FILES:
                 rel = it.get(f)
