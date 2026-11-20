@@ -10,7 +10,7 @@ from pathlib import Path
 from django.core.files import File
 from django.core.management.base import BaseCommand
 
-from world.models import HistoryEntry, HistoryTranslation
+from world.models import HistoryEntry, HistoryIllustration, HistoryTranslation
 
 FILES = ["artwork", "image_vertical", "image_horizontal", "video_vertical", "video_horizontal"]
 
@@ -39,6 +39,20 @@ class Command(BaseCommand):
                     with open(src.parent / rel, "rb") as fh:
                         getattr(entry, f).save(Path(rel).name, File(fh), save=False)
             entry.save()
+            for illustration in it.get("illustrations", []):
+                rel = illustration.get("image")
+                if not rel or not (src.parent / rel).exists():
+                    continue
+                image, _ = HistoryIllustration.objects.update_or_create(
+                    entry=entry, order=illustration.get("order", 1),
+                    defaults={
+                        "caption": illustration.get("caption", ""),
+                        "alt_text": illustration.get("alt_text", ""),
+                        "after_heading": illustration.get("after_heading", ""),
+                    },
+                )
+                with open(src.parent / rel, "rb") as fh:
+                    image.image.save(Path(rel).name, File(fh), save=True)
             for lang, tr in (it.get("translations") or {}).items():
                 HistoryTranslation.objects.update_or_create(entry=entry, lang=lang, defaults={
                     "title": tr["title"], "place": tr.get("place", ""), "text": tr["text"]})
