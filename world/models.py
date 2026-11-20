@@ -104,7 +104,30 @@ class HistoryEntry(models.Model):
             "v916": url(self.video_vertical), "v169": url(self.video_horizontal),
             "h916": url(self.image_vertical), "h169": url(self.image_horizontal), "art": url(self.artwork),
             "narr": [{"lang": n.lang, "voice": n.voice, "url": n.audio.url, "by": n.narrator} for n in self.narrations.all() if n.audio],
+            "illustrations": [{"url": i.image.url, "caption": i.caption, "alt": i.alt_text,
+                               "after": i.after_heading, "order": i.order}
+                              for i in self.illustrations.all() if i.image],
         }
+
+
+class HistoryIllustration(models.Model):
+    """An inline image supporting a history article, optionally placed after a section heading."""
+
+    entry = models.ForeignKey(HistoryEntry, on_delete=models.CASCADE, related_name="illustrations")
+    image = models.ImageField(upload_to="history/illustrations/")
+    caption = models.CharField(max_length=240, blank=True)
+    alt_text = models.CharField(max_length=240, blank=True, help_text="Describe the image for screen readers.")
+    after_heading = models.CharField(max_length=200, blank=True,
+                                     help_text="Optional exact section heading, without ##. Leave blank to show after the introduction.")
+    order = models.PositiveSmallIntegerField(default=1)
+
+    class Meta:
+        ordering = ["order", "id"]
+        verbose_name = "article illustration"
+        verbose_name_plural = "article illustrations"
+
+    def __str__(self):
+        return self.caption or "Illustration for " + self.entry.title
 
 
 class HistoryTranslation(models.Model):
