@@ -6,7 +6,7 @@ from django import forms
 from django.contrib import admin, messages
 from django.utils.html import format_html
 
-from .models import (Artwork, Audiobook, BookChapter, Chapter, Ebook, Comic, ComicPage, HistoryEntry, HistoryTranslation, Narration,
+from .models import (Artwork, Audiobook, BookChapter, Chapter, Ebook, Comic, ComicPage, HistoryEntry, HistoryIllustration, HistoryTranslation, Narration,
                      PushSubscription, Status, Video)
 
 admin.site.site_header = "Radi's World — Admin"
@@ -45,6 +45,14 @@ class TranslationInline(admin.StackedInline):
     verbose_name_plural = "Translations — Kiswahili, Français, العربية, 한국어, 日本語, 中文, Español"
 
 
+class IllustrationInline(admin.StackedInline):
+    model = HistoryIllustration
+    extra = 0
+    fields = ("image", "caption", "alt_text", "after_heading", "order")
+    ordering = ("order",)
+    verbose_name_plural = "Inline article illustrations — add images between relevant sections"
+
+
 class NarrationInline(admin.TabularInline):
     model = Narration
     extra = 0
@@ -53,7 +61,7 @@ class NarrationInline(admin.TabularInline):
 
 @admin.register(HistoryEntry)
 class HistoryEntryAdmin(admin.ModelAdmin):
-    inlines = [TranslationInline, NarrationInline]
+    inlines = [TranslationInline, IllustrationInline, NarrationInline]
     list_display = ("year_col", "title", "topic", "region", "status", "featured", "langs", "voices")
     list_display_links = ("title",)
     list_editable = ("status", "featured")
