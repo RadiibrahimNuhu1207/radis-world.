@@ -654,7 +654,7 @@ function build(){
     const [dd, mm] = e.d ? e.d.split("-").map(Number) : [null, null];
     return Object.assign({}, e, { key: "h:" + e.id, type: "h", title: L.title, place: L.place, text: L.text, translated: !!e.tr[LANG],
       day: dd, date: e.d ? dayLabel(dd, mm) : "", ylab: yearLabel(e), era: eraOf(e.y),
-      img: e.h169 || e.h916, art: e.art || "", plain: plainText(L.text), video: !!(e.v169 || e.v916) });
+      img: e.h169 || e.h916, art: e.art || "", tart: e.tart || "", plain: plainText(L.text), video: !!(e.v169 || e.v916) });
   }).sort((a, b) => a.y - b.y);
   V = DATA.videos.map(v => Object.assign({}, v, { key: "v:" + v.id, type: "v" })).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   A = DATA.audiobooks.map(a => Object.assign({}, a, { key: "a:" + a.id, type: "a" }));
@@ -695,14 +695,14 @@ function card(x){
   if(!x) return "";
   const cap = (a, b) => `<div class="cap"><b>${esc(a)}</b>${b ? `<small>${esc(b)}</small>` : ""}</div>`;
   const open = (inner, c) => `<button class="card k-${x.type}" data-open="${x.key}"><div class="art">${inner}</div>${c}</button>`;
-  if(x.type === "h") return open((x.art ? `<img loading="lazy" src="${x.art}" alt=""><span class="yrb">${esc(x.ylab)}<small>${esc(regName(x.region))}</small></span>` : plate(x)) + (x.video ? PLAY : ""), cap(x.title, [x.place, x.date].filter(Boolean).join(", ")));
+  if(x.type === "h") return open((x.art ? `<img loading="lazy" src="${x.tart || x.art}" alt=""><span class="yrb">${esc(x.ylab)}<small>${esc(regName(x.region))}</small></span>` : plate(x)) + (x.video ? PLAY : ""), cap(x.title, [x.place, x.date].filter(Boolean).join(", ")));
   if(x.type === "v") return open(`<img loading="lazy" src="${x.thumb}" alt="">${x.kind !== "story" ? `<span class="tag">${esc(t("k_" + x.kind))}</span>` : ""}${PLAY}`, cap(x.title, fullDate(x.date)));
   if(x.type === "a"){ const s = store.get("ab:" + x.id, null);
-    return open((x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x)) + wave(x.id), cap(x.title, s ? t("resume_at", { t: mmss(s.t) }) : x.author)); }
-  if(x.type === "c") return open(x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x), cap(x.title, t("pages", { n: x.pages.length })));
+    return open((x.cover ? `<img loading="lazy" src="${x.thumb || x.cover}" alt="">` : genCover(x)) + wave(x.id), cap(x.title, s ? t("resume_at", { t: mmss(s.t) }) : x.author)); }
+  if(x.type === "c") return open(x.cover ? `<img loading="lazy" src="${x.thumb || x.cover}" alt="">` : genCover(x), cap(x.title, t("pages", { n: x.pages.length })));
   if(x.type === "b"){ const p = store.get("bk:" + x.key, 0);
-    return open((x.cover ? `<img loading="lazy" src="${x.cover}" alt="">` : genCover(x)) + (p > 0 && p < 1 ? `<span class="prog"><i style="width:${Math.round(p * 100)}%"></i></span>` : ""), cap(x.title, x.author)); }
-  if(x.type === "r") return open(x.image ? `<img loading="lazy" src="${x.image}" alt="">` : `<div class="poem">${esc(x.text)}</div>`, cap(x.title, t("art_" + x.kind)));
+    return open((x.cover ? `<img loading="lazy" src="${x.thumb || x.cover}" alt="">` : genCover(x)) + (p > 0 && p < 1 ? `<span class="prog"><i style="width:${Math.round(p * 100)}%"></i></span>` : ""), cap(x.title, x.author)); }
+  if(x.type === "r") return open(x.image ? `<img loading="lazy" src="${x.thumb || x.image}" alt="">` : `<div class="poem">${esc(x.text)}</div>`, cap(x.title, t("art_" + x.kind)));
   return "";
 }
 
