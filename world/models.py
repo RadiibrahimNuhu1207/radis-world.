@@ -54,6 +54,32 @@ def url(f):
     return f.url if f else ""
 
 
+def thumb(f, w=480):
+    """URL of a small preview copy (max w px wide) of an image, made once and kept in media/thumbs/.
+
+    Cards on the home page use these; the full image is still used when an item is opened.
+    Falls back to the original image if the preview can't be made.
+    """
+    if not f:
+        return ""
+    try:
+        import os
+        from django.conf import settings
+        from PIL import Image, ImageOps
+        name = f"thumbs/{w}/{f.name.rsplit('.', 1)[0]}.jpg"
+        path = os.path.join(settings.MEDIA_ROOT, name)
+        if not os.path.exists(path):
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with Image.open(f.path) as im:
+                im = ImageOps.exif_transpose(im).convert("RGB")
+                if im.width > w:
+                    im.thumbnail((w, w * 10), Image.LANCZOS)
+                im.save(path, "JPEG", quality=82, optimize=True, progressive=True)
+        return settings.MEDIA_URL + name
+    except Exception:
+        return f.url
+
+
 # ---------------------------------------------------------------- history
 class HistoryEntry(models.Model):
     """One moment in world history. Base text is English; other languages live in translations."""
@@ -102,7 +128,7 @@ class HistoryEntry(models.Model):
             "d": f"{self.day:02d}-{self.month:02d}" if self.day and self.month else None,
             "m": self.month, "cat": self.topic, "region": self.region, "featured": self.featured, "tr": tr,
             "v916": url(self.video_vertical), "v169": url(self.video_horizontal),
-            "h916": url(self.image_vertical), "h169": url(self.image_horizontal), "art": url(self.artwork),
+            "h916": url(self.image_vertical), "h169": url(self.image_horizontal), "art": url(self.artwork), "tart": thumb(self.artwork, 720),
             "narr": [{"lang": n.lang, "voice": n.voice, "url": n.audio.url, "by": n.narrator} for n in self.narrations.all() if n.audio],
             "illustrations": [{"url": i.image.url, "caption": i.caption, "alt": i.alt_text,
                                "after": i.after_heading, "order": i.order}
@@ -222,7 +248,7 @@ class Audiobook(models.Model):
     def as_dict(self):
         return {
             "id": self.slug, "title": self.title, "author": self.author, "narrator": self.narrator,
-            "desc": self.description, "cover": url(self.cover), "lang": self.language, "featured": self.featured,
+            "desc": self.description, "cover": url(self.cover), "thumb": thumb(self.cover), "lang": self.language, "featured": self.featured,
             "chapters": [{"title": c.title, "url": c.audio.url, "min": c.minutes} for c in self.chapters.all() if c.audio],
         }
 
@@ -258,7 +284,7 @@ class Comic(models.Model):
     def as_dict(self):
         pages = [p.image.url for p in self.pages.all() if p.image]
         return {"id": self.slug, "title": self.title, "desc": self.description, "lang": self.language,
-                "cover": url(self.cover) or (pages[0] if pages else ""), "featured": self.featured, "pages": pages}
+                "cover": url(self.cover) or (pages[0] if pages else ""), "thumb": thumb(self.cover), "featured": self.featured, "pages": pages}
 
 
 class ComicPage(models.Model):
@@ -293,7 +319,7 @@ class Ebook(models.Model):
 
     def as_dict(self):
         return {"id": self.slug, "title": self.title, "author": self.author, "desc": self.description,
-                "cover": url(self.cover), "pdf": url(self.pdf), "dl": self.allow_download and bool(self.pdf),
+                "cover": url(self.cover), "thumb": thumb(self.cover), "pdf": url(self.pdf), "dl": self.allow_download and bool(self.pdf),
                 "lang": self.language, "featured": self.featured,
                 "chapters": [{"title": c.title, "text": c.text} for c in self.chapters.all()]}
 
@@ -332,7 +358,7 @@ class Artwork(models.Model):
         return self.title
 
     def as_dict(self):
-        return {"id": self.slug, "title": self.title, "kind": self.kind, "image": url(self.image), "text": self.text,
+        return {"id": self.slug, "title": self.title, "kind": self.kind, "image": url(self.image), "thumb": thumb(self.image), "text": self.text,
                 "desc": self.description, "lang": self.language, "featured": self.featured}
 
 
