@@ -7,7 +7,7 @@ from django.contrib import admin, messages
 from django.utils.html import format_html
 
 from .models import (Artwork, Audiobook, BookChapter, Chapter, Ebook, Comic, ComicPage, HistoryEntry, HistoryIllustration, HistoryTranslation, Narration,
-                     PushSubscription, Status, Video)
+                     MusicTrack, PushSubscription, Status, Video)
 
 admin.site.site_header = "Radi's World — Admin"
 admin.site.site_title = "Radi's World"
@@ -201,6 +201,13 @@ class EbookAdmin(admin.ModelAdmin):
     @admin.display(boolean=True, description="PDF")
     def has_pdf(self, o):
         return bool(o.pdf)
+
+
+@admin.register(MusicTrack)
+class MusicTrackAdmin(admin.ModelAdmin):
+    list_display = ("title", "artist", "order", "status")
+    list_editable = ("order", "status")
+    search_fields = ("title", "artist")
 
 
 @admin.register(Artwork)

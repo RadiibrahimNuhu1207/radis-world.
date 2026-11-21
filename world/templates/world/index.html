@@ -419,6 +419,15 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--night);padding:10px 18px;font-weight:600;font-size:14px;
   border-radius:999px;z-index:95;opacity:0;pointer-events:none;transition:opacity .25s;max-width:90vw;text-align:center}
 .toast.on{opacity:1}
+.install{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,140%);width:min(440px,calc(100% - 24px));z-index:60;
+  background:#121829;border:1px solid rgba(242,184,75,.35);border-radius:16px;padding:14px 14px 14px 16px;display:flex;gap:12px;align-items:center;
+  box-shadow:0 12px 40px rgba(0,0,0,.5);transition:transform .35s ease}
+.install.on{transform:translate(-50%,0)}
+.install img{width:44px;height:44px;border-radius:10px;flex:none}
+.install .tx{flex:1;min-width:0}.install b{display:block;color:var(--ink)}.install small{color:var(--mist);font-size:13px;line-height:1.35;display:block}
+.install .go{background:var(--gold);color:var(--night);border:0;border-radius:999px;font-weight:700;padding:9px 14px;cursor:pointer}
+.install .no{background:none;border:0;color:var(--mist);cursor:pointer;padding:8px;font-size:13px}
+@media (prefers-reduced-motion: reduce){.install{transition:none}}
 footer{color:var(--dim);font-size:13px;padding:56px var(--pad) 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:var(--mist)} footer a:hover{color:var(--ink)}
 
@@ -562,6 +571,11 @@ footer a{color:var(--mist)} footer a:hover{color:var(--ink)}
   <div class="btns" style="justify-content:center"><button class="btn" id="onb-go" data-i="start"></button></div>
 </div></div>
 <div class="toast" id="toast" role="status"></div>
+<div class="install" id="install" role="dialog" aria-labelledby="install-t" hidden>
+  <img src="{% static 'world/icons/icon-192.png' %}" alt="">
+  <div class="tx"><b id="install-t"></b><small id="install-s"></small></div>
+  <button class="go" id="install-go"></button><button class="no" id="install-no"></button>
+</div>
 <div class="amb-mini" id="amb-mini" hidden><i></i><span></span><button data-amb-stop aria-label="Stop">✕</button></div>
 
 {{ data|json_script:"app-data" }}
@@ -1035,6 +1049,10 @@ async function copy(txt){ try{ await navigator.clipboard.writeText(txt); toast(t
 /* ---------- listening: calm music while reading, plus Radi's own recordings ---------- */
 const AMB = { calm: "{% static 'world/ambient/calm-pages.mp3' %}", storm: "{% static 'world/ambient/storm-night.mp3' %}",
   coast: "{% static 'world/ambient/swahili-coast.mp3' %}" };
+const MY_MUSIC = (DATA.music || []).filter(m => m.url);
+MY_MUSIC.forEach(m => { AMB[m.id] = m.url; });
+const AMB_ORDER = [...MY_MUSIC.map(m => m.id), "calm", "storm", "coast"];
+function ambName(k){ const m = MY_MUSIC.find(x => x.id === k); return m ? m.title : t("amb_" + k); }
 const ambAudio = new Audio(); ambAudio.loop = true; ambAudio.preload = "none";
 let ambTrack = null;
 function playAmb(k){
@@ -1044,12 +1062,12 @@ function playAmb(k){
     .catch(() => toast(t("err_generic")));
   paintAmb();
 }
-function ambChips(){ return ["calm", "storm", "coast"].map(k => `<button class="chip" data-amb="${k}" aria-pressed="${ambTrack === k}">${esc(t("amb_" + k))}</button>`).join(""); }
+function ambChips(){ return AMB_ORDER.map(k => `<button class="chip" data-amb="${k}" aria-pressed="${ambTrack === k}">${esc(ambName(k))}</button>`).join(""); }
 function paintAmb(){
   $$("[data-amb]").forEach(b => b.setAttribute("aria-pressed", b.dataset.amb === ambTrack));
   const mini = $("#amb-mini"); mini.hidden = !ambTrack;
-  if(ambTrack) mini.querySelector("span").textContent = t("amb_" + ambTrack);
-  $("#bk-music").textContent = "♪ " + (ambTrack ? t("amb_" + ambTrack) : t("music"));
+  if(ambTrack) mini.querySelector("span").textContent = ambName(ambTrack);
+  $("#bk-music").textContent = "♪ " + (ambTrack ? ambName(ambTrack) : t("music"));
 }
 function narrPanel(x){
   const rec = x.narr.filter(n => n.lang === LANG);
@@ -1201,7 +1219,7 @@ async function flip(dir){
   try{ await an.finished; }catch(e){}
   bk.i = ni; renderBook(); leaf.remove(); bk.busy = false;
 }
-$("#bk-music").onclick = () => { const order = [null, "calm", "storm", "coast"]; playAmb(order[(order.indexOf(ambTrack) + 1) % 4] || null); };
+$("#bk-music").onclick = () => { const order = [null, ...AMB_ORDER]; playAmb(order[(order.indexOf(ambTrack) + 1) % order.length] || null); };
 $("#bk-next").onclick = () => flip(1); $("#bk-prev").onclick = () => flip(-1); $("#bk-close").onclick = closeBook;
 function paintSound(){ $("#bk-sound").textContent = bookSound ? t("sound_on") : t("sound_off"); $("#bk-sound").setAttribute("aria-pressed", bookSound); }
 $("#bk-sound").onclick = () => { bookSound = !bookSound; store.set("bookSound", bookSound); paintSound(); };
@@ -1283,6 +1301,33 @@ if(!store.get("lang", null)){
   $("#onb").classList.add("on");
 }
 if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
+
+/* ---------- "Install Radi's World" prompt ---------- */
+(function(){
+  const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  const snoozed = Date.now() < store.get("installSnooze", 0);
+  if(standalone || snoozed) return;
+  const box = $("#install"), isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  let deferred = null;
+  function open(ios){
+    $("#install-t").textContent = t("install_t");
+    $("#install-s").textContent = ios ? t("install_ios") : t("install_s");
+    $("#install-go").textContent = ios ? t("ok") : t("install_btn");
+    $("#install-no").textContent = t("not_now");
+    box.hidden = false; requestAnimationFrame(() => box.classList.add("on"));
+  }
+  function close(snoozeDays){ box.classList.remove("on"); setTimeout(() => { box.hidden = true; }, 400);
+    if(snoozeDays) store.set("installSnooze", Date.now() + snoozeDays * 864e5); }
+  $("#install-no").onclick = () => close(7);
+  $("#install-go").onclick = async () => {
+    if(!deferred){ close(30); return; }
+    deferred.prompt(); const r = await deferred.userChoice.catch(() => null); deferred = null;
+    close(r && r.outcome === "accepted" ? 3650 : 7);
+  };
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; setTimeout(() => open(false), 4000); });
+  addEventListener("appinstalled", () => close(3650));
+  if(isIOS) setTimeout(() => open(true), 6000);
+})();
 </script>
 </body>
 </html>

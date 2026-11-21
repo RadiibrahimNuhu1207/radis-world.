@@ -1,18 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang|default:'en' }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ title }} — Radi's World</title>
+<title>{{ title }}{% if kind %} — {{ kind }}{% endif %} · Radi's World</title>
 <meta name="description" content="{{ desc|truncatechars:160 }}">
-<meta property="og:type" content="article">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0B0F1A">
+<meta property="og:type" content="{% if kind == 'Book' %}book{% else %}article{% endif %}">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ desc|truncatechars:160 }}">
 {% if image %}<meta property="og:image" content="{% if image|slice:':4' == 'http' %}{{ image }}{% else %}{{ request.scheme }}://{{ request.get_host }}{{ image }}{% endif %}">{% endif %}
+<meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
 <meta property="og:site_name" content="Radi's World">
 <meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="refresh" content="0; url={{ target }}">
-<style>body{background:#0B0F1A;color:#F4F8FF;font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#4DA3FF}</style>
+<style>
+:root{--night:#0B0F1A;--ink:#F4F8FF;--blue:#4DA3FF;--gold:#F2B84B;--mist:#A9B4C8}
+*{box-sizing:border-box}body{background:var(--night);color:var(--ink);font-family:Georgia,"Times New Roman",serif;margin:0;line-height:1.7}
+header{padding:18px 22px;border-bottom:1px solid rgba(242,184,75,.25);font-family:system-ui,sans-serif;font-weight:700;letter-spacing:.06em}
+header a{color:var(--gold);text-decoration:none}
+main{max-width:760px;margin:0 auto;padding:28px 22px 60px}
+.kind{font-family:system-ui,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:.3em 0 .2em}
+.by{color:var(--mist);font-style:italic;margin:0 0 18px}
+.hero{width:100%;border-radius:10px;display:block;margin:10px 0 22px}
+.hero.tall{max-width:340px}
+.open{display:inline-block;background:var(--gold);color:var(--night);font-family:system-ui,sans-serif;font-weight:700;padding:14px 24px;border-radius:999px;text-decoration:none;margin:6px 0 26px}
+.body{white-space:pre-line;font-size:18px}
+footer{color:var(--mist);font-family:system-ui,sans-serif;font-size:14px;padding:24px 22px;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+footer a{color:var(--blue)}
+</style>
 </head>
-<body><p>{{ title }}<br><a href="{{ target }}">Open in Radi's World</a></p></body>
+<body>
+<header><a href="/">RADI'S WORLD</a></header>
+<main>
+  {% if kind %}<div class="kind">{{ kind }}</div>{% endif %}
+  <h1>{{ title }}</h1>
+  {% if author %}<p class="by">by {{ author }}</p>{% endif %}
+  {% if image %}<img class="hero{% if tall %} tall{% endif %}" src="{{ image }}" alt="{{ title }}">{% endif %}
+  <a class="open" href="{{ target }}">Open in Radi's World</a>
+  {% if body %}<div class="body">{{ body }}</div>{% endif %}
+</main>
+<footer>Stories, history, books, comics and art by Radi the Storyteller · <a href="/">radisworld.pythonanywhere.com</a></footer>
+</body>
 </html>
