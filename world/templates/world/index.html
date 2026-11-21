@@ -423,6 +423,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stro
   background:#121829;border:1px solid rgba(242,184,75,.35);border-radius:16px;padding:14px 14px 14px 16px;display:flex;gap:12px;align-items:center;
   box-shadow:0 12px 40px rgba(0,0,0,.5);transition:transform .35s ease}
 .install.on{transform:translate(-50%,0)}
+.install[hidden]{display:none!important}
 .install img{width:44px;height:44px;border-radius:10px;flex:none}
 .install .tx{flex:1;min-width:0}.install b{display:block;color:var(--ink)}.install small{color:var(--mist);font-size:13px;line-height:1.35;display:block}
 .install .go{background:var(--gold);color:var(--night);border:0;border-radius:999px;font-weight:700;padding:9px 14px;cursor:pointer}
@@ -623,7 +624,7 @@ const dayLabel = (day, m) => fmt({ day: "numeric", month: "long" }, new Date(Dat
 const monthName = m => fmt({ month: "long" }, new Date(Date.UTC(2000, m - 1, 1)));
 const fullDate = iso => iso ? fmt({ day: "numeric", month: "short", year: "numeric" }, new Date(iso + "T00:00:00Z")) : "";
 function illustrationHTML(i){
-  return \`<figure class="history-illustration"><img src="\${esc(i.url)}" alt="\${esc(i.alt || i.caption || "Historical illustration")}" loading="lazy">\${i.caption ? \`<figcaption>\${esc(i.caption)}</figcaption>\` : ""}</figure>\`;
+  return `<figure class="history-illustration"><img src="${esc(i.url)}" alt="${esc(i.alt || i.caption || "Historical illustration")}" loading="lazy">${i.caption ? `<figcaption>${esc(i.caption)}</figcaption>` : ""}</figure>`;
 }
 function fmtText(s, illustrations = []){
   const pending = [...illustrations], out = [];
@@ -635,11 +636,11 @@ function fmtText(s, illustrations = []){
   blocks.forEach((p, index) => {
     if(p.startsWith("## ")){
       const heading = p.slice(3);
-      out.push(\`<h3 class="sec">\${esc(heading)}</h3>\`);
+      out.push(`<h3 class="sec">${esc(heading)}</h3>`);
       addFor(heading);
     } else if(p.includes("\n")){
-      out.push(\`<ul class="lines">\${p.split("\n").map(l => \`<li>\${esc(l)}</li>\`).join("")}</ul>\`);
-    } else out.push(\`<p>\${esc(p)}</p>\`);
+      out.push(`<ul class="lines">${p.split("\n").map(l => `<li>${esc(l)}</li>`).join("")}</ul>`);
+    } else out.push(`<p>${esc(p)}</p>`);
     if(index === 0) addFor("");
   });
   pending.forEach(i => out.push(illustrationHTML(i)));
