@@ -336,6 +336,26 @@ class Artwork(models.Model):
                 "desc": self.description, "lang": self.language, "featured": self.featured}
 
 
+# ---------------------------------------------------------------- reading music
+class MusicTrack(models.Model):
+    title = models.CharField(max_length=120, help_text="Name shown on the Music button, e.g. 'Kalimba evening'")
+    audio = models.FileField(upload_to="music/", help_text="MP3 file. Only upload music you own or may use.")
+    artist = models.CharField(max_length=120, blank=True)
+    order = models.PositiveSmallIntegerField(default=1, help_text="Lower numbers play first")
+    status = models.CharField(max_length=12, choices=Status.choices, default=Status.PUBLISHED)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["order", "title"]
+        verbose_name = "music track"
+
+    def __str__(self):
+        return self.title
+
+    def as_dict(self):
+        return {"id": "m%d" % self.pk, "title": self.title, "artist": self.artist, "url": url(self.audio)}
+
+
 # ---------------------------------------------------------------- notifications
 class PushSubscription(models.Model):
     endpoint = models.URLField(max_length=600, unique=True)
